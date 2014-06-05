@@ -1,5 +1,5 @@
-Branch Privado Cubic ERP
-========================
+Branch Privado Cubic ERP v7.0
+=============================
 
 Le damos la mas cordial bienvenida al branch privado de Cubic ERP. Un sito de colaboración eficaz para el éxito de su proyecto en OpenERP (ahora Odoo).
 
