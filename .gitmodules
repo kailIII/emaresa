@@ -1,0 +1,6 @@
+[submodule "branch"]
+	path = branch
+	url = https://github.com/CubicERP/branch.git
+[submodule "odoo"]
+	path = odoo
+	url = https://github.com/CubicERP/odoo.git
