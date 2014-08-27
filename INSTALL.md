@@ -5,7 +5,7 @@ Instalación de librerías Python
 
     $ sudo apt-get install python-docutils python-gdata python-mako python-dateutil python-feedparser python-lxml python-tz python-vatnumber python-webdav python-xlwt python-werkzeug python-yaml python-zsi python-unittest2 python-mock python-libxslt1 python-ldap python-reportlab python-pybabel python-pychart python-simplejson python-psycopg2 python-vobject python-openid python-setuptools bzr postgresql unixodbc unixodbc-dev python-pyodbc python-psutil nginx
     $ sudo easy_install jinja2
-    $ sudo easy_install Geraldo
+    $ sudo easy_install CubicReport
     $ sudo easy_install openerp-client-lib
     $ sudo easy_install openerp-client-etl
     $ sudo easy_install gunicorn
