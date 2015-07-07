@@ -1,0 +1,46 @@
+
+Versión 0.8.1
+
+	Se añade un campo related, este no se muestra en las vistas, para que la cebecera mantenga el centro de costo que corresponde.
+
+Versión 0.8
+
+	Se agrega campo de centro de costo a la linea del voucher.
+	Se modifica campo centro de costo del voucher, ahora se autocompleta con el centro de costo de la línea con mayor importe.
+
+Versión 0.7.3
+
+	Se agrega campo nombre del apunte contable en la línea del voucher.
+
+Versión 0.7.2
+
+	Se agrega campo centro de costo a vista de pago de clientes.
+
+Versión 0.7.1
+
+	Se agrega a la vista "escribir cheque" y "pago proveedores" el campo "date_due" como requeredo con autocompletado a la fecha actual.
+
+
+Versión 0.7
+
+	Agregado cambio en campos "fecha de transferencia" y "referencia" para dejarlos requeridos en el pago clientes.
+	Agregado dominio para journal_id de codigos 651, 680 para que no aparezcan en la lista.
+	Modificada linea de return "funcion action_move_line_create" sacandola del for por error en confirmaciones masivas.
+	Modificada funcion "recompute_voucher_lines" para mantener integridad en flujos externos a pago de proveedores.
+
+Versión 0.6
+
+	Agregada vista de date_due y solucionado problema en escribir cheques complentando el monto en palabras.
+
+Versión 0.5
+
+	Cambio en nombre modulo y traducciones.
+
+Versión 0.4
+
+	Agregado campo para origin_bank reemplazando modulo info_payment.
+
+Versión 0.3
+
+	Agregado funciones para que las líneas del voucher no sean actualizadas en su reconciliacion y monto en clientes con campo habilitado.
+

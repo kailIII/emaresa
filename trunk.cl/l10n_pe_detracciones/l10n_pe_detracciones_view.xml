@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+
+		<!-- ########### Idioma ############ -->
+		<record model="ir.ui.view" id="view_account_detracciones_form">
+			<field name="name">account.detracciones.form</field>
+			<field name="model">account.detracciones</field>
+			<field name="arch" type="xml">
+				<form string="Servicios Afectos a Detracciones" version="7.0">
+					<div class="oe_title">
+						<label for="name" class="oe_edit_only" string="Nombre Servicio"/>
+						<h1>
+							<field name="name"/>
+						</h1>
+					</div>
+					<group>
+						<group>
+							<field name="account_id"/>
+							<field name="type"/>
+						</group>
+						<group>
+							<field name="porcentaje"/>
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_account_detracciones_tree">
+			<field name="name">account.detracciones.tree</field>
+			<field name="model">account.detracciones</field>
+			<field name="arch" type="xml">
+				<tree string="Servicios Afectos a Detracciones">
+					<field name="name"/>
+					<field name="account_id"/>
+					<field name="porcentaje"/>
+					<field name="type"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.actions.act_window" id="action_account_detracciones">
+			<field name="name">Servicios Afectos a Detracciones</field>
+			<field name="res_model">account.detracciones</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem id="menu_l10n_pe_detracciones" name="Servicios Afectos a Detracciones"
+			groups="l10n_pe_detracciones.group_detracciones_admin,l10n_pe_detracciones.group_detracciones_users"
+			parent="account.menu_configuration_misc" action="action_account_detracciones"/>
+   	</data>
+</openerp>
+                                                                                                                                                                                     
+
+
+
+
+

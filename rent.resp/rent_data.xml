@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<!-- Intervalos -->
+	<data noupdate="1">
+		<record id="interval_once" model="rent.interval">
+			<field name="name">Once</field>
+			<field name="method">get_invoice_for_once_period</field>
+		</record>
+		<record id="interval_month" model="rent.interval">
+			<field name="name">Monthly (Based on begin date)</field>
+			<field name="method">get_invoices_for_month_period</field>
+			<!--<field name="not_allowed_duration_unities" eval="[(6, 0, [uom_day])]"/>-->
+		</record>
+	</data>
+	
+	<!-- Unidades de Medida -->
+	<data noupdate="1">
+		<record id="duration_uom_categ" model="product.uom.categ">
+			<field name="name">Duration</field>
+		</record>
+		
+		<!-- Uoms -->
+		<record id="uom_day" model="product.uom">
+			<field name="name">Day</field>
+			<field name="category_id" ref="duration_uom_categ"/>
+			<!-- Because we consider a month is 30 days, we have to consider a year is 360 days (12*30). -->
+			<field name="factor" eval="360.0"/>
+			<field name="uom_type">smaller</field>
+			<field name="rounding" eval="1.0"/>
+		</record>
+		<record id="uom_month" model="product.uom">
+			<field name="name">Month</field>
+			<field name="category_id" ref="duration_uom_categ"/>
+			<field name="factor" eval="12.0"/>
+			<field name="uom_type">smaller</field>
+			<field name="rounding" eval="1.0"/>
+		</record>
+		<record id="uom_year" model="product.uom">
+			<field name="name">Year</field>
+			<field name="category_id" ref="duration_uom_categ"/>
+			<field name="factor" eval="1.0"/>
+			<field name="uom_type">reference</field>
+			<field name="rounding" eval="1.0"/>
+		</record>
+	</data>
+	
+	<!-- Lista de Precios -->
+	<data noupdate="1">
+		<record id="pricelist_type_sale" model="product.pricelist.type">
+			<field name="name">Rent Pricelist</field>
+			<field name="key">rent</field>
+		</record>
+
+		<record id="list_price" model="product.price.type">
+			<field name="name">Rent Price</field>
+			<field name="field">rent_price</field>
+			<field search="[('name','=','PEN')]" model='res.currency' name='currency_id'/>
+		</record>
+	</data>
+	
+	<!-- Sequence for Rent Orders: ALQXXXXX. -->
+	<data noupdate="1">
+		<record id="rent_order_sequence_type" model="ir.sequence.type">
+			<field name="name">Rent Order</field>
+			<field name="code">rent.order</field>
+		</record>
+
+		<record id="rent_order_sequence" model="ir.sequence">
+			<field name="name">Rent Order</field>
+			<field name="code">rent.order</field>
+			<field name="prefix">ALQ</field>
+			<field name="padding">7</field>
+			<field search="[('name','=','EMARESA PERÚ S.A.C')]" model='res.company' name='company_id'/>
+			<!--<field name="company_id" eval="4"/>-->
+		</record>
+	</data>
+
+
+	<!-- Data de Cron -->
+	<data noupdate="1">
+		<record id="rent_cron_invoices" model="ir.cron" forcecreate="True">
+			<field name="name">Rent - Invoices Cron</field>
+			<field name="active" eval="1"/>
+			<field name="interval_number" eval="1"/>
+			<field name="interval_type">days</field>
+			<field name="numbercall" eval="-1"/>
+			<field name="doall" eval="0"/>
+			<field name="model">rent.order.line</field>
+			<field name="function">run_cron_make_invoices</field>
+			<field search="[('id','=',1)]" model="res.users" name="user_id"/>
+		</record>
+	</data>
+</openerp>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!--Inherited view -->
+		<record id="view_followup_inherit_followup_report_form" model="ir.ui.view">
+			<field name="name">account.followup.report.form.inherit</field>
+			<field name="inherit_id" ref="account_followup.view_partner_inherit_followup_form"/>
+			<field name="model">res.partner</field>
+			<field name="arch" type="xml">
+				<xpath expr="//button[@string='Print Overdue Payments']" position="replace">
+					<button name="print_report" type="object" string="Print Overdue Payments"
+						groups="account.group_account_user" 
+						help="Print overdue payments report independent of follow-up line"
+						attrs="{'invisible':[('payment_amount_due', '&lt;=', 0.0)]}"/>
+				</xpath>
+				<xpath expr="//button[@string='Print Overdue Payments']" position="before">
+					<button name="print_report_without_header" type="object" string="Print Overdue Payments Without Header"
+						groups="account.group_account_user" 
+						help="Print overdue payments report independent of follow-up line"
+						attrs="{'invisible':[('payment_amount_due', '&lt;=', 0.0)]}"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

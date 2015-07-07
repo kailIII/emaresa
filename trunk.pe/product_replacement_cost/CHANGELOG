@@ -1,0 +1,37 @@
+
+Versión 0.3.1
+
+	Se añaden las traducciones correspondientes al módulo.
+
+Versión 0.3
+
+	Se corrige el valor de actualización del coste promedio del producto en moneda seleccionada desde este con nueva formula de distribución del valor entre los productos entrantes y los productos existentes para distribuciones de gastos e ingresos de mercadería.
+	Se corrige función de entrada de mercadería en la que se calculan los costos promedios para añadir costeo de producto en moneda seleccionada.
+
+Versión 0.2.3
+
+	Se añade modificación al asiento generado desde la recepción de mercadería cambiando el nombre por el origin de la recepción.
+
+Versión 0.2.2
+
+	Se corrigen errores en valoración del producto en recosteo del producto, ya no suma el valor nuevo de coste, ahora va a buscar la valoración del producto para el costeo que corresponde.
+
+Versión 0.2
+
+	Se añade actualización de precio coste en moneda del producto cuando se ejecuta un recosteo de producto.
+
+Versión 0.1.2
+
+	Se corrige error en el calculo de los valores en paso de monedas.
+
+Versión 0.1.1
+
+	Se interviene la función de actualización del precio de coste de manera manual añadiendo la conversión al rate del día de la moneda seleccionada en el producto.
+	Se añaden a la vista del producto los campos creados anteriormente.
+
+Versión 0.1
+
+	Se añade currency_standard_price para calculo de costo de reposición del producto en moneda seleccionada.
+	Se añade campo currency_id para seleccionar en que moneda se calcula el costo de reposición.
+	Se interviene función para calculo de costo y se añade el calculo de costo en moneda seleccionada.
+

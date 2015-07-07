@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_account_ballot_fees,account.ballot.fees,model_account_fees,account.group_account_manager,1,1,1,1
+access_account_ballot_fees_line,account.ballot.fees.line.line,model_account_fees_line,account.group_account_manager,1,1,1,1
+access_account_ballot_fees_tax,account.ballot.fees.tax,model_account_fees_tax,account.group_account_manager,1,1,1,1

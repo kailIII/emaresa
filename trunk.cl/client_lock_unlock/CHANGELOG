@@ -1,0 +1,26 @@
+
+Versión 1.2.5_1
+
+	Se corrige un error en el monto entregado en descripción del cron de tramos.
+
+Versión 1.2.5
+
+	Se corrige error de bloqueo de clientes por centro de costo en la respuesta del SQL que no venía sumado por centro de costo y rut.
+
+Versión 1.2.4
+
+	Se corrige error de "fecha hasta" no respetada por crones de bloqueo de tramos y por vencimiento de documentos.
+
+Versión 1.2.3
+
+	Agregado campo booleano para bloqueo automático de clientes y actualización de traducciones.
+
+Versión 1.2.2
+
+	Corregido cron de bloqueo de clientes por tramo definido en ERP.
+
+Versión 1.2.1
+
+	Agregada condición para saltar los clientes inactivos y sin conciliación automática.
+	Se corrigen cabeceras de archivos .py.
+

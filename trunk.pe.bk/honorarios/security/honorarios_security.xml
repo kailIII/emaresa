@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="0">
+		<!-- multi-company domain rules -->
+		<record id="ballot_fees_rule" model="ir.rule">
+			<field name="name">Ballot Fees</field>
+			<field name="model_id" search="[('model','=','account.fees')]" model="ir.model"/>
+			<field name="global" eval="True"/>
+			<field name="domain_force"></field>
+		</record>
+	</data>
+</openerp>

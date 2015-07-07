@@ -1,0 +1,5 @@
+
+Versión 0.1
+
+	Se añade el campo 'account_move_id' dentro del 'stock.move' para que al crear un asiento se pueda acceder de manera más sensilla a este.
+

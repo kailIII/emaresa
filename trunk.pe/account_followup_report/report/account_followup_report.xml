@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+<!--		<record id="account_followup_report" model="ir.actions.report.xml">
+			<field name="name">Cuenta Corriente Cliente</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account_followup.followup</field>
+			<field name="report_name">followup_cta_cte_print</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_followup_report/report/parser.py</field>
+			<field name="report_rml">account_followup_report/report/template_cta_cte.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<record id="report_account_followup_without_header" model="ir.actions.report.xml">
+			<field name="name">Cuenta Corriente Cliente Sin Cabecera</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account_followup.followup</field>
+			<field name="report_name">followup_cta_cte_without_header_print</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_followup_report/report/parser.py</field>
+			<field name="report_rml">account_followup_report/report/template_cta_cte_without_header.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>-->
+
+		<report auto="False" id="report_account_followup_cta_cte" menu="False" model="account_followup.followup"
+				name="followup_cta_cte_report" rml="account_followup_report/report/template_cta_cte.rml"
+				string="Cuenta Corriente Cliente"/>
+
+		<report auto="False" id="report_account_followup_cta_cte_without_header" menu="False" model="account_followup.followup"
+				name="followup_cta_cte_without_header_report"
+				rml="account_followup_report/report/template_cta_cte_without_header.rml"
+				string="Cuenta Corriente Cliente Sin Cabecera"/>
+	</data>
+</openerp>
+

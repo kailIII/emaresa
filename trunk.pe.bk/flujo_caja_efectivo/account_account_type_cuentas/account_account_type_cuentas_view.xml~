@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="account_account_type_cuentas_form" model="ir.ui.view">
+            <field name="name">account_account_type_cuentas_form</field>
+            <field name="model">account.account.type</field>
+            <field name="type">form</field>
+            <field name="inherit_id" ref="account.view_account_type_form"/>
+ 	    <field name="arch" type="xml">
+		<field name="code" position="after">
+                	<group string="Flujo de Caja" colspan="8">
+				<group>
+                   			<field name="categoria"/>
+                   			<field name="secuencia"/>
+                   			<field name="flujo_caja" string="Mostrar en Flujo Caja"/>
+				</group>
+			</group>
+		</field>
+            </field>
+	</record>
+  	<record id="account_account_type_cuentas_tree" model="ir.ui.view">
+            <field name="name">account_account_type_cuentas_tree</field>
+            <field name="model">account.account.type</field>
+            <field name="type">tree</field>
+ 	    <field name="arch" type="xml">
+                <tree string="Tipos de Cuenta">
+                    <field name="name"/>
+		    <field name="code"/>
+		    <field name="categoria"/>
+		    <field name="secuencia"/>
+		    <field name="flujo_caja"/>
+                </tree>
+            </field>
+	</record>
+    </data>
+</openerp>

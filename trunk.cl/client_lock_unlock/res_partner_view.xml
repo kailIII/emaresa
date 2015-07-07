@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="res_partner_view_lock_unlock_tree" model="ir.ui.view">
+			<field name="name">res.partner.view.lock.unlock.tree</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_tree"/>
+			<field name="arch" type="xml">
+				<field name="parent_id" position="after">
+					<field name="lock_unlock"/>
+				</field>
+			</field>
+		</record>
+	
+		<record id="res_partner_view_lock_unlock_form" model="ir.ui.view">
+			<field name="name">res.partner.view.lock.unlock.form</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="base.view_partner_form"/>
+			<field name="arch" type="xml">
+				<field name="website" position="after">
+					<field name="automatic_locking"/>
+				</field>
+				<xpath expr="//page[@name='page_history']" position="before">
+					<page string="Lock/Unlock" name="lock_unlock">
+						<group>
+							<group>
+								<field name="lock_unlock" readonly="1"/>
+							</group>
+							<group>
+								<field name="to_date" readonly="1"/>
+							</group>
+						</group>
+						<group>
+							<separator string="Lock - Unlock Registry" colspan="4"/>
+							<field name="lock_registry" nolabel="1" readonly="1" colspan="4">
+								<tree string="Lock - Unlock Registry">
+									<field name="registry_date" readonly="1"/>
+									<field name="users_id" readonly="1"/>
+									<field name="lock_unlock" readonly="1"/>
+									<field name="to_date" readonly="1"/>
+									<field name="description" readonly="1"/>
+								</tree>
+							</field>
+						</group>
+					</page>
+				</xpath>
+				<xpath expr="//div[@name='buttons']" position="inside">
+					<button name="%(client_lock_unlock.lock_unlock_wizard_action)d"
+						type="action" string="Lock/Unlock"/>
+				</xpath>	
+			</field>
+		</record>
+	</data>
+</openerp>

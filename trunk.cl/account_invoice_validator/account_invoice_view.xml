@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="account_invoice_validator_supplier_form" model="ir.ui.view">
+			<field name="name">account.invoice.validator.supplier.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form"/>
+			<field name="arch" type="xml">
+				<field name="type" position="after">
+					<div class="oe_right oe_button_box" name="buttons">
+						<button name="invoice_validator" string="Revisar Duplicadas" class="oe_highlight" type="object"/>
+					</div>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

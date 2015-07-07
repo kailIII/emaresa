@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Confirmacion de Activos -->
+		<record id="view_account_asset_asset_confirm_wizard_form" model="ir.ui.view">
+			<field name="name">account.asset.asset.confirm.form</field>
+			<field name="model">account.asset.asset.confirm</field>
+			<field name="arch" type="xml">
+				<form string="Confirmar Activos" version="7.0">
+<!--					<field name="company_id" widget="selection" groups="base.group_multi_company"/>-->
+			        	<div>
+						<label string="Los activos seleccionados seran puestos en estado de ejecucion o confirmados."/>
+						<label string="Confirme accion"/>
+					</div>
+					<footer>
+						<button type="object" name="confirmar" string="Confirm Assets" class="oe_highlight"/>
+						<label string="or"/>
+			    		        <button string="Cancelar" class="oe_link" special="cancel"/>
+				   	</footer>
+				</form>
+			</field>
+		</record>
+					        
+		<act_window id="menu_action_confirm_account_asset" 
+			multi="True"
+			key2="client_action_multi" name="Confirm Assets"
+			res_model="account.asset.asset.confirm" src_model="account.asset.asset"
+			view_id="view_account_asset_asset_confirm_wizard_form"
+			view_type="form" target="new" view_mode="form"/>
+			
+		<!-- Fin Confirmacion de Activos -->
+	</data>
+</openerp>

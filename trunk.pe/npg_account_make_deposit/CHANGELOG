@@ -1,0 +1,26 @@
+
+Versión 3.13
+
+	Se añade el campo "Fecha Vencimiento" al reporte de depositos.
+
+Versión 3.12
+
+	Modifica reportes a rml para mayor desempeño y compatibilidad.
+	Se comentan las lineas para integración con Aeroo Report.
+
+Versión 3.11
+
+	Agregadas busquedas para el campo de "Numero de Deposito" en los cheques depositados.
+
+Versión 3.10
+
+	Agregado campo de numero deposito en las lineas de los cheques.
+
+Versión 3.9
+
+	Agregada busqueda por empresas a cheques depositados.
+
+Versión 3.8
+
+	Agregado campo de fecha deposito en lineas, actualización de traducciones.
+

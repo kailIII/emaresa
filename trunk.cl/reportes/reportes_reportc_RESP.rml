@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<document filename="Libro de Compras">
+  <template title="Localizacion Chilena" author="Michael Silva(msilva@solintegra.cl)" allowSplitting="20" >
+    <pageTemplate id="first">  	    	
+    	<frame id="first" x1="1.0cm" y1="3.3cm" height="23.0cm" width="19cm"/>
+        <pageGraphics>		
+                <setFont name="Helvetica" size="8"/>
+                <fill color="black"/>                
+                <stroke color="black"/>
+		<drawString x="0.5cm" y="29.0cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.name) ]] </drawString>
+		<drawString x="0.5cm" y="28.5cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.rut)]]</drawString>
+		<drawString x="0.5cm" y="28.0cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.x_giro)]]</drawString>
+		<drawString x="0.5cm" y="27.5cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.address[0].street)]]</drawString>
+
+<setFont name="Helvetica" size="9"/>
+		<drawString x="10.0cm" y="27.7cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and 'Libro de Compras') ]]</drawString>		
+
+<setFont name="Helvetica" size="7"/>
+		<drawString x="10.1cm" y="27.3cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and _periodos_v(data['form']['periodos'])) ]]</drawString>
+
+<setFont name="Helvetica" size="8"/>
+
+		<image x="12.0cm" y="28.3cm" height="30.0" >[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.logo) ]]</image>
+
+                <lines>0.5cm 26.7cm 20.7cm 26.7cm</lines>        
+                <lines>0.5cm 1.5cm 20.7cm 1.5cm</lines>            			
+            <drawCentredString x="10.5cm" y="0.8cm"> Pagina: <pageNumber/>  </drawCentredString>
+        </pageGraphics>	
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <blockTopPadding length="0.8cm"/>
+      <blockBottomPadding length="0.4cm" />
+    </blockTableStyle>	
+	
+     <initialize>    
+		<paraStyle name="all" alignment="justify"/>
+    </initialize>    	
+    <paraStyle name="string_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="5.3" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>  	
+    <paraStyle name="string_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+	<paraStyle name="string_titulos_rs" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    	  
+    <paraStyle name="integer_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="string_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="2.5" spaceAfter="0.0"/>    
+    <paraStyle name="string_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="4.9" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>         
+    <paraStyle name="string_campos_montos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>    
+    <paraStyle name="string_titulos_montos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>    
+    <images/>
+  </stylesheet>
+  <story>       
+
+<!-- muestra cuerpo del reporte-->
+  <section>
+<para>[[ repeatIn(nuevo(data['form']['compania'],data['form']['periodos'],data['form']['si'],data['form']['type_']), 'o') ]]</para> 
+		<blockTable colWidths="20.0cm"  style="Standard_Outline">
+			<tr>
+				<td><para  style="string_titulos">[[ (o['name']) ]]</para></td>
+			</tr>
+		</blockTable>
+		<blockTable  colWidths="1.4cm,1.7cm,2.0cm,6.0cm,2.0cm,2.0cm,2.0cm,2.0cm" rowHeights = "0.5cm">	   
+	        	<tr>		
+				<td><para style="string_titulos">Numero</para></td>
+				<td><para style="string_titulos">Fecha</para></td>
+				<td><para style="string_titulos">Rut</para></td>
+				<td><para style="string_titulos">Proveedor</para></td>
+				<td><para style="string_titulos_montos">Exento</para></td>
+				<td><para style="string_titulos_montos">Neto</para></td>
+				<td><para style="string_titulos_montos">Iva</para></td>
+				<td><para style="string_titulos_montos">Total</para></td>
+			</tr>
+		</blockTable>
+		<pto>
+		<pto_header>
+		<blockTable  colWidths="1.4cm,1.7cm,2.0cm,6.0cm,2.0cm,2.0cm,2.0cm,2.0cm" rowHeights = "0.5cm">	   
+	        	<tr>		
+				<td><para style="string_titulos">Numero</para></td>
+				<td><para style="string_titulos">Fecha</para></td>
+				<td><para style="string_titulos">Rut</para></td>
+				<td><para style="string_titulos">Proveedor</para></td>
+				<td><para style="string_titulos_montos">Exento</para></td>
+				<td><para style="string_titulos_montos">Neto</para></td>
+				<td><para style="string_titulos_montos">Iva</para></td>
+				<td><para style="string_titulos_montos">Total</para></td>
+			</tr>
+		</blockTable> 
+	 	</pto_header>
+	 	<section>
+		<blockTable  colWidths="1.4cm,1.7cm,2.0cm,6.0cm,2.0cm,2.0cm,2.0cm,2.0cm" rowHeights = "0.5cm">	
+			
+			<para>[[ repeatIn(detalle(o['id'],data['form']['compania'],data['form']['periodos'],data['form']['si'],data['form']['type_']),'od') ]]</para>
+		        <tr>		
+					<td><para  style="string_campos">[[ (od['number']) ]]</para></td>			
+					<td><para  style="string_campos">[[ (od['date_invoice']) ]]</para></td>		  
+					<td><para  style="string_campos">[[ (od['rut']) ]]</para></td>		  
+					<td><para  style="string_campos">[[ (corto_dat_v(od['proveedor'], 30)) ]]</para></td>		  
+					<td><para  style="string_campos_montos">[[ (od['afe_exe']) ]]</para></td>		  
+					<td><para  style="string_campos_montos">[[ (od['cc_amount_untaxed']) ]]</para></td>		  	
+					<td><para  style="string_campos_montos">[[ (od['cc_amount_tax'])]]</para></td>		  
+					<td><para  style="string_campos_montos">[[ (od['cc_amount_total']) ]]</para></td>	      		  		  
+		        </tr>		
+      	</blockTable>				
+	  	</section>
+	  	</pto>
+	  	<section>
+	  	<blockTable  colWidths="1.4cm,1.7cm,2.0cm,6.0cm,2.0cm,2.0cm,2.0cm,2.0cm" rowHeights = "0.5cm">
+	  		<para>[[ repeatIn(subtotales(o['id'],data['form']['compania'],data['form']['periodos']),'st') ]]</para>
+				<tr>		
+					<td><para  style="string_titulos"></para></td>			
+					<td><para  style="string_titulos"></para></td>		  
+					<td><para  style="string_titulos"></para></td>		  
+					<td><para  style="string_titulos_montos">SUBTOTAL</para></td>		  
+					<td><para  style="string_titulos_montos">[[ (st['base_amount']) ]]</para></td>		  
+					<td><para  style="string_titulos_montos">[[ (st['amount_untaxed']) ]]</para></td>		  	
+					<td><para  style="string_titulos_montos">[[ (st['amount_tax'])]]</para></td>		  
+					<td><para  style="string_titulos_montos">[[ (st['amount_total']) ]]</para></td>	      		  		  
+		        </tr>
+		 </blockTable>
+		 </section>   		
+  </section>  	
+<section>
+	  	 <blockTable  colWidths="1.4cm,1.7cm,2.0cm,6.0cm,2.0cm,2.0cm,2.0cm,2.0cm" rowHeights = "0.5cm">
+		  <para style="string_titulos">[[ repeatIn(totales(data['form']['compania'],data['form']['periodos']), 'ot') ]]</para>	
+				<tr>
+					<td><para  style="string_titulos_montos"></para></td>			
+					<td><para  style="string_titulos_montos"></para></td>		  
+					<td><para  style="string_titulos_montos"></para></td>		  
+					<td><para  style="string_titulos_montos">TOTALES</para></td>	
+					<td><para  style="string_titulos_montos">[[(ot['base_amount'])]]</para></td>
+					<td><para  style="string_titulos_montos">[[(ot['amount_untaxed'])]]</para></td>
+					<td><para  style="string_titulos_montos">[[(ot['amount_tax'])]]</para></td>
+					<td><para  style="string_titulos_montos">[[(ot['amount_total'])]]</para></td>
+				</tr>
+		 </blockTable>							
+		</section>		
+
+	<section>
+		<para >[[ repeatIn(nuevo(data['form']['compania'],data['form']['periodos'],data['form']['si'],data['form']['type_']), 'o') ]]</para> 
+				<blockTable colWidths="9.0cm" style="Standard_Outline">
+					<tr>
+						<td><para style="string_titulos">[[ (o['name']) ]]</para></td>
+					</tr>
+				</blockTable>
+						
+						<section>
+							<para style="string_campos">[[ repeatIn(subtotales(o['id'],data['form']['compania'],data['form']['periodos']), 'ot') ]]</para>
+								<blockTable colWidths="9.0cm, 1.0cm"  rowHeights="0.4cm">
+									<tr>
+										<td><para  style="string_campos">Cantidad de documentos:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['cantidad'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Sub total Exento:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['base_amount'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Sub total Neto:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_untaxed'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Sub total IVA:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_tax'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Sub total: </para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_total'])]]</para></td>
+									</tr>
+								</blockTable>
+							
+						</section>	
+	</section>
+				<blockTable colWidths="9.0cm" style="Standard_Outline">
+					<tr>
+						<td><para style="string_titulos">TOTAL FINAL</para></td>
+					</tr>
+				</blockTable>
+						
+						<section>
+							<para style="string_campos">[[ repeatIn(totales(data['form']['compania'],data['form']['periodos']), 'ot') ]]</para>
+								<blockTable colWidths="9.0cm, 1.0cm"  rowHeights="0.4cm" >
+									<tr>
+										<td><para  style="string_campos">Cantidad de documentos:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['cantidad'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Total Exento:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['base_amount'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Total Neto:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_untaxed'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Total IVA:</para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_tax'])]]</para></td>
+									</tr>
+									<tr>
+										<td><para  style="string_campos">Gran Total: </para></td>
+										<td><para  style="string_campos_montos">[[(ot['amount_total'])]]</para></td>
+									</tr>
+								</blockTable>
+							
+						</section>	
+
+
+
+  </story>
+</document>

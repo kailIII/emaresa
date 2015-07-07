@@ -1,0 +1,39 @@
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_reportes_form">
+			<field name="name">reportes.triburarios.form</field>
+			<field name="model">reportes.tributarios</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Localizacion Chilena. Reportes S.I.I.">
+            				<field name="type_" required="1"/>
+            				<field name="company_id" required="1"/>
+					<field name="periodos" colspan="4" string="Periodo(s)"/>
+					<field name="si"/>
+					<newline/>
+            				<group colspan="2">
+               					<button type="object" name="create_report" icon="terp-account" string="Crear PDF"
+							confirm=" Este Proceso tomara un tiempo. Deseas continuar"/>
+            				</group>	
+            				<group colspan="2">
+            					<button type="object" name="create_report_excel" icon="terp-go-today" string="Crear Excel"
+							confirm="Este proceso tomara un tiempo. Deseas continuar?"/>
+					</group>				
+				</form>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_reportes_tributarios">
+			<field name="name">reportes_tributarios</field>
+			<field name="res_model">reportes.tributarios</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+
+		
+
+		<menuitem id="reportes_tributarios_menu" name="Reportes contables" parent="account.menu_finance_reporting"/>
+		<menuitem name="Generar Reportes" parent="reportes_tributarios_menu" id="reportes_tributarios_menu_mainform" action="action_reportes_tributarios"/>
+
+	</data>
+</openerp>

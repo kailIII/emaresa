@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Tree -->
+		<record id="view_account_analytic_line_tree_period" model="ir.ui.view">
+			<field name="name">account.analytic.line.tree.period</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id" ref="account.view_account_analytic_line_tree"/>
+			<field name="arch" type="xml">
+				<field name="journal_id" position="after">
+					<field name="period_id"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- Filter -->
+		<record id="view_account_analytic_line_filter_period" model="ir.ui.view">
+			<field name="name">account.analytic.line.period</field>
+			<field name="model">account.analytic.line</field>
+			<field name="inherit_id" ref="account.view_account_analytic_line_filter"/>
+			<field name="arch" type="xml">
+				<xpath expr="//group/filter[@string='Journal']" position="after">
+					<filter string="Period" context="{'group_by':'period_id'}"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

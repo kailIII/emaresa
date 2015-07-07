@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	 <!-- <record id="view_user_account_move_line" model="ir.ui.view">
+	            <field name="name">user.account.move.line</field>
+	            <field name="model">account.move.line</field>
+	            <field name="inherit_id" ref="account.view_account_move_line_form"/>
+	            <field name="arch" type="xml">
+	                <field name="type" position="after">
+	                    <field name="user_id"/>
+	                </field>
+	            </field>
+	 </record> -->
+ 
+    </data>
+</openerp>

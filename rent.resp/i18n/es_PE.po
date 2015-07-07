@@ -1,0 +1,800 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* rent
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-10-15 07:11+0000\n"
+"PO-Revision-Date: 2014-10-15 14:14-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <ffernandez@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es_PE\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: rent
+#: selection:rent.order.line,product_type:0
+msgid "Service"
+msgstr "Servicio"
+
+#. module: rent
+#: field:product.product,rent_time_unity:0
+msgid "Rent Time Unity"
+msgstr "Unidad de Tiempo de Arriendo"
+
+#. module: rent
+#: field:res.partner,legal_representative:0
+msgid "Legal Representative"
+msgstr "Representante legal"
+
+#. module: rent
+#: constraint:rent.order.line:0
+msgid ""
+"You can't use this product type with this product. Check that the product is "
+"marked for rent or for sale. Moreover, Service products must be declared as "
+"'Service' in the product view."
+msgstr ""
+"Usted no puede usar este tipo de producto con este producto. Verifique si el "
+"producto está marcado para arriendos o ventas. Por "
+
+#. module: rent
+#: help:rent.order,description:0
+msgid "A small description of the rent order. Used in the report."
+msgstr "Una pequeña descripción de la Orden de Arriendo. Usado en el reporte"
+
+#. module: rent
+#: help:rent.order.line,unit_price:0
+msgid ""
+"The price per duration or the sale price, depending of the product type. For "
+"rented product, the price is expressed in the product rent unity, not the "
+"order rent unity! BE CAREFUL!"
+msgstr ""
+"El precio por la duración o el precio de venta, depende del tipo de "
+"producto. Para el producto alquilado, el precio se expresa en la unidad de "
+"productos de alquiler, no en la unidad que aparece orden alquiler! Ten "
+"cuidado!"
+
+#. module: rent
+#: field:rent.order.line,unit_price:0
+msgid "Product Unit Price"
+msgstr "Valor de Venta Unitario"
+
+#. module: rent
+#: field:rent.order,total_with_discount:0
+msgid "Untaxed amount (with discount)"
+msgstr "Precio de Venta"
+
+#. module: rent
+#: field:stock.move,rent_line_id:0
+msgid "Rent Order Line"
+msgstr "Lineas de Alquiler"
+
+#. module: rent
+#: field:rent.order,rent_deadline:0
+msgid "Rent Deadline"
+msgstr "Plazo de Renta"
+
+#. module: rent
+#: field:rent.order,price_include:0
+msgid "Price Include"
+msgstr "Precio Incluye"
+
+#. module: rent
+#: field:rent.order,price_include:0
+msgid "Price Include"
+msgstr "Precio Incluye"
+
+#. module: rent
+#: field:rent.order,rent_period:0
+msgid "Rent Period"
+msgstr "Periodo de Renta"
+
+#. module: rent
+#: field:rent.order,price_not_include:0
+msgid "Price no Include"
+msgstr "Precio no Incluye"
+
+#. module: rent
+#: field:rent.order,delivery_deadline:0
+msgid "Delivery Deadline"
+msgstr "Plazo de Envío"
+
+#. module: rent
+#: field:rent.order,delivery_place:0
+msgid "Delivery Place and Equipment Return"
+msgstr "Lugar de Despacho y Retorno de Equipamiento"
+
+#. module: rent
+#: field:rent.order,order_rate:0
+msgid "Rate"
+msgstr "Tasa"
+
+#. module: rent
+#: field:rent.order,order_payment:0
+msgid "Payment"
+msgstr "Pago"
+
+#. module: rent
+#: field:rent.order,offer_period:0
+msgid "Offer Period"
+msgstr "Periodo de Oferta"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Rent Conditions"
+msgstr "Condiciones de Renta"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Sale Conditions"
+msgstr "Condiciones de Venta"
+
+#. module: rent
+#: field:product.product,model:0
+msgid "Model"
+msgstr "Modelo"
+
+#. module: rent
+#: field:product.product,brand:0
+msgid "Brand"
+msgstr "Marca"
+
+#. module: rent
+#: field:product.product,price_type:0
+msgid "Price Type"
+msgstr "Tipo de Precio"
+
+#. module: rent
+#: field:rent.order,description:0
+msgid "Object"
+msgstr "Comentario"
+
+#. module: rent
+#: help:rent.order.line,product_type:0
+msgid ""
+"Select Rent if you want to rent this product. Service means that you will "
+"sell this product with the others rented products. Use it to sell some "
+"services like installation or assurances. Products which are sold will be "
+"invoiced once, with the first invoice."
+msgstr ""
+"Selecciona \"Alquilable\" para aquellos productos que quieras arrendar. Si "
+"seleccionas \"Servicio\" esto significa que puedes añadir servicios "
+"adicionales al producto alquilado. Se utiliza para vender algunos servicios "
+"que gustes como instalación o mantención. Estos productos seleccionados como "
+"\"Servicios\" se incluyen en la primera factura."
+
+#. module: rent
+#: field:rent.order.line,invoicing_date:0
+msgid "Invoicing date"
+msgstr "Fecha de Facturación"
+
+#. module: rent
+#: help:rent.order,shop_id:0
+msgid "The shop where this order was created."
+msgstr "La tienda donde fue creada la orden."
+
+#. module: rent
+#: field:rent.order.line,line_price:0
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: rent
+#: model:product.uom,name:rent.uom_day
+msgid "Day"
+msgstr "Día"
+
+#. module: rent
+#: field:rent.order.line,product_id_uom:0
+msgid "UoM"
+msgstr "Unidad de Medida"
+
+#. module: rent
+#: model:ir.model,name:rent.model_rent_interval
+msgid "rent.interval"
+msgstr "Intervalo de Arriendo"
+
+#. module: rent
+#: field:rent.order,notes:0 view:rent.order.line:0
+#: field:rent.order.line,notes:0
+msgid "Notes"
+msgstr "Notas"
+
+#. module: rent
+#: field:rent.order,total_taxes:0 view:rent.order.line:0
+#: field:rent.order.line,tax_ids:0
+msgid "Taxes"
+msgstr "Impuestos"
+
+#. module: rent
+#: field:product.product,can_be_rent:0
+msgid "Can be rented"
+msgstr "Puede ser Alquilado"
+
+#. module: rent
+#: model:ir.model,name:rent.model_rent_order_line
+msgid "rent.order.line"
+msgstr "Lineas de Alquiler"
+
+#. module: rent
+#: view:rent.order:0 selection:rent.order,state:0
+#: selection:rent.order.line,state:0
+msgid "Ongoing"
+msgstr "En tránsito"
+
+#. module: rent
+#: sql_constraint:rent.order.line:0
+msgid "The price must be superior to 0."
+msgstr "El valor debe ser superior a 0."
+
+#. module: rent
+#: selection:rent.order.line,state:0
+msgid "Cancelled"
+msgstr "Cancelado"
+
+#. module: rent
+#: field:rent.order.line,date_in_shipping:0
+msgid "Return date"
+msgstr "Fecha de Regreso"
+
+#. module: rent
+#: model:rent.interval,name:rent.interval_once
+msgid "Once"
+msgstr "Una Vez"
+
+#. module: rent
+#: field:rent.order,shop_id:0
+msgid "Shop"
+msgstr "Tienda"
+
+#. module: rent
+#: help:rent.order.line,date_in_shipping:0
+msgid "Date of products return."
+msgstr "Fecha de retorno del producto"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Terms and conditions..."
+msgstr "Términos y condiciones..."
+
+#. module: rent
+#: view:rent.order:0 field:rent.order,reference:0
+msgid "Reference"
+msgstr "Referencia"
+
+#. module: rent
+#: model:ir.model,name:rent.model_stock_move
+msgid "Stock Move"
+msgstr "Movimiento stock"
+
+#. module: rent
+#: field:rent.order,total_products_sell_price:0
+msgid "Products sell price"
+msgstr "Valor de venta del producto"
+
+#. module: rent
+#: model:ir.ui.menu,name:rent.rent_order_menu view:rent.order:0
+msgid "Rent Orders"
+msgstr "Ordenes de Alquiler"
+
+#. module: rent
+#: help:rent.order,rent_line_ids:0
+msgid "Lines of this rent order."
+msgstr "Líneas de esta orden de alquiler."
+
+#. module: rent
+#: view:rent.order:0
+msgid "(update)"
+msgstr "(actualizar)"
+
+#. module: rent
+#: view:rent.order:0 selection:rent.order,state:0
+#: selection:rent.order.line,state:0
+msgid "Confirmed"
+msgstr "Confirmado"
+
+#. module: rent
+#: help:rent.order.line,discount:0
+msgid "If you want to apply a discount on this order line."
+msgstr "Si usted desea aplicar un descuento en esta linea de alquiler."
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Confirm"
+msgstr "Confirmar"
+
+#. module: rent
+#: field:rent.order.line,rent_duration_unity:0
+msgid "Duration Unity"
+msgstr "Unidad de Duración"
+
+#. module: rent
+#: help:rent.order,state:0
+msgid ""
+"Gives the state of the rent order :\n"
+"- Quotation\n"
+"- Confirmed\n"
+"- Ongoing (Products have been shipped)\n"
+"- Done (Products have been get back)"
+msgstr ""
+"Indica el estado de la orden de alquiler :\n"
+"- Cotización\n"
+"- Confirmado\n"
+"- En tránsito (Los productos han sido enviados)\n"
+"- Facturable- Terminado (Los productos han regresados)"
+
+#. module: rent
+#: model:ir.actions.act_window,name:rent.rent_action_form view:rent.order:0
+#: field:stock.picking,rent_id:0
+msgid "Rent Order"
+msgstr "Orden de Alquiler"
+
+#. module: rent
+#: field:rent.order.line,out_picking_id:0
+msgid "Output picking id"
+msgstr "Output picking id"
+
+#. module: rent
+#: model:ir.model,name:rent.model_stock_picking
+msgid "Picking List"
+msgstr "Listado de Movimientos de productos"
+
+#. module: rent
+#: field:rent.order,rent_line_ids:0
+msgid "Order Lines"
+msgstr "Líneas de la Orden"
+
+#. module: rent
+#: field:rent.order.line,in_picking_id:0
+msgid "Input picking id"
+msgstr "Input picking id"
+
+#. module: rent
+#: field:rent.order,total:0
+msgid "Untaxed amount"
+msgstr "Valor de Venta"
+
+#. module: rent
+#: model:ir.actions.act_window,help:rent.rent_action_form
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"\t\t\t\t\tClick to create a rent order.\n"
+"\t\t\t\t</p><p>\n"
+"\t\t\t\t\tOpenERP will help you efficiently handle the complete rent flow:\n"
+"\t\t\t\t\t\tRent order, delivery, incoming, invoicing and payment.\n"
+"\t\t\t\t</p>\n"
+"\t\t\t"
+msgstr ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"Presione en crear para generar una nueva Orden de Alquiler.\n"
+"</p><p>\n"
+"OpenERP le ayudará a manejar de manera eficiente el flujo de alquiler completo: \n"
+"Ordenes de Alquiler, despachos, ingresos de productos, la facturación y el pago.\n"
+"</p>\n"
+""
+
+#. module: rent
+#: model:ir.model,name:rent.model_rent_order
+msgid "rent.order"
+msgstr "Orden de Alquiler"
+
+#. module: rent
+#: field:rent.order,total_taxes_with_discount:0
+msgid "Taxes (with discount)"
+msgstr "Impuestos (con descuento)"
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Generate Invoice"
+msgstr "Generar Factura"
+
+#. module: rent
+#: selection:rent.order,state:0 selection:rent.order.line,state:0
+msgid "Done"
+msgstr "Terminada"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Confirm All"
+msgstr "Confirmar todo"
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Generate Advance Invoice"
+msgstr "Generar Factura Anticipada"
+
+#. module: rent
+#: selection:rent.order.line,state:0
+msgid "Awaiting for Product"
+msgstr "Esperando Productos"
+
+#. module: rent
+#: help:rent.order.line,real_unit_price:0
+msgid ""
+"This price correspond to the price of the product, not matter its type. In "
+"the case of a rented product, its equal to the unit price expressed in order "
+"duration unity, and in the case of a service product, to the sale price of "
+"the product."
+msgstr ""
+"Corresponde al valor del producto, no importa su tipo. En el caso de un "
+"producto alquilado, es igual al valor de arriendo diario o correspondiente a "
+"la unidad seleccionada."
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Rent Order Lines"
+msgstr "Líneas de Alquiler"
+
+#. module: rent
+#: help:rent.order.line,out_picking_id:0
+msgid "The picking object which handle Stock->Client moves."
+msgstr ""
+"Maneja Movimientos de Stock --> Movimientos hacia y desde los clientes."
+
+#. module: rent
+#: help:product.product,can_be_rent:0
+msgid "Enable this if you want to rent this product."
+msgstr "Habilitar si desea que este producto pueda ser alquilado."
+
+#. module: rent
+#: field:rent.order.line,discount:0
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: rent
+#: field:rent.order.line,state:0
+msgid "State"
+msgstr "Estado"
+
+#. module: rent
+#: view:rent.order:0 field:rent.order,invoices_ids:0
+msgid "Invoices"
+msgstr "Facturas"
+
+#. module: rent
+#: model:ir.model,name:rent.model_account_invoice_line
+msgid "Invoice Line"
+msgstr "Línea factura"
+
+#. module: rent
+#: model:product.uom,name:rent.uom_month
+msgid "Month"
+msgstr "Mes"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Group by..."
+msgstr "Agrupar por..."
+
+#. module: rent
+#: help:rent.order.line,product_id_uom:0
+msgid "The Unit of Measure of this product."
+msgstr "La Unidad de Medida de este producto."
+
+#. module: rent
+#: view:rent.order:0
+msgid "Untaxed Total"
+msgstr "Total Valor de Venta"
+
+#. module: rent
+#: field:rent.order.line,product_type:0
+msgid "Type of product"
+msgstr "Tipo de Producto"
+
+#. module: rent
+#: view:rent.order:0 field:rent.order,salesman:0
+msgid "Salesman"
+msgstr "Vendedor"
+
+#. module: rent
+#: field:rent.order,invoiced_rate:0
+msgid "Invoiced"
+msgstr "Facturado"
+
+#. module: rent
+#: help:rent.order.line,rent_duration_unity:0
+msgid ""
+"The duration unity, available choices depends of your company configuration."
+msgstr ""
+"La unidad de duración, las opciones habilitadas dependen de la configuración "
+"de la compañía."
+
+#. module: rent
+#: field:rent.interval,not_allowed_duration_unities:0
+msgid "Duration not allowed with this interval !"
+msgstr "La duración no es habilitada en este intervalo !"
+
+#. module: rent
+#: field:rent.order.line,prebillings:0
+msgid "Prebilling?"
+msgstr "Facturación Anticipada?"
+
+#. module: rent
+#: help:rent.order.line,quantity:0
+msgid "How many products to rent."
+msgstr "Cantidad de productos para alquilar."
+
+#. module: rent
+#: view:rent.order:0
+msgid "Commentary"
+msgstr "Comentario"
+
+#. module: rent
+#: field:rent.interval,method:0
+msgid "Method"
+msgstr "Metodos"
+
+#. module: rent
+#: view:product.product:0
+msgid "To Rent"
+msgstr "Alquilar"
+
+#. module: rent
+#: help:rent.order.line,in_picking_id:0
+msgid "The picking object which handle Client->Stock moves."
+msgstr ""
+"Maneja Movimientos de Stock --> Movimientos hacia y desde los clientes."
+
+#. module: rent
+#: help:product.product,rent_price:0
+msgid ""
+"The price is expressed for the duration unity defined in the company "
+"configuration."
+msgstr ""
+"El precio está expresado por la unidad de duración definida en la "
+"configuración de la compañía."
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Rent Information"
+msgstr "Información del Alquiler"
+
+#. module: rent
+#: help:rent.order,discount:0
+msgid "Apply a global discount to this order."
+msgstr "Aplicar descuento global para esta orden."
+
+#. module: rent
+#: field:rent.order.line,last_invoicing_date:0
+msgid "Last invoicing date"
+msgstr "Última fecha de facturación"
+
+#. module: rent
+#: field:rent.order,date_created:0
+msgid "Date"
+msgstr "Fecha"
+
+#. module: rent
+#: view:rent.order.line:0
+msgid "Payment Info"
+msgstr "Información de pago"
+
+#. module: rent
+#: view:rent.order:0 selection:rent.order,state:0
+#: selection:rent.order.line,state:0
+msgid "Quotation"
+msgstr "Cotización"
+
+#. module: rent
+#: view:product.product:0
+msgid "Can be Rent"
+msgstr "Puede ser Alquilado"
+
+#. module: rent
+#: field:rent.order.line,date_end_rent:0
+msgid "Rent end date"
+msgstr "Fecha de termino alquiler"
+
+#. module: rent
+#: field:rent.order,total_with_taxes_with_discount:0
+msgid "Total (with discount)"
+msgstr "Precio de Venta (con descuento)"
+
+#. module: rent
+#: help:rent.order,partner_id:0
+msgid "Select a customer. Only partners marked as customer will be shown."
+msgstr ""
+"Seleccione un cliente. Solo empresas marcadas como clientes serán "
+"desplegados."
+
+#. module: rent
+#: field:rent.order,total_products_buy_price:0
+msgid "Products buy price"
+msgstr "Productos por valor"
+
+#. module: rent
+#: sql_constraint:rent.order:0 sql_constraint:rent.order.line:0
+msgid "Discount must be a value between 0 and 100."
+msgstr "El valor de descuento debe estar entre 0 y 100."
+
+#. module: rent
+#: field:rent.order.line,quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: rent
+#: constraint:product.product:0
+msgid "The Rent price must be a positive value."
+msgstr "El valor de arriendo debe ser positivo."
+
+#. module: rent
+#: help:rent.order,notes:0
+msgid "Enter informations you want about this order."
+msgstr "Ingresar información que necesite sobre esta orden."
+
+#. module: rent
+#: help:rent.order.line,date_begin_rent:0
+msgid "Date of the begin of the leasing."
+msgstr "Fecha del inicio del alquiler."
+
+#. module: rent
+#: field:rent.order,fiscal_position:0
+msgid "Fiscal Position"
+msgstr "Posición Fiscal"
+
+#. module: rent
+#: help:rent.order.line,description:0
+msgid "This description will be used in invoices."
+msgstr "Esta descripción puede ser usado en las facturas."
+
+#. module: rent
+#: model:rent.interval,name:rent.interval_month
+msgid "Monthly (Based on begin date)"
+msgstr "Mensual (Basado en la fecha de inicio)"
+
+#. module: rent
+#: selection:rent.order,state:0 selection:rent.order.line,state:0
+msgid "Billable"
+msgstr "Facturable"
+
+#. module: rent
+#: view:rent.order:0
+msgid "Show invoices"
+msgstr "Muestra facturas"
+
+#. module: rent
+#: model:product.price.type,name:rent.list_price view:product.product:0
+msgid "Rent Price"
+msgstr "Valor de Alquiler"
+
+#. module: rent
+#: sql_constraint:rent.order:0
+msgid "Rent Order reference must be unique !"
+msgstr "La referencia debe ser única !"
+
+#. module: rent
+#: help:rent.order.line,last_invoicing_date:0
+msgid "Last invoicing date."
+msgstr "Ultima fecha de facturación."
+
+#. module: rent
+#: field:rent.order.line,real_unit_price:0
+msgid "Unit Price"
+msgstr "Valor Unitario"
+
+#. module: rent
+#: help:rent.order.line,rent_duration:0
+msgid "The duration of the lease, expressed in selected unit."
+msgstr "Duración del alquiler, expresado en las unidades seleccionadas."
+
+#. module: rent
+#: model:product.pricelist.type,name:rent.pricelist_type_sale
+msgid "Rent Pricelist"
+msgstr "Tarifa de Alquiler"
+
+#. module: rent
+#: model:ir.model,name:rent.model_product_product
+#: field:rent.order.line,product_id:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: rent
+#: field:rent.order.line,description:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: rent
+#: field:rent.order,currency_id:0
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: rent
+#: help:rent.order.line,product_id:0
+msgid "The product you want to rent."
+msgstr "El producto que desea alquilar."
+
+#. module: rent
+#: field:rent.order,journal_id:0
+msgid "Journal"
+msgstr "Journal"
+
+#. module: rent
+#: help:rent.order,invoiced_rate:0
+msgid "Invoiced percent, calculated on the number if invoices confirmed."
+msgstr ""
+"Porcentaje facturado, calculado sobre el número de facturas confirmadas."
+
+#. module: rent
+#: field:product.product,rent_price:0
+msgid "Rent price"
+msgstr "Valor de Alquiler"
+
+#. module: rent
+#: help:rent.order,salesman:0
+msgid "The salesman who handle this order, optional."
+msgstr "Vendedor que maneja esta orden, opcional."
+
+#. module: rent
+#: view:rent.order:0 field:rent.order,partner_id:0
+msgid "Customer"
+msgstr "Cliente"
+
+#. module: rent
+#: field:rent.interval,name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: rent
+#: help:rent.order,reference:0
+msgid "The reference is a unique identifier that identify this order."
+msgstr "La referencia es un identificador único para la orden."
+
+#. module: rent
+#: help:product.product,rent_time_unity:0
+msgid "Rent duration unity in which the price is defined."
+msgstr "Unidad de duración en que el valor está definido."
+
+#. module: rent
+#: field:rent.order.line,date_begin_rent:0
+msgid "Shipping date"
+msgstr "Fecha de Entrega"
+
+#. module: rent
+#: field:rent.order.line,order_id:0
+msgid "Order"
+msgstr "Orden"
+
+#. module: rent
+#: field:rent.order,discount:0
+msgid "Global discount (%)"
+msgstr "Descuento Global (%)"
+
+#. module: rent
+#: help:rent.order.line,prebillings:0
+msgid "Check if you want to prebilling the rent."
+msgstr "Marque esta casilla si quiere generar Factura Anticipada del alquiler."
+
+#. module: rent
+#: field:rent.order,state:0
+msgid "States"
+msgstr "Estados"
+
+#. module: rent
+#: help:rent.order,fiscal_position:0
+msgid "Fiscal Position applied to taxes and accounts."
+msgstr "Posición fiscal aplicada al impuesto y cuentas"
+
+#. module: rent
+#: selection:rent.order.line,product_type:0
+msgid "Rent"
+msgstr "Alquiler"
+
+#. module: rent
+#: model:product.uom,name:rent.uom_year
+msgid "Year"
+msgstr "Año"
+
+#. module: rent
+#: model:product.uom.categ,name:rent.duration_uom_categ
+#: field:rent.order.line,rent_duration:0
+msgid "Duration"
+msgstr "Duración"
+
+#. module: rent
+#: view:rent.order:0 field:rent.order,total_with_taxes:0
+msgid "Total"
+msgstr "Precio Venta"
+

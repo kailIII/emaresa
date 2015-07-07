@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Order Lines Workflow -->
+		<record model="workflow" id="rent_order_lines_workflow">
+			<field name="name">rent.order.lines.basic</field>
+			<field name="osv">rent.order.line</field>
+			<field name="on_create">True</field>
+		</record>
+
+		<!-- States -->
+		<record id="lines_state_draft" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="flow_start">True</field>
+			<field name="name">draft</field>
+		</record>
+		<record id="lines_state_confirmed" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="name">confirmed</field>
+			<field name="kind">function</field>
+			<field name="action">action_confirmed(),
+					action_generate_out_move()</field>
+		</record>
+		<record id="lines_state_awaiting" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="name">awaiting</field>
+			<field name="kind">function</field>
+			<field name="action">write({'state': 'awaiting'}),
+					action_ongoing()</field>
+		</record>
+		<record id="lines_state_ongoing" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="name">ongoing</field>
+			<field name="kind">function</field>
+			<field name="action">action_ongoing()</field>
+			<field name="join_mode">XOR</field>
+		</record>
+		<record id="lines_state_billable" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="name">billable</field>
+			<field name="kind">function</field>
+			<field name="action">action_billable()</field>
+		</record>
+		<record id="lines_state_done" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="flow_stop">True</field>
+			<field name="name">done</field>
+			<field name="kind">function</field>
+			<field name="action">generate_last_invoice()</field>
+		</record>
+
+
+
+<!--<field name="name">execution</field>
+<field name="kind">subflow</field>
+<field name="subflow_id" search="[('osv','=','mro.order')]"/>-->
+		<record id="lines_state_cancelled" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_lines_workflow"/>
+			<field name="name">cancelled</field>
+			<field name="kind">function</field>
+			<field name="action">action_cancel()</field>
+			<field name="flow_stop">True</field>
+		</record>
+		
+
+		<!-- Transitions -->
+		<record id="draft_to_confirmed_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_draft"/>
+			<field name="act_to" ref="lines_state_confirmed"/>
+			<field name="signal">on_confirm_clicked</field>
+		</record>
+		<record id="confirmed_to_awaiting_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_confirmed"/>
+			<field name="act_to" ref="lines_state_awaiting"/>
+			<field name="signal">confirmed_to_awaiting</field>
+		</record>
+		<record id="confirmed_to_ongoing_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_confirmed"/>
+			<field name="act_to" ref="lines_state_ongoing"/>
+			<field name="trigger_model">stock.move</field>
+			<field name="trigger_expr_id">[line.id for line in out_picking_id.move_lines]</field>
+			<field name="condition">test_out_shipping_done()</field>
+		</record>
+		<record id="ongoing_to_billable_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_ongoing"/>
+			<field name="act_to" ref="lines_state_billable"/>
+			<field name="trigger_model">stock.move</field>
+			<field name="trigger_expr_id">[line.id for line in (in_picking_id.move_lines if in_picking_id else [])]</field>
+			<field name="condition">test_in_shipping_done()</field>
+		</record>
+		<record id="ongoing_to_awaiting_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_ongoing"/>
+			<field name="act_to" ref="lines_state_awaiting"/>
+			<field name="signal">ongoing_to_awaiting</field>
+		</record>
+		<record id="awaiting_to_billable_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_awaiting"/>
+			<field name="act_to" ref="lines_state_billable"/>
+			<field name="trigger_model">stock.move</field>
+			<field name="trigger_expr_id">[line.id for line in (in_picking_id.move_lines if in_picking_id else [])]</field>
+			<field name="condition">test_in_shipping_billable()</field>
+		</record>
+		<record id="awaiting_to_done_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_awaiting"/>
+			<field name="act_to" ref="lines_state_done"/>
+			<field name="trigger_model">stock.move</field>
+			<field name="trigger_expr_id">[line.id for line in (in_picking_id.move_lines if in_picking_id else [])]</field>
+			<field name="condition">test_in_shipping_done()</field>
+		</record>
+		<record id="billable_to_done_lines" model="workflow.transition">
+			<field name="act_from" ref="lines_state_billable"/>
+			<field name="act_to" ref="lines_state_done"/>
+			<field name="signal">on_billable_to_done</field>
+		</record>
+
+
+
+
+
+		<record id="draft_to_cancelled" model="workflow.transition">
+			<field name="act_from" ref="lines_state_draft"/>
+			<field name="act_to" ref="lines_state_cancelled"/>
+			<field name="signal">on_cancel_clicked</field>
+		</record>
+		<!--<record id="ongoing_to_billable_1" model="workflow.transition">
+			<field name="act_from" ref="state_ongoing" />
+			<field name="act_to" ref="state_billable"/>
+			<field name="signal">on_force_stop_clicked</field>
+		</record>-->
+		<record id="ongoing_to_cancel" model="workflow.transition">
+			<field name="act_from" ref="lines_state_ongoing"/>
+			<field name="act_to" ref="lines_state_cancelled"/>
+			<field name="signal">on_cancel_clicked</field>
+		</record>
+	</data>
+
+	<data>
+		<!-- Order Workflow -->
+		<record model="workflow" id="rent_order_workflow">
+			<field name="name">rent.order.basic</field>
+			<field name="osv">rent.order</field>
+			<field name="on_create">True</field>
+		</record>
+
+		<!-- States -->
+		<record id="order_state_draft" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_workflow"/>
+			<field name="flow_start">True</field>
+			<field name="name">draft</field>
+		</record>
+		<record id="order_state_confirmed" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_workflow"/>
+			<field name="name">confirmed</field>
+			<field name="kind">function</field>
+			<field name="action">write({'state': 'confirmed'})</field>
+		</record>
+		<record id="order_state_done" model="workflow.activity">
+			<field name="wkf_id" ref="rent_order_workflow"/>
+			<field name="flow_stop">True</field>
+			<field name="name">done</field>
+			<field name="kind">function</field>
+			<field name="action">write({'state': 'done'})</field>
+		</record>
+
+		<!-- Transaction -->
+		<record id="draft_to_confirmed_order" model="workflow.transition">
+			<field name="act_from" ref="order_state_draft"/>
+			<field name="act_to" ref="order_state_confirmed"/>
+			<field name="signal">on_confirmed_clicked</field>
+		</record>
+		<record id="confirmed_to_done_order" model="workflow.transition">
+			<field name="act_from" ref="order_state_confirmed"/>
+			<field name="act_to" ref="order_state_done"/>
+			<field name="signal">on_confirm_to_done</field>
+		</record>
+	</data>
+</openerp>

@@ -1,0 +1,372 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+    <menuitem id="payroll_peru_menu" name="Payroll Peru" parent="hr.menu_hr_configuration" sequence="1" groups="base.group_hr_manager"/>
+    <record model="ir.ui.view" id="view_rem_afp_form">
+        <field name="name">rem.afp.form</field>
+        <field name="model">rem.afp</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.afp">
+                <field name="name" select="1"/>
+                <separator string="Porcentajes" colspan="8"/>
+                <field name="commission" select="0"/>
+                <field name="commission2" select="0"/>
+                <field name="contribution" select="0"/>
+                <field name="SIS" select="0"/>
+                <field name="tope" select="0"/>
+                <field name="comision_tope" select="0"/>
+		<field name="Total_AFP" select="0"/>
+                <separator string="Empleados" colspan="4"/>
+                <field name="employee_ids" colspan="4" nolabel="1" select="0"/>
+                <field name="cod_previred" select="0"/>
+               
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_afp_tree">
+        <field name="name">rem.afp.tree</field>
+        <field name="model">rem.afp</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.afp">
+                <field name="name"/>
+                <field name="commission"/>
+                <field name="contribution"/>
+                <field name="SIS"/>
+                <field name="cod_previred"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_afp">
+        <field name="name">AFPs</field>
+        <field name="res_model">rem.afp</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    
+    <menuitem name="Mantenedor AFP" id="menu_rem_afp" parent="payroll_peru_menu" action="action_rem_afp"/>
+       
+    <record model="ir.ui.view" id="view_rem_health_form">
+        <field name="name">rem.health.form</field>
+        <field name="model">rem.health</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.health">
+                <field name="name" select="1"/>
+                <field name="tax_cap" select="2"/>
+                <separator string="Empleados" colspan="4"/>
+                <field name="employee_ids" colspan="4" nolabel="1" select="0"/>
+
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_health_tree">
+        <field name="name">rem.health.tree</field>
+        <field name="model">rem.health</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.health">
+                <field name="name"/>
+                <field name="tax_cap"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_health">
+        <field name="name">rem_health</field>
+        <field name="res_model">rem.health</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+<menuitem name="Mantenedor Salud" id="menu_rem_health" parent="payroll_peru_menu"  action="action_rem_health"/>
+
+<record model="ir.ui.view" id="view_rem_neto_form">
+        <field name="name">rem.neto.form</field>
+        <field name="model">rem.neto</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.neto">
+                <field name="name" select="1"/>
+                <field name="period_id" select="2"/>
+                <field name="monto_neto" select="0"/>
+                <field name="employee_ids"/>
+
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_neto_tree">
+        <field name="name">rem.neto.tree</field>
+        <field name="model">rem.neto</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="employee_ids">
+                <field name="employee_ids"/>
+                <field name="monto_neto"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_neto">
+        <field name="name">Retencion</field>
+        <field name="res_model">rem.neto</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    
+    <menuitem name="Retenciones" id="menu_rem_neto" parent="payroll_peru_menu"  action="action_rem_neto"/>
+    
+    <record model="ir.ui.view" id="view_rem_otro_tree">
+        <field name="name">rem.health.tree</field>
+        <field name="model">rem.health</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.health">
+                <field name="name"/>
+                <field name="tax_cap"/>
+
+            </tree>
+        </field>
+    </record>
+    
+  
+    <record model="ir.ui.view" id="view_rem_tax_segment_form">
+        <field name="name">Impuesto 5ta Categoria</field>
+        <field name="model">rem.tax_segment</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.tax_segment">
+            	<field name="name" select="1"/>
+            	<separator string="Topes" colspan="4"/>
+                <field name="UIT1"/>
+     		<field name="UIT2"/>
+     		<field name="UIT3"/>
+     		<field name="UIT4"/>
+                <separator string="Empleados" colspan="4"/>
+                <field name="employee_ids" colspan="4" nolabel="1" select="0"/>
+
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_tax_segment_tree">
+        <field name="name">rem.tax_segment.tree</field>
+        <field name="model">rem.tax_segment</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.tax_segment">
+                <field name="UIT1"/>
+                <field name="UIT2"/>
+                <field name="UIT3"/>
+                <field name="UIT4"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_tax_segment">
+        <field name="name">Topes impuestos</field>
+        <field name="res_model">rem.tax_segment</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="M. Tabla Impuesto" id="menu_rem_tax_segment" parent="payroll_peru_menu" action="action_rem_tax_segment" groups="base.group_hr_manager"/>
+
+        
+    <record model="ir.ui.view" id="view_rem_indicator_form">
+        <field name="name">Conceptos</field>
+        <field name="model">rem.indicator</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.indicator">
+                <field name="name" select="1"/>
+            <group string="Conceptos Remunerativos" colspan="4">
+                <field name="asig_fam"/>
+                <field name="comisiones"/>
+                <field name="vacac"/>
+                <field name="gratif"/>
+                <field name="bonific2"/>
+                <field name="bonos"/>
+            </group>
+            <group string="Conceptos No Remunerativos" colspan="4">
+                <field name="refrigerio"/>
+                <field name="bonific"/>
+                <field name="cts"/>
+                <field name="otros"/>
+            </group>
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_indicator_tree">
+        <field name="name">Conceptos</field>
+        <field name="model">rem.indicator</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.indicator">
+                
+                <field name="refrigerio"/>
+                <field name="bonific"/>
+                <field name="cts"/>
+                <field name="otros"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_indicator">
+        <field name="name">Conceptos</field>
+        <field name="res_model">rem.indicator</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Concep Rem y No Rem" id="menu_rem_indicator" parent="payroll_peru_menu" action="action_rem_indicator"/>
+
+     
+    <record model="ir.ui.view" id="view_rem_tiempos_form">
+        <field name="name">Tiempos</field>
+        <field name="model">rem.tiempos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.tiempos">
+                <field name="name" select="1"/>
+                <field name="diasmes" select="0"/>
+                <field name="dias_trab" select="0"/>
+                <field name="trab_real" select="0"/>
+                <field name="hrs_trab" select="0"/>
+                <field name="hrs_ext" select="0"/>
+                <field name="fact_he" select="0"/>
+                                
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_tiempos_tree">
+        <field name="name">Tiempos</field>
+        <field name="model">rem.tiempos</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.tiempos">
+                <field name="name"/>
+                <field name="diasmes" select="0"/>
+                <field name="dias_trab" select="0"/>
+                <field name="hrs_trab" select="0"/>
+                
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_tiempos">
+        <field name="name">Tiempos</field>
+        <field name="res_model">rem.tiempos</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Tiempos" id="menu_rem_tiempos" parent="payroll_peru_menu" action="action_rem_tiempos"/>
+   
+   
+       <record model="ir.ui.view" id="view_rem_adelantos_form">
+        <field name="name">Tiempos</field>
+        <field name="model">rem.adelantos</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.adelantos">
+                <field name="name" select="1"/>
+                <field name="otros" select="0"/>
+                <field name="adelantos" select="0"/>
+                <field name="dep_cts" select="0"/>
+                <field name="quincena" select="0"/>
+                                                
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_adelantos_tree">
+        <field name="name">Tiempos</field>
+        <field name="model">rem.adelantos</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.adelantos">
+                <field name="name"/>
+                <field name="otros" select="0"/>
+                <field name="adelantos" select="0"/>
+                <field name="dep_cts" select="0"/>
+                <field name="quincena" select="0"/>
+                
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_adelantos">
+        <field name="name">Adelantos</field>
+        <field name="res_model">rem.adelantos</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="Adelantos" id="menu_rem_adelantos" parent="payroll_peru_menu" action="action_rem_adelantos"/>
+        
+    <record model="ir.ui.view" id="view_rem_voluntary_saving_form">
+        <field name="name">Entidades Prestadoras de Salud</field>
+        <field name="model">rem.voluntary_saving</field>
+        <field name="type">form</field>
+        <field name="arch" type="xml">
+            <form string="rem.voluntary_saving">
+                <field name="name" select="1"/>
+                <field name="Value" select="0"/>
+                <field name="currency" select="0"/>
+                <field name="Star_Date" select="0"/>
+                <field name="employee_ids" select="0"/>
+
+            </form>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="view_rem_voluntary_saving_tree">
+        <field name="name">Entidades Prestadoras de Salud</field>
+        <field name="model">rem.voluntary_saving</field>
+        <field name="type">tree</field>
+        <field name="arch" type="xml">
+            <tree string="rem.voluntary_saving">
+                <field name="name"/>
+                <field name="Value"/>
+                <field name="currency"/>
+                
+                <field name="employee_ids"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="action_rem_voluntary_saving">
+        <field name="name">Entidades Prestadoras de Salud</field>
+        <field name="res_model">rem.voluntary_saving</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem name="M. Ent. Prestad. de Salud" id="menu_rem_voluntary_saving" parent="payroll_peru_menu" action="action_rem_voluntary_saving"/>
+
+
+
+        <record id="hr_employee_view_form_l10n_pe_hr_payroll" model="ir.ui.view">
+            <field name="name">hr.employee.view.form.l10n_pe_hr_payroll</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <page string="Personal Information" position="after">
+                   <page string="Remuneraciones" groups="base.group_hr_manager">
+                           <group string="Datos para remuneraciones" colspan="8">
+                                <field name="tiempos_id" />
+                                <field name="afp_id" />
+                                <field name="type_commis"/>
+                                <field name="health_ids" string="Sistema de Salud" placeholder="Sistema Público Essalud"> </field>
+                                <field name="voluntary_saving_ids" string="Entidades Prestadoras de Salud" placeholder="Según corresponda a cada empleado"> </field>
+                                <field name="currency" string="Unidad Impositiva Tributaria"> </field>
+                                <field name="indicator" string="Conceptos Remunerativos y No Remunerativos" placeholder="Crear o Editar para cada empleado"> </field>
+                                <field name="tax_segment_id" string="Topes"> </field>
+                                <field name="rem_neto_id" string="Retenciones" placeholder="Seleccionar y Editar si corresponde"> </field>
+                                <field name="adelantos_id" string="Adelantos" placeholder="Ej: Quincena, Anticipos, otros"> </field>
+                                <field name="codigo" string="Codigo Empleado" placeholder="Unico por empleado"> </field>
+                                <field name="no_cusp" string="No C.U.S.P."> </field>
+                           </group>
+                    </page>
+ 
+                </page>
+                </field>
+        </record>
+
+        
+</data>
+</openerp>

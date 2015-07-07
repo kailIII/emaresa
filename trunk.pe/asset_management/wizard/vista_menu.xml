@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>	 
+    <record model="ir.ui.view" id="account_asset_asset_depreciation">
+            <field name="name">account.asset.asset.depreciation</field>
+            <field name="model">account.asset.asset.depreciar</field>
+            <field name="arch" type="xml">
+                <form string="Control de Activos" version="7.0">
+                <button type="object" name="compute_depreciation_board"   string="Depreciar Activos" class="oe_highlight"/>
+                   
+                    <group colspan="2"> 
+        			<field name="state_d"/>
+            		</group>	
+                    <div>
+                        <p>
+                          Click para Depreciar activos.
+                        </p><p>
+                          TU puedes depreciar todos los activos desde este boton
+                        </p>
+                    </div>
+                </form>
+            </field>
+        </record>
+        
+  	<record id="action_control_activos" model="ir.actions.act_window">
+        <field name="name">Calcular Amortización</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.asset.asset.depreciar</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="account_asset_asset_depreciation"/>
+    	<field name="usage">menu</field>
+        <field name="target">new</field>
+    </record>
+    
+    <menuitem parent="account_asset.menu_finance_assets" id="form_control_activos" action="action_control_activos"/>
+  
+  </data>
+</openerp>

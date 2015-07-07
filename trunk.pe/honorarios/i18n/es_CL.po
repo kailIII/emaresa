@@ -1,0 +1,841 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* honorarios
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20130618-231044\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-08-21 02:06+0000\n"
+"PO-Revision-Date: 2014-09-09 04:02-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <dacevedo@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Español Chile\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: honorarios
+#: help:account.fees,move_id:0
+msgid "Link to the automatically generated Journal Items."
+msgstr "Enlaza a los apuntes contables de forma automática."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Ballot Fees Date"
+msgstr "Fecha"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "My Ballot Fees"
+msgstr "Mis boletas de honorarios"
+
+#. module: honorarios
+#: field:account.fees.tax,tax_code_id:0
+msgid "Tax Code"
+msgstr "Tax Code"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Group By..."
+msgstr "Agrupar Por..."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Impuesto"
+msgstr "Impuesto"
+
+#. module: honorarios
+#: field:account.fees.tax,account_id:0
+msgid "Tax Account"
+msgstr "Cuenta de Impuesto"
+
+#. module: honorarios
+#: field:account.fees.line,uos_id:0
+msgid "Unit of Measure"
+msgstr "Unidad de Medida"
+
+#. module: honorarios
+#: field:account.fees.tax,tax_amount:0
+msgid "Tax Code Amount"
+msgstr "Monto de Impuesto"
+
+#. module: honorarios
+#: field:account.fees.tax,base_code_id:0
+msgid "Base Code"
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Validar Recibo"
+msgstr "Validar Recibo"
+
+#. module: honorarios
+#: field:account.fees,message_unread:0
+msgid "Unread Messages"
+msgstr "Mensajes sin Leer"
+
+#. module: honorarios
+#: field:account.fees,company_id:0 field:account.fees.line,company_id:0
+#: field:account.fees.tax,company_id:0
+msgid "Company"
+msgstr "Compañía"
+
+#. module: honorarios
+#: field:account.fees,amount_untaxed:0
+msgid "Bruto"
+msgstr "Bruto"
+
+#. module: honorarios
+#: model:ir.actions.act_window,help:honorarios.action_ballot_fees
+msgid ""
+"<p class=\"oe_view_nocontent_create\">\n"
+"\t\t\t\tClick to register a ballot fees from a worker.\n"
+"\t\t\t</p><p>\n"
+"\t\t\t\tYou can control the ballot fees from your employee according to\n"
+"\t\t\t\tthe worker received.\n"
+"\t\t\t</p>\n"
+"\t\t"
+msgstr ""
+"Click para registrar una boleta de honorarios para un trabajador.\n"
+"En este menú se pueden controlar las boletas de honorarios de sus empleados."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Open/Paid Ballot Fees"
+msgstr "Boletas de Honorarios Abiertas/Pagadas"
+
+#. module: honorarios
+#: help:account.fees.line,origin:0
+msgid "Reference of the document that produced this invoice."
+msgstr "Referencia el documento que creó la boleta de honorarios."
+
+#. module: honorarios
+#: field:account.fees.tax,base:0
+msgid "Base"
+msgstr "Base"
+
+#. module: honorarios
+#: view:account.fees:0 field:account.fees,user_id:0
+msgid "Salesperson"
+msgstr "Vendedor"
+
+#. module: honorarios
+#: view:account.fees:0 view:account.fees.line:0
+msgid "Recibo de Honorarios"
+msgstr "Recibo de Honorarios"
+
+#. module: honorarios
+#: help:account.fees,reconciled:0
+msgid ""
+"It indicates that the ballot fees has been paid and the journal entry of the "
+"ballot fees has been reconciled\t\twith one or several journal entries of "
+"payment."
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: honorarios
+#: help:account.fees,account_id:0
+msgid "The partner account used for this ballot fees."
+msgstr "La cuenta del beneficiario de esta boleta de honorarios."
+
+#. module: honorarios
+#: field:account.fees,account_id:0 field:account.fees.line,account_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: honorarios
+#: selection:account.fees,state:0
+msgid "Paid"
+msgstr "Pagada"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Debe"
+msgstr "Debe"
+
+#. module: honorarios
+#: field:account.fees,message_ids:0
+msgid "Messages"
+msgstr "Mensajes"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Haber"
+msgstr "Haber"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Pagos"
+msgstr "Pagos"
+
+#. module: honorarios
+#: help:account.fees.tax,sequence:0
+msgid "Gives the sequence order when displaying a list of ballot fees tax."
+msgstr ""
+"Da la secuencia del orden en que se despliegan los impuestos de las boletas "
+"de honorarios."
+
+#. module: honorarios
+#: field:account.fees.line,price_subtotal:0 field:account.fees.tax,amount:0
+msgid "Amount"
+msgstr "Monto"
+
+#. module: honorarios
+#: field:account.fees.line,fees_id:0
+msgid "Ballot Fees Reference"
+msgstr "Referencia"
+
+#. module: honorarios
+#: selection:account.fees,state:0
+msgid "Cancelled"
+msgstr "Cancelada"
+
+#. module: honorarios
+#: help:account.fees,payment_term:0
+msgid ""
+"If you use payment terms, the due date will be computed automatically at the "
+"generation of accounting entries. If you keep the payment term and the due "
+"date empty, it means direct payment. The payment term may compute several "
+"due dates, for example 50% now, 50% in one month."
+msgstr ""
+"If you use payment terms, the due date will be computed automatically at the "
+"generation of accounting entries. If you keep the payment term and the due "
+"date empty, it means direct payment. The payment term may compute several "
+"due dates, for example 50% now, 50% in one month."
+
+#. module: honorarios
+#: model:ir.model,name:honorarios.model_mail_compose_message
+msgid "Email composition wizard"
+msgstr "Asistente de redacción de correo electrónico."
+
+#. module: honorarios
+#: help:account.fees,message_unread:0
+msgid "If checked new messages require your attention."
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Neto"
+msgstr "Neto"
+
+#. module: honorarios
+#: view:account.fees.line:0 field:account.fees.tax,fees_id:0
+#: model:ir.model,name:honorarios.model_account_fees_line
+msgid "Ballot Fees Line"
+msgstr "Lineas de boletas de honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Proveedor"
+msgstr "Proveedor"
+
+#. module: honorarios
+#: field:account.fees,period_id:0
+msgid "Force Period"
+msgstr "Forzar Periodo"
+
+#. module: honorarios
+#: field:account.fees.line,account_analytic_id:0
+msgid "Analytic Account"
+msgstr "Cuenta Analítica"
+
+#. module: honorarios
+#: help:account.fees,message_summary:0
+msgid ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+msgstr ""
+"Holds the Chatter summary (number of messages, ...). This summary is "
+"directly in html format in order to be inserted in kanban views."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "(update)"
+msgstr "(actualizar)"
+
+#. module: honorarios
+#: view:account.fees:0 field:account.fees,partner_id:0
+#: field:account.fees.line,partner_id:0
+#: model:ir.model,name:honorarios.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: honorarios
+#: view:account.fees:0 field:account.fees,payment_ids:0
+msgid "Payments"
+msgstr "Pagos"
+
+#. module: honorarios
+#: field:account.fees,move_id:0
+msgid "Journal Entry"
+msgstr "Asiento Contable"
+
+#. module: honorarios
+#: help:account.fees,period_id:0
+msgid "Keep empty to use the period of the validation(ballot fees) date."
+msgstr "Mantenga en blanco para usar la fecha del periodo de la validación."
+
+#. module: honorarios
+#: field:account.fees,payment_term:0
+msgid "Payment Terms"
+msgstr "Terminos de Pago"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Número"
+msgstr "Número"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Period"
+msgstr "Periodo"
+
+#. module: honorarios
+#: field:account.fees.tax,account_analytic_id:0
+msgid "Analytic account"
+msgstr "Cuenta Analítica"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Unpaid Invoices"
+msgstr "Boletas de Honorarios Impagas"
+
+#. module: honorarios
+#: field:account.fees,message_follower_ids:0
+msgid "Followers"
+msgstr "Seguidores"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Documento Origen"
+msgstr "Documento Origen"
+
+#. module: honorarios
+#: field:account.fees,sent:0
+msgid "Sent"
+msgstr "Enviada"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Recibo Honorarios"
+msgstr "Recibo Honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Recompute taxes and total"
+msgstr "Recalcular impuestos y total"
+
+#. module: honorarios
+#: field:account.fees,reconciled:0
+msgid "Paid/Reconciled"
+msgstr "Pagada/Conciliada"
+
+#. module: honorarios
+#: sql_constraint:account.fees:0
+msgid "Ballot Fees Number must be unique per Company!"
+msgstr "El número de la boleta de honorarios debe ser único por compañía!"
+
+#. module: honorarios
+#: field:account.fees,fiscal_position:0
+msgid "Fiscal Position"
+msgstr "Posición Fiscal"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Recibo/Boleta de Honorarios"
+msgstr "Recibo/Boleta de Honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Plazos de pago"
+msgstr "Plazos de pago"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Compañia"
+msgstr "Compañía"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Diario"
+msgstr "Diario"
+
+#. module: honorarios
+#: field:account.fees.tax,manual:0
+msgid "Manual"
+msgstr "Manual"
+
+#. module: honorarios
+#: help:account.fees,date_fees:0
+msgid "Keep empty to use the current date"
+msgstr "Mantenga vacío para utilizar fecha actual"
+
+#. module: honorarios
+#: field:account.fees.tax,factor_base:0
+msgid "Multipication factor for Base code"
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Producto"
+msgstr "Producto"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Saldo Pendiente"
+msgstr "Saldo Pendiente"
+
+#. module: honorarios
+#: field:account.fees.line,discount:0
+msgid "Discount (%)"
+msgstr "Descuento (%)"
+
+#. module: honorarios
+#: help:account.fees,sent:0
+msgid "It indicates that the ballot fees has been sent."
+msgstr "Indica que la boleta de honorarios ha sido enviada."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cancelar Recibo Honorarios"
+msgstr "Cancelar Recibo Honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Monto"
+msgstr "Monto"
+
+#. module: honorarios
+#: field:account.fees,currency_id:0
+msgid "Currency"
+msgstr "Moneda"
+
+#. module: honorarios
+#: field:account.fees,amount_tax:0 field:account.fees.line,fees_line_tax_id:0
+msgid "Retencion"
+msgstr "Retención"
+
+#. module: honorarios
+#: field:account.fees,fees_number:0
+msgid "Fees Number"
+msgstr "Número de Boleta"
+
+#. module: honorarios
+#: view:account.fees.tax:0
+msgid "Tax Codes"
+msgstr "Código de Impuesto"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Monto Neto"
+msgstr "Monto Neto"
+
+#. module: honorarios
+#: field:account.fees,comment:0
+msgid "Additional Information"
+msgstr "Información Adicional"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cambiar a Borrador"
+msgstr "Cambiar a Borrador"
+
+#. module: honorarios
+#: field:account.fees,origin:0 field:account.fees.line,origin:0
+msgid "Source Document"
+msgstr "Documento de Origen"
+
+#. module: honorarios
+#: model:ir.actions.act_window,name:honorarios.act_account_journal_2_account_fees_opened
+msgid "Unpaid Ballot Fees"
+msgstr "Boletas de Honorarios Impagas"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Recibos en Borrador"
+msgstr "Recibos en Borrador"
+
+#. module: honorarios
+#: help:account.fees.tax,tax_code_id:0
+msgid "The tax basis of the tax declaration."
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cuenta"
+msgstr "Cuenta"
+
+#. module: honorarios
+#: view:account.fees:0 selection:account.fees,state:0
+msgid "Draft"
+msgstr "Borrador"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Draft Ballot Fees"
+msgstr "Boletas de Honorarios en Borrador"
+
+#. module: honorarios
+#: help:account.fees,residual:0
+msgid "Remaining amount due."
+msgstr "Monto restante."
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Información Adicional"
+msgstr "Información Adicional"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Número Recibo"
+msgstr "Número Recibo"
+
+#. module: honorarios
+#: view:account.fees:0 field:account.fees,state:0
+msgid "Status"
+msgstr "Estado"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Fecha Pago"
+msgstr "Fecha Pago"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Total Amount"
+msgstr "Monto Total"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Impuestos"
+msgstr "Impuestos"
+
+#. module: honorarios
+#: field:account.fees,tax_line:0
+msgid "Tax Lines"
+msgstr "Lineas de Impuesto"
+
+#. module: honorarios
+#: field:account.fees,message_is_follower:0
+msgid "Is a Follower"
+msgstr "Es Seguidor"
+
+#. module: honorarios
+#: field:account.fees,internal_number:0
+msgid "Ballot Fees Number"
+msgstr "Número"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Estado"
+msgstr "Estado"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Lineas Recibo de Honorarios"
+msgstr "Lineas Recibo de Honorarios"
+
+#. module: honorarios
+#: field:account.fees,date_fees:0
+msgid "Ballor Fees Date"
+msgstr "Fecha"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Search Recibo Honorarios"
+msgstr "Búsqueda de Boleta de Honorarios"
+
+#. module: honorarios
+#: field:account.fees.tax,name:0
+msgid "Tax Description"
+msgstr "Descripción de Impuesto"
+
+#. module: honorarios
+#: help:account.fees.line,account_id:0
+msgid "The income or expense account related to the selected product."
+msgstr "Cuenta de gasto o ingreso del producto seleccionado."
+
+#. module: honorarios
+#: field:account.fees,message_summary:0
+msgid "Summary"
+msgstr "Resumen"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Unpaid"
+msgstr "Impaga"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Lineas de Impuesto"
+msgstr "Lineas de Impuesto"
+
+#. module: honorarios
+#: help:account.fees.tax,base_code_id:0
+msgid "The account basis of the tax declaration."
+msgstr ""
+
+#. module: honorarios
+#: field:account.fees,residual:0
+msgid "Balance"
+msgstr "Balance"
+
+#. module: honorarios
+#: field:account.fees.line,quantity:0
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: honorarios
+#: field:account.fees.tax,base_amount:0
+msgid "Base Code Amount"
+msgstr "Monto Base"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Residual Amount"
+msgstr "Monto Restante"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cantidad"
+msgstr "Cantidad"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Forzar periodo"
+msgstr "Forzar periodo"
+
+#. module: honorarios
+#: view:account.fees:0
+#: model:ir.actions.act_window,name:honorarios.act_res_partner_2_account_fees_opened
+#: model:ir.actions.act_window,name:honorarios.action_ballot_fees
+#: model:ir.ui.menu,name:honorarios.menu_action_fees
+#: field:res.partner,fees_ids:0
+msgid "Ballot Fees"
+msgstr "Boletas de Honorarios"
+
+#. module: honorarios
+#: field:account.fees,number:0
+msgid "Number"
+msgstr "Número"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Documento de Origen"
+msgstr "Documento de Origen"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Numero Asiento"
+msgstr "Número Asiento"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cuenta Bancaria"
+msgstr "Cuenta Bancaria"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Moneda"
+msgstr "Moneda"
+
+#. module: honorarios
+#: help:account.fees.line,sequence:0
+msgid "Gives the sequence of this line when displaying the ballot fees."
+msgstr ""
+
+#. module: honorarios
+#: help:account.fees,internal_number:0
+msgid ""
+"Unique number of the ballot fees, computed automatically when the ballot "
+"fees is created."
+msgstr ""
+"Número único de la boleta de honorarios, se genera automáticamente cuando la "
+"boleta es creada."
+
+#. module: honorarios
+#: field:account.fees,amount_total:0
+msgid "Total a Pagar"
+msgstr "Total a Pagar"
+
+#. module: honorarios
+#: selection:account.fees,state:0
+msgid "Open"
+msgstr "Abierta"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Importe"
+msgstr "Importe"
+
+#. module: honorarios
+#: view:account.fees.tax:0
+msgid "Manual Ballot Fees Taxes"
+msgstr "Impuesto Manual de Boleta"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Referencia"
+msgstr "Referencia"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Otra Información"
+msgstr "Otra Información"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Responsible"
+msgstr "Responsable"
+
+#. module: honorarios
+#: field:account.fees.line,price_unit:0
+msgid "Unit Price"
+msgstr "Precio Unitario"
+
+#. module: honorarios
+#: field:account.fees.line,product_id:0
+msgid "Product"
+msgstr "Producto"
+
+#. module: honorarios
+#: help:account.fees,origin:0
+msgid "Reference of the document that produced this ballot fees."
+msgstr "Referencia al documento del cual procede la boleta de honorarios."
+
+#. module: honorarios
+#: field:account.fees,name:0 field:account.fees.line,name:0
+msgid "Description"
+msgstr "Descripción"
+
+#. module: honorarios
+#: help:account.fees,fees_number:0
+msgid "The reference of this ballot fees as provided by the lender."
+msgstr "Referencia de la boleta de honorarios."
+
+#. module: honorarios
+#: field:account.fees.tax,factor_tax:0
+msgid "Multipication factor Tax code"
+msgstr "Factor de multiplicación del impuesto"
+
+#. module: honorarios
+#: view:account.fees:0 field:account.fees,journal_id:0
+msgid "Journal"
+msgstr "Diario"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Número Documento"
+msgstr "Número Documento"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Fecha Recibo"
+msgstr "Fecha Recibo"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Asiento"
+msgstr "Asiento"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Linea Recibo Honorarios"
+msgstr "Linea Recibo Honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Usuario"
+msgstr "Usuario"
+
+#. module: honorarios
+#: field:account.fees,partner_bank_id:0
+msgid "Bank Account"
+msgstr "Cuenta Bancaria"
+
+#. module: honorarios
+#: help:account.fees,partner_bank_id:0
+msgid ""
+"Bank Account Number to which the ballot fees will be paid. A Company bank "
+"account if this is a Customer Ballot Fees,\t\totherwise a Partner bank "
+"account number."
+msgstr ""
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Unidad de Medida"
+msgstr "Unidad de Medida"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Precio Unitario"
+msgstr "Precio Unitario"
+
+#. module: honorarios
+#: model:ir.model,name:honorarios.model_account_fees_tax
+msgid "Ballot Fees Tax"
+msgstr "Impuesto de Boleta de Honorarios"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Descripción"
+msgstr "Descripción"
+
+#. module: honorarios
+#: help:account.fees,message_ids:0
+msgid "Messages and communication history"
+msgstr "Mensajes e Historial de comunicación"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Cuenta Analítica"
+msgstr "Cuenta Analítica"
+
+#. module: honorarios
+#: field:account.fees,move_lines:0
+msgid "Entry Lines"
+msgstr ""
+
+#. module: honorarios
+#: field:account.fees.line,sequence:0 field:account.fees.tax,sequence:0
+msgid "Sequence"
+msgstr "Secuencia"
+
+#. module: honorarios
+#: model:ir.model,name:honorarios.model_account_fees
+msgid "Honorarios"
+msgstr "Honorarios"
+
+#. module: honorarios
+#: help:account.fees,state:0
+msgid ""
+" * The 'Draft' status is used when a user is encoding a new and unconfirmed "
+"Invoice. \t\t\t\n"
+"* The 'Open' status is used when user create ballot fees,a ballot fees "
+"number is generated.Its in open status till user does not pay ballot fees. \t"
+"\t\t\n"
+"* The 'Paid' status is set automatically when the ballot fees is paid. Its "
+"related journal entries may or may not be reconciled. \t\t\t\n"
+"* The 'Cancelled' status is used when user cancel ballot fees."
+msgstr ""
+
+#. module: honorarios
+#: field:account.fees,fees_line:0
+msgid "Ballot Fees Lines"
+msgstr "Líneas de Boletas de Honorarios"
+
+#. module: honorarios
+#: field:account.fees,check_total:0
+msgid "Verification Total"
+msgstr "Verificación de Total"
+
+#. module: honorarios
+#: view:account.fees:0
+msgid "Untaxed Amount"
+msgstr "Neto"

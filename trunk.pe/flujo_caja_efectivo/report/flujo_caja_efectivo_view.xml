@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<openerp>
+<data>
+	<!-- Liquidacion Form report definition -->
+	<record id="flujo_caja" model="ir.actions.report.xml">
+		<field name="name">Flujo de Caja</field>
+		<field name="type">ir.actions.report.xml</field>
+		<field name="model">reporte_flujo_caja_efectivo</field>
+		<field name="report_name">report_flujo_caja_efectivo</field>
+		<field name="report_type">aeroo</field>
+		<field name="in_format">oo-ods</field>
+		<field name="out_format">7</field>
+		<field name="parser_loc">flujo_caja_efectivo/report/flujo_caja_efectivo.py</field>
+		<field name="report_rml">flujo_caja_efectivo/report/flujo_caja_efectivo.ods</field>
+		<field name="parser_state">loc</field>
+		<field name="tml_source">file</field>
+	</record>	
+</data>
+</openerp>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<openerp>
+   <data>
+        <record id="view_analisis_cuenta_gastos_form" model="ir.ui.view">
+            <field name="name">reporte_analisis_cuenta_gastos.form</field>
+            <field name="model">reporte_analisis_cuenta_gastos</field>
+            <field name="arch" type="xml">
+                <form string="Analisis de Cuenta de Gastos" version="7.0">
+			<group colspan="6" col="6">
+				<field name="report_xml_id" widget="selection" domain="[('report_name','=','report_analisis_cuenta_gastos')]" invisible="1"/>
+				<field name="cuentas" string="Cuentas" domain="[('user_type','=','Gasto'),('type','!=','view')]"/>
+				<field name="compania_id" string="Compañías"  widget="selection"/>
+			</group>
+			<footer>
+				<button name="generate_report" class="oe_highlight" string="Imprimir" type="object"/>
+				or
+				<button string="Cancelar" class="oe_link" special="cancel" />
+			</footer>
+                </form>
+            </field>
+        </record>
+        
+	<record id="action_analisis_cuenta_gastos_reports" model="ir.actions.act_window">
+		<field name="name">Analisis de Cuenta de Gastos</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">reporte_analisis_cuenta_gastos</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+    <menuitem id="gestion_menu" name="Informes Gestion" parent="account.menu_finance"/>
+    <menuitem id="menu_analisis_cuenta_gastos" name="Analisis de Cuenta de Gastos" parent="gestion_menu"/>
+	<menuitem name="Generar" parent="menu_analisis_cuenta_gastos" id="menu_analisis_cuenta_gastos_generar"  action="action_analisis_cuenta_gastos_reports"/>
+    </data>
+</openerp>

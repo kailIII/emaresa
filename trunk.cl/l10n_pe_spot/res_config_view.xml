@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+        <record model="ir.ui.view" id="view_account_config_settings">
+            <field name="name">account.config.settings.inherit.spot</field>
+            <field name="inherit_id" ref="account.view_account_config_settings"/>
+            <field name="model">account.config.settings</field>
+            <field name="priority">40</field>
+            <field name="arch" type="xml">
+                <xpath expr="//group[@name='bank_cash']/div" position="inside">
+                    <div>
+                        <label for="spot_bank_journal_id"/>
+                        <field name="spot_bank_journal_id" placeholder="e.g. BCP Cta Cte Soles" class="oe_inline"/>
+                        <label for="detraction_journal_id"/>
+                        <field name="detraction_journal_id" placeholder="e.g. BN Cta de Detracciones" class="oe_inline"/>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+	</data>
+</openerp>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="stock_picking_fields" model="ir.ui.view">
+			<field name="name">stock.picking.fields.form</field>
+			<field name="model">stock.picking</field>
+			<field name="inherit_id" ref="stock.view_picking_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/h1" position="before">
+					<h1>
+						<field name="number" class="oe_inline" placeholder="Number Office Guide"/>
+					</h1>
+				</xpath>
+				<xpath expr="//sheet/notebook/page/group[last()]" position="inside">
+					<group string="Reference Payment Voucher"> <!-- Referencia Comprobante de Pago -->
+						<field name="proof_type"/>
+						<field name="proof_number"/>
+					</group>
+					<separator/>
+					<group string="Reason for Transfer" colspan="4"> <!--Motivo del Traslado-->
+						<group>
+							<field name="sale"/>
+							<field name="sale_sac"/>
+							<field name="purchase"/>
+						</group>
+						<group>
+							<field name="despatch"/>
+							<field name="refound"/>
+							<field name="between_establishments"/>
+						</group>
+						<group>
+							<field name="for_processing"/>
+							<field name="pick_processed"/>
+							<field name="itinerant_issuer"/>
+						</group>
+						<group>
+							<field name="primary_zone"/>
+							<field name="import"/>
+							<field name="export"/>
+						</group>
+					</group>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="stock_picking_out_fields" model="ir.ui.view">
+			<field name="name">stock.picking.out.fields.form</field>
+			<field name="model">stock.picking.out</field>
+			<field name="inherit_id" ref="stock.view_picking_out_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//sheet/h1" position="before">
+					<h1>
+						<field name="number" class="oe_inline" placeholder="Number Office Guide"/>
+					</h1>
+				</xpath>
+				<xpath expr="//sheet/notebook/page/group[last()]" position="inside">
+					<group string="Reference Payment Voucher"> <!-- Referencia Comprobante de Pago -->
+						<field name="proof_type"/>
+						<field name="proof_number"/>
+					</group>
+					<separator/>
+					<group string="Reason for Transfer" colspan="4"> <!--Motivo del Traslado-->
+						<group>
+							<field name="sale"/>
+							<field name="sale_sac"/>
+							<field name="purchase"/>
+						</group>
+						<group>
+							<field name="despatch"/>
+							<field name="refound"/>
+							<field name="between_establishments"/>
+						</group>
+						<group>
+							<field name="for_processing"/>
+							<field name="pick_processed"/>
+							<field name="itinerant_issuer"/>
+						</group>
+						<group>
+							<field name="primary_zone"/>
+							<field name="import"/>
+							<field name="export"/>
+						</group>
+					</group>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

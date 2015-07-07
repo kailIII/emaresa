@@ -1,0 +1,12 @@
+
+Versión 0.2
+
+	Se corrigen errores por duplicidad de onchange en account_id y se borra vista de invoice_supplier_form por no ser necesaria.
+	Se corrige función onchange por duplicidad, se hereda onchange_account_id del modelo agregando el campo necesario para hacer requerida
+la distribución analítica.
+
+Versión 0.1
+ 
+	Se crean las validaciones para que pueda quede requerida la distribución analítica de la linea de la factura en caso de que el código del
+tipo de la cuenta seleccionada sea 'Egresos' o 'Ingresos'.
+

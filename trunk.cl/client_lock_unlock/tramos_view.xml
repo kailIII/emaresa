@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="tramos_view_tree" model="ir.ui.view">
+			<field name="name">tramos.view.tree</field>
+			<field name="model">tramos</field>
+			<field name="arch" type="xml">
+				<tree string="Tramos">
+					<field name="code"/>
+					<field name="amount"/>
+					<field name="days"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+			
+		<record id="tramos_view_form" model="ir.ui.view">
+			<field name="name">tramos.view.form</field>
+			<field name="model">tramos</field>
+			<field name="arch" type="xml">
+				<form string="Tramos">
+					<group>
+						<group>
+							<field name="analytic_id"/>
+							<field name="code" attrs="{'invisible': [('code','=',False)]}"/>
+						</group>
+						<group>
+							<field name="amount"/>
+							<field name="days"/>
+							<field name="state"/>
+						</group>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="tramos_view_search" model="ir.ui.view">
+			<field name="name">tramos.search</field>
+			<field name="model">tramos</field>
+			<field name="arch" type="xml">
+				<search string="Search Tramos">
+					<field name="analytic_id"/>
+					<field name="code"/>
+					<group expand="0" string="Group By...">
+						<filter string="Code" context="{'group_by': 'code'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+
+		<record id="action_tramos" model="ir.actions.act_window">
+			<field name="name">Tramos</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">tramos</field>
+			<field name="view_type">form</field>
+			<field name="search_view_id" ref="tramos_view_search"/>
+			<field name="view_id" ref="tramos_view_tree"/>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">
+					Click to add a business rules.
+				</p><p>
+					This is the list of business rules for locking and unlocking customer
+				</p>
+			</field>
+		</record>
+
+		<menuitem name="Business Rules" id="menu_tramos_root" parent="account.menu_finance_configuration"/>
+		<menuitem name="Function Lock/Unlock" id="menu_tramos_action" action="action_tramos" parent="menu_tramos_root"/>
+
+	</data>
+</openerp>

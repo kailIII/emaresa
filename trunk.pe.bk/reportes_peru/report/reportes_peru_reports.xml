@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<!-- Invoice report definition -->
+		<record id="invoice_report" model="ir.actions.report.xml">
+			<field name="name">Factura</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.invoice</field>
+			<field name="report_name">Factura</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">reportes_peru/report/template_picking_out.py</field>
+			<field name="report_rml">reportes_peru/report/template_invoice.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+	
+		<!-- This record add the print button for the asiento report -->
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.invoice']" name="models"/>
+			<field name="name">Factura</field>
+			<field eval="'ir.actions.report.xml,'+str(invoice_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+
+<!--		<report auto="False" id="account_move_report" model="account.move" name="account_move_report"
+			rml="account_report/report/template_account_move.rml" string="Comprobante Contable" usage="default"/>-->
+
+
+		<!-- Ballot report definition -->
+		<record id="ballot_report" model="ir.actions.report.xml">
+			<field name="name">Boleta</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.invoice</field>
+			<field name="report_name">Boleta</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">reportes_peru/report/template_picking_out.py</field>
+			<field name="report_rml">reportes_peru/report/template_ballot.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+	
+		<!-- This record add the print button for the cobranza report -->
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.invoice']" name="models"/>
+			<field name="name">Boleta</field>
+			<field eval="'ir.actions.report.xml,'+str(ballot_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+
+<!--		<report auto="False" id="account_voucher_report" model="account.voucher" name="account_voucher_report"
+			rml="account_report/report/template_account_voucher.rml" string="Comprobante Cobranza" usage="default"/>-->
+
+		<!-- Stock Picking Out report definition -->
+		<record id="stock_picking_out_report" model="ir.actions.report.xml">
+			<field name="name">Guía de Remisión</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">stock.picking.out</field>
+			<field name="report_name">Guía Remisión</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">reportes_peru/report/template_picking_out.py</field>
+			<field name="report_rml">reportes_peru/report/template_picking_out.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+	
+		<!-- This record add the print button for the cargo report -->
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['stock.picking.out']" name="models"/>
+			<field name="name">Guía Remisión</field>
+			<field eval="'ir.actions.report.xml,'+str(stock_picking_out_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>
+
+		<!-- Purchase Order Definition -->
+
+		<report string="Imprimir Factura" model="account.invoice" auto="True" name="peru_invoice"
+				rml="addons/reportes_peru/report/peru_invoice.rml" id="peru_invoice"/>
+
+		<report string="IMPRIMIR Guia de Remisión" model="stock.picking.out" auto="True" name="stock_picking_out_report_rml"
+				rml="addons/reportes_peru/report/stock_picking_out_report.rml" id="stock_picking_out_report_rml"/>
+	</data>
+</openerp>

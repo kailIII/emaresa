@@ -1,6 +1,12 @@
 .settings/
 *.dmp
 
+log/
+backup/
+junk/
+
+.oer.pid
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]

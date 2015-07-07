@@ -1,0 +1,56 @@
+
+Versión 2.3
+
+	Se agregan campos faltantes en order de renta y se cambia ruta en template de campos movidos al "product". En estos momentos, el template de cotización posee todos sus campos.
+
+Versión 2.2.1
+
+	Se corrige nombre de reporte cotización por rent_quotation.
+
+Versión 2.2
+
+	Se añade rml de cotización y contrato de arriendo.
+	Se crean nuevos campos para datos restantes en cotización.
+	Se eliminan reportes en odt y se quita dependencia de report_aeroo_ooo.
+
+Versión 2.1.4
+
+	Se cambia a usuario admin (id=1) en cron para compatibilidad.
+	Se modifica error de retorno nulo en onchange de producto si no pilla la unidad.
+	
+Versión 2.1.3
+
+	Se corrige estados de orden de arriendo, ahora termina al terminar todas las líneas de arriendo.
+
+Versión 2.1.2
+
+	Se corrige error al devolver un producto de forma anticipada luego de facturar anticipadamente el último periodo.
+
+Versión 2.1.1
+
+	Se elimina la vista calendario de la acción de la orden de arriendo.
+	se corrige traducción de vista ayuda de ordenes de arriendo (solo visible si no existen ordenes)
+
+Versión 2.1
+
+	Se agregan traducciones de Español Perú.
+	Se corrigen errores de facturación anticipada en caso de volver el producto antes de tiempo.
+	Se elimina la línea de descripción extra que había sobre las líneas de arriendo.
+	Se modifica el estado en que se pueden agregar líneas nuevas, ahora solo se cierra cuando llega a estado terminado la orden.
+
+Versión 2.0
+
+	Se termina el flujo del arriendo por cada línea y la orden queda dependiente de los estados de éstas.
+	Se agrega funcionalidad de facturación adelantada.
+	Se agrega función de facturar en el momento que se desee.
+	Se quita restricción de dirección al partner.
+	Se agrega comentario con fechas y a que orden pertecese la factura.
+	Se añade estado para arriendos con facturación anticipada al flujo.
+	Se alade en producto la funcionalidad de que a productos ya creados les agrega la unidad de medida en caso de que se quieran comenza a arrendar.
+	Se corrige cron de facturación mensual para compatibilidad con facturación anticipada.
+	Se añaden funciones de creación de facturas para estado "Facturable" y de facturación anticipada o cuando el cliente quiera.
+
+Versión 1.1
+
+	Se modifica el .py para compatibilidad sin openlib.
+

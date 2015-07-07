@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_protest_check_form">
+		        <field name="name">protest_cause.form</field>
+			<field name="model">l10n_cl_emaresa_protest_check</field>
+			<field name="arch" type="xml">
+				<form string="cheques" version="7.0">
+					<group colspan="4">
+    						<group>
+							<field name="code"/>
+						</group>
+						<group>
+							<field name="name"/>
+						</group>                   
+					</group>
+				</form>    
+			</field>
+		</record>   
+
+		<record model="ir.ui.view" id="view_protest_check_tree">
+			<field name="name">protest_cause.tree</field>
+			<field name="model">l10n_cl_emaresa_protest_check</field>
+			<field name="arch" type="xml">
+				<tree string="cheques">
+					<field name="code"/>
+					<field name="name"/>
+				</tree>    
+			</field>
+		</record>  
+
+		<record model="ir.actions.act_window" id="action_protest_cause">
+			<field name="name">Protest Cause</field>
+			<field name="view_id" ref="view_protest_check_tree"/>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">l10n_cl_emaresa_protest_check</field>
+			<field name="view_type">form</field>
+	
+		</record>   
+
+		<menuitem id="protest_cause_menu" name="Protest Cause" parent="account.menu_configuration_misc" action="action_protest_cause"/>
+       
+   	</data>
+</openerp>
+                                                                                                                                                                                     
+
+
+
+
+

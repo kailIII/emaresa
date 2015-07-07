@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="account_invoice_detracciones_form" model="ir.ui.view">
+			<field name="name">account.invoice.detracciones.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<field name="payment_term" position="before">
+			       		<field name="subject_to_detrac"
+						groups="l10n_pe_detracciones.group_detracciones_admin,l10n_pe_detracciones.group_detracciones_users"/>
+					<field name="detrac_id" domain="[('type','=','sales')]"
+						groups="l10n_pe_detracciones.group_detracciones_admin,l10n_pe_detracciones.group_detracciones_users"
+						attrs="{'invisible': [('subject_to_detrac','=',False)],
+							'required': [('subject_to_detrac','=',True)]}"/>
+				</field>
+			</field>
+		</record>
+
+		<record id="account_invoice_supplier_detracciones_form" model="ir.ui.view">
+			<field name="name">account.invoice.supplier.detracciones.form</field>
+			<field name="model">account.invoice</field>
+			<field name="type">form</field>
+			<field name="inherit_id" ref="account.invoice_supplier_form"/>
+			<field name="arch" type="xml">
+				<field name="reference" position="after">
+		       			<field name="subject_to_detrac"
+						group="l10n_pe_detracciones.group_detracciones_admin,l10n_pe_detracciones.group_detracciones_users"/>
+					<field name="detrac_id" domain="[('type','=','purchases')]"
+						group="l10n_pe_detracciones.group_detracciones_admin,l10n_pe_detracciones.group_detracciones_users"
+						attrs="{'invisible': [('subject_to_detrac','=',False)],
+							'required': [('subject_to_detrac','=',True)]}"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

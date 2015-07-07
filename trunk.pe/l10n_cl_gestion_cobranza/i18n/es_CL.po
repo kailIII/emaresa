@@ -1,0 +1,94 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_gestion_cobranza
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-09 17:36+0000\n"
+"PO-Revision-Date: 2014-06-09 13:39-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <dacevedo@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Español Chile\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Rut Cliente"
+msgstr "Rut Cliente"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Referencia"
+msgstr "Referencia"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Journal"
+msgstr "Diario"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+#: model:ir.actions.act_window,name:l10n_cl_gestion_cobranza.action_gestion_cobranza
+#: model:ir.ui.menu,name:l10n_cl_gestion_cobranza.menu_gestion_cobranza
+msgid "Gestion Cobranza"
+msgstr "Gestión Cobranza"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Period"
+msgstr "Período"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Numero Documento"
+msgstr "Número Documento"
+
+#. module: l10n_cl_gestion_cobranza
+#: field:account.move.line,date_to:0
+msgid "Date to"
+msgstr "Fecha Hasta"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Group By..."
+msgstr "Agrupar por..."
+
+#. module: l10n_cl_gestion_cobranza
+#: field:account.move.line,date_from:0
+msgid "Date from"
+msgstr "Fecha Desde"
+
+#. module: l10n_cl_gestion_cobranza
+#: model:ir.model,name:l10n_cl_gestion_cobranza.model_account_move_line
+msgid "Journal Items"
+msgstr "Apuntes contables"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Correlativo"
+msgstr "Correlativo"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Cliente"
+msgstr "Cliente"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Tipo Documento"
+msgstr "Tipo Documento"
+
+#. module: l10n_cl_gestion_cobranza
+#: view:account.move.line:0
+msgid "Cuenta Contable"
+msgstr "Cuenta Contable"

@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<document filename="solicitud_cargo_personal.pdf">
+	<template pageSize="(612.0,792.0)" title="Solicitud de Cargo Cta. Cte. Personal" author="David Acevedo Toledo (Fedoro)" allowSplitting="20">
+		<pageTemplate id="first">
+			<frame id="first" x1="57.0" y1="37.0" width="498" height="678"/>
+		</pageTemplate>
+	</template>
+	<stylesheet>
+		<blockTableStyle id="Standard_Outline">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="TOP"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla2">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla1">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="1,0" stop="-2,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<initialize>
+			<paraStyle name="all" alignment="justify"/>
+		</initialize>
+		<paraStyle name="Header" fontName="Helvetica-Bold" fontSize="15.0" leading="15" spaceAfter="5" alignment="CENTER"/>
+		<paraStyle name="Header_sub" fontName="Helvetica-Bold" fontSize="15.0" leading="15" alignment="CENTER" spaceAfter="60.0"/>
+		<paraStyle name="Default" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+		<paraStyle name="Standard" fontName="Helvetica" leftIndent="23.0" spaceBefore="6.0" spaceAfter="4.0" fontSize="12.0"/>
+		<paraStyle name="P1" fontName="Helvetica-Bold" fontSize="15.0" leading="10" spaceAfter="18" alignment="CENTER"/>
+		<paraStyle name="P4" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P5" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P6" fontName="Helvetica" fontSize="8.0" leading="10" alignment="JUSTIFY"/>
+		<paraStyle name="P7" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P9" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER"/>
+	</stylesheet>
+	<story>
+		<para style="Default">[[repeatIn(objects,'o')]]</para>
+		<illustration>
+			<image width="100.0" height="40.0" x="-10" y="-30">[[(company.logo) or ' ']]</image>
+		</illustration>
+		<para style="Header">Solicitud de Cargo</para>
+		<para style="Header_sub">Cta. Cte. Personal</para>
+		<blockTable colWidths="126.0,176.0,84.0,123.0" style="Tabla2">
+			<tr>
+				<td>
+					<para style="P7">Trabajador</para>
+				</td>
+				<td>
+					<para style="P4">[[o.line_id[0].partner_id.name]]</para>
+				</td>
+				<td>
+					<para style="P7">N°</para>
+				</td>
+				<td>
+					<para style="P4">[[o.name]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">R.U.T.</para>
+				</td>
+				<td>
+					<para style="P4">[[formatRut(o.line_id[0].partner_id.vat)]]</para>
+				</td>
+				<td>
+					<para style="P7">Fecha</para>
+				</td>
+				<td>
+					<para style="P4">[[formatLang(o.date, date=True)]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">Solicita se le Conceda</para>
+				</td>
+				<td>
+					<para style="P4">[[o.ref]]</para>
+				</td>
+				<td>
+					<para style="P7">División</para>
+				</td>
+				<td>
+					<para style="P4">[[division(o.line_id)]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">Monto Solicitado</para>
+				</td>
+				<td>
+					<para style="P4">[[formatLang(montos(o.line_id), digits=0)]]</para>
+				</td>
+				<td>
+					<para style="P7">Vencimiento</para>
+				</td>
+				<td>
+					<para style="P4">[[formatLang(vencimiento(o.line_id), date=True)]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">Destino del Cargo</para>
+				</td>
+				<td>
+					<para style="P4">[[cuenta(o.line_id)]]</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="P7">FORMA DE PAGO :</para>
+		<para style="P7">
+			<font face="Helvetica">[[o.narration]]</font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="P6">El trabajador autoriza descontar de su remuneración el monto solicitado según la forma de pago estipulada y también autoriza a la empresa descontar de cualquier pago extraordinario que reciba el saldo adeudado a dicha fecha, tales como gratificaciones, aguinaldos, etc.</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="75.0,116.0,116.0,116.0,75.0" style="Tabla1">
+			<tr>
+				<td>
+					<para style="P9">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P9">V°B° JEFE DIRECTO</para>
+				</td>
+				<td>
+					<para style="P9">V°B° CONTABILIDAD</para>
+				</td>
+				<td>
+					<para style="P9">V°B° FINANZAS</para>
+				</td>
+				<td>
+					<para style="P9">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white">
+						      
+						</font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white">
+							    
+						</font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white">
+							  
+						</font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="P5">_____________________________________________</para>
+		<para style="P9">FIRMA TRABAJADOR</para>
+		<para style="P5">[[o.line_id[0].partner_id.name]]</para>
+		<para style="P5">[[formatRut(o.line_id[0].partner_id.vat)]]</para>
+	</story>
+</document>
+

@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<document filename="localizacionChilena">
+  <template  pageSize="(842.0,595.0)" title="Localizacion Chilena" author="OpenDrive Ltda. (contacto@opendrive.cl)" allowSplitting="20" >
+    <pageTemplate id="first" >  	    	
+    	<frame id="first"  x1="40.0" y1="28.0" width="786" height="450"/>
+        <pageGraphics>		
+                <setFont name="Helvetica" size="8"/>
+                <fill color="black"/>                
+                <stroke color="black"/>
+		
+		<drawString x="50" y="560">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.rut)]]</drawString>
+		<drawString x="50" y="550">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.x_giro)]]</drawString>
+		<drawString x="50" y="540">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.address[0].street)]]</drawString>
+
+<setFont name="Helvetica" size="12"/>
+		<drawString x="393" y="490">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and 'Libro Diario') ]]</drawString>		
+
+<setFont name="Helvetica" size="7"/>
+		<drawString x="10.1cm" y="27.3cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and _get_period(data['form']['periodos'])) ]]</drawString>
+
+<setFont name="Helvetica" size="8"/>
+
+                <lines>36 22.0 796 22.0 </lines>        
+                <lines>36 515 796 515</lines>            
+			
+            <drawCentredString x="393" y="10"> Pagina: <pageNumber/>  </drawCentredString>
+        </pageGraphics>	
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>	
+     <initialize>    
+		<paraStyle name="all" alignment="justify"/>
+    </initialize>    	
+    <paraStyle name="string_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="1.5"/>    
+    <paraStyle name="integer_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="5.3" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="1.5"/>    	
+    <paraStyle name="string_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="1.5"/>    
+    <paraStyle name="integer_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="1.5"/>    	
+    <paraStyle name="string_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="string_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="2.5" spaceAfter="0.0"/>    
+    <paraStyle name="string_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="4.9" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>
+
+    <paraStyle name="string_campos_montos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>    
+    <paraStyle name="string_titulos_montos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>            
+    <images/>
+  </stylesheet>
+  <story>       
+
+<section>
+	  <para>[[ repeatIn(_get_move(data['form']['periodos'],data['form']['company_id']), 'o') ]]</para> 
+      <blockTable rowHeights="0.55cm" colWidths="50,80,200,195,145,65,65">
+        <tr>
+            <td>    
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Fecha')]]</para>
+                <para textColor="black" style="string_campos_c">[[ (o['campo']=='data' and o['fecha'])]]</para>    
+            </td>
+            <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Comprobante')]]</para>
+                <para textColor="black" style="string_campos_c">[[ cortar( (o['campo']=='data' and o['comprobante'] ), 20) ]]</para>
+            </td>
+    	    <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Documento')]]</para>    
+                <para textColor="black" style="string_campos_c">[[ cortar( (o['campo']=='data' and o['glosa'] ), 55) ]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Cuenta')]]</para>
+                <para textColor="black" style="string_campos_c">[[ cortar( (o['campo']=='data' and o['cuenta']), 45)]]</para>   
+            </td>
+            <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Glosa')]]</para>  
+                <para textColor="black" style="string_campos_c">[[ (o['campo']=='data' and o['documento'])]]</para>    
+				<para textColor="black" style="string_titulos">[[ (o['campo']=='titulos3' and o['comprobante'])]]</para>    
+            </td>
+            <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Debe')]]</para>  
+                <para textColor="black" style="integer_campos_c">[[ (o['campo']=='data' and o['debe'])]]</para>
+                <para textColor="black" style="integer_titulos">[[ (o['campo']=='titulos3' and o['debe'])]]</para>      
+            </td>
+            <td>
+                <para textColor="black" style="string_titulos">[[ (o['campo']=='titulos' and 'Haber')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['campo']=='data' and o['haber'])]]</para>   
+                <para textColor="black" style="integer_titulos">[[ (o['campo']=='titulos3' and o['haber'])]]</para>
+            </td>
+        </tr>
+      </blockTable>    
+</section>
+  </story>
+  Pagina <pageNumber /> / <getName id="lastPage" default="0" />
+</document>

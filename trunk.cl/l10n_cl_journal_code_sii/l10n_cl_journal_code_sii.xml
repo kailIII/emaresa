@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	 <record id="view_account_journal_tipo_doc_sii" model="ir.ui.view">
+	            <field name="name">account.journal.form.tipo_doc_sii</field>
+	            <field name="model">account.journal</field>
+	            <field name="inherit_id" ref="account.view_account_journal_form"/>
+	            <field name="arch" type="xml">
+	                <field name="type" position="after">
+	                    <field name="code_sii" string="Código SII"/>
+	                    <field name="type_tax" string="Tipo de Doc. Exento o Afecto"/>
+	                </field>
+	            </field>
+	 </record>
+ 
+    </data>
+</openerp>

@@ -1,0 +1,91 @@
+import datetime
+from report import report_sxw
+from report.report_sxw import rml_parse
+
+class Parser(report_sxw.rml_parse):
+	def __init__(self, cr, uid, name, context):
+		super(Parser, self).__init__(cr, uid, name, context)
+		
+		self.localcontext.update({
+			'imponibles': self.imponibles,
+                        't_imponibles': self.t_imponibles,
+			'noimponibles': self.noimponibles,
+			't_noimponibles': self.t_noimponibles,
+                        't_haberes': self.t_haberes,
+			'descuentos': self.descuentos,
+                        't_descuentos': self.t_descuentos,
+                        'liquido': self.liquido,
+                        'vales': self.vales,
+                        'pago': self.pago,
+	        })
+
+	def imponibles(self, objeto):
+		imponibles = []
+		for obj in objeto:
+			if obj.sequence >= 0 and obj.sequence < 49:
+				imponibles.append(obj)
+		return imponibles
+
+	def t_imponibles(self, objeto):
+		t_imponibles = []
+		for obj in objeto:
+			if obj.sequence == 50:
+				t_imponibles.append(obj)
+		return t_imponibles
+
+	def noimponibles(self, objeto):
+		noimponibles = []
+		for obj in objeto:
+			if obj.sequence > 51 and obj.sequence < 98:
+				noimponibles.append(obj)
+		return noimponibles
+
+	def t_noimponibles(self, objeto):
+		t_noimponibles = []
+		for obj in objeto:
+			if obj.sequence == 99:
+				t_noimponibles.append(obj)
+		return t_noimponibles
+
+	def t_haberes(self, objeto):
+		t_haberes = []
+		for obj in objeto:
+			if obj.sequence == 100:
+				t_haberes.append(obj)
+		return t_haberes
+
+	def descuentos(self, objeto):
+		descuentos = []
+		for obj in objeto:
+			if obj.sequence > 101 and obj.sequence < 184:
+				descuentos.append(obj)
+		return descuentos
+
+	def t_descuentos(self, objeto):
+		t_descuentos = []
+		for obj in objeto:
+			if obj.sequence == 185:
+				t_descuentos.append(obj)
+		return t_descuentos
+
+	def liquido(self, objeto):
+		liquido = []
+		for obj in objeto:
+			if obj.sequence == 190:
+				liquido.append(obj)
+		return liquido
+
+	def vales(self, objeto):
+		vales = []
+		for obj in objeto:
+			if obj.sequence == 195:
+				vales.append(obj)
+		return vales
+
+	def pago(self, objeto):
+		pago = []
+		for obj in objeto:
+			if obj.sequence == 200:
+				pago.append(obj)
+		return pago
+

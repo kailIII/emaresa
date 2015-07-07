@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+        <record model="ir.ui.view" id="view_account_invoice_asset_category_form">
+            <field name="name">account.invoice.line.category.form</field>
+            <field name="model">account.invoice.line</field>
+            <field name="inherit_id" ref="account_asset.view_account_invoice_asset_form"/>
+            <field name="arch" type="xml">
+                <field name="asset_category_id" position="after">
+                    <field name="asset_category_tributario_id"/>
+                </field>
+		<field name="asset_category_id" position="replace">
+			<field name="asset_category_id" string="Asset IFRS Category"/>
+		</field>
+            </field>
+        </record>
+        
+<!--       <record model="ir.ui.view" id="view_invoice_asset_category_form_line_tree">
+            <field name="name">account.invoice.supplier.category.form</field>
+            <field name="model">account.invoice</field>
+            <field name="inherit_id" ref="account_asset.view_invoice_asset_category"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='invoice_line']/tree/field[@name='asset_category_id']" position="after">
+			<field name="asset_category_tributario_id"
+				domain="[('accounting_type','=','tributario')]"/>
+                </xpath>
+		<xpath expr="//field[@name='invoice_line']/tree/field[@name='asset_category_id']" position="replace">
+			<field name="asset_category_id" string="Asset IFRS Category"
+				domain="[('accounting_type','=','ifrs')]"/>
+		</xpath>
+            </field>
+        </record>-->
+
+    </data>
+</openerp>

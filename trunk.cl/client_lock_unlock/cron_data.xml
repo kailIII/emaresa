@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<!-- Cron de bloqueo de clientes por no pago de cuentas por tramos de morosidad. -->
+		<record forcecreate="True" id="ir_cron_client_lock_tramos_scheduler_action" model="ir.cron">
+			<field name="name">Bloqueo de Clientes por Tramos</field>
+			<field name="user_id" ref="base.user_root"/>
+			<field eval="False" name="active"/>
+			<field name="interval_number">24</field>
+			<field name="interval_type">hours</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall"/>
+			<field name="model">res.partner.lock_unlock_wizard</field>
+			<field name="function">_lock_client</field>
+			<field name="args">()</field>
+		</record>
+
+		<!-- Cron de bloqueo por no pago de facturas en cheques y contado. -->
+		<record forcecreate="True" id="ir_cron_client_lock_check_and_invoice_scheduler_action" model="ir.cron">
+			<field name="name">Bloqueo de Clientes por Facturas Contado y Cheques Vencidos</field>
+			<field name="user_id" ref="base.user_root"/>
+			<field eval="False" name="active"/>
+			<field name="interval_number">24</field>
+			<field name="interval_type">hours</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall"/>
+			<field name="model">res.partner.lock_unlock_wizard</field>
+			<field name="function">_lock_client_payment_type</field>
+			<field name="args">()</field>
+		</record>
+
+		<!-- Cron de bloqueo por fecha hasta -->
+		<record forcecreate="True" id="ir_cron_client_lock_date_to_scheduler_action" model="ir.cron">
+			<field name="name">Bloqueo de Clientes por campo Fecha Hasta</field>
+			<field name="user_id" ref="base.user_root"/>
+			<field eval="False" name="active"/>
+			<field name="interval_number">24</field>
+			<field name="interval_type">hours</field>
+			<field name="numbercall">-1</field>
+			<field eval="False" name="doall"/>
+			<field name="model">res.partner.lock_unlock_wizard</field>
+			<field name="function">_lock_client_to_date</field>
+			<field name="args">()</field>
+		</record>
+	</data>
+</openerp>

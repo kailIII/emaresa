@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='view_company_form'>
+			<field name='name'>res.company.form.inherit.pe.spot</field>
+			<field name='model'>res.company</field>
+			<field name='inherit_id' ref='l10n_pe_base.view_company_form'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//group[@name='l10n_pe']" position="attributes">
+					<attribute name="invisible">0</attribute>
+				</xpath>
+				<xpath expr="//group[@name='l10n_pe']" position="inside">
+					<field name="spot_bank_journal_id"/>
+					<field name="detraction_journal_id"/>
+				</xpath>
+			</field>
+		</record>
+		
+	</data>
+</openerp>

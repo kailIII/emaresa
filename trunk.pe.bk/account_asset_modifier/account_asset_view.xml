@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Tree View -->
+		<record id="view_account_asset_asset_inherit_tree" model="ir.ui.view">
+			<field name="name">account.asset.asset.inherit.tree.view</field>
+			<field name="model">account.asset.asset</field>
+			<field name="inherit_id" ref="account_asset.view_account_asset_asset_tree"/>
+			<field name="arch" type="xml">
+				<field name="category_id" position="after">
+					<field name="account_analytic_id"/>
+					<field name="accounting_type" invisible="1"/>
+				</field>
+				<field name="purchase_date" position="after">
+					<field name="activation_date"/>
+					<field name="derecognised_date"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- Form View -->
+		<record id="view_account_asset_asset_inherit_form" model="ir.ui.view">
+			<field name="name">account.asset.asset.inherit.form.view</field>
+			<field name="model">account.asset.asset</field>
+			<field name="inherit_id" ref="account_asset.view_account_asset_asset_form"/>
+			<field name="arch" type="xml">
+				<field name="purchase_date" position="after">
+					<field name="activation_date"/>
+					<field name="derecognised_date"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- Search View -->
+		<record id="view_account_asset_asset_inherit_search" model="ir.ui.view">
+			<field name="name">account.asset.asset.inherit.search.view</field>
+			<field name="model">account.asset.asset</field>
+			<field name="inherit_id" ref="account_asset.view_account_asset_search"/>
+			<field name="arch" type="xml">
+				<filter string="Current" position="replace">
+					<filter icon="terp-check" string="Draft" domain="[('state','=',('draft'))]"
+								help="Assets in draft state"/>
+					<filter icon="terp-check" string="Active" domain="[('state','=',('open'))]"
+								help="Assets in open state"/>
+				</filter>
+				<field name="partner_id" position="after">
+					<group expand="0" string="Group By...">
+						<filter string="Category" domain="[]" context="{'group_by':'category_id'}"/>
+						<filter string="State" domain="[]" context="{'group_by':'state'}"/>
+						<filter string="Partner" domain="[]" context="{'group_by':'partner_id'}"/>
+						<filter string="Currency" domain="[]" context="{'group_by':'currency_id'}"/>
+						<filter string="Account Analytic" domain="[]" context="{'group_by':'account_analytic_id'}"/>
+						<filter string="Accounting Type" domain="[]" context="{'group_by':'accounting_type'}"/>
+					</group>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>                
+

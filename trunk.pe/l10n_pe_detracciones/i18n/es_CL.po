@@ -1,0 +1,84 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* l10n_pe_detracciones
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-05 11:58+0000\n"
+"PO-Revision-Date: 2014-06-05 08:00-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <dacevedo@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Español Chile\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: l10n_pe_detracciones
+#: field:account.detracciones,porcentaje:0
+msgid "Porcentaje (%)"
+msgstr "Porcentaje (%)"
+
+#. module: l10n_pe_detracciones
+#: field:account.detracciones,account_id:0
+msgid "Account"
+msgstr "Cuenta"
+
+#. module: l10n_pe_detracciones
+#: model:ir.model,name:l10n_pe_detracciones.model_account_invoice
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_pe_detracciones
+#: model:res.groups,name:l10n_pe_detracciones.group_detracciones_admin
+msgid "Detracciones Admin"
+msgstr "Administrador Detracciones"
+
+#. module: l10n_pe_detracciones
+#: model:res.groups,name:l10n_pe_detracciones.group_detracciones_users
+msgid "Detracciones Users"
+msgstr "Usuario Detracciones"
+
+#. module: l10n_pe_detracciones
+#: field:account.invoice,detrac_id:0
+msgid "Services Subject to Detraccion"
+msgstr "Servicios Afectos a Detracciones"
+
+#. module: l10n_pe_detracciones
+#: selection:account.detracciones,type:0
+msgid "Sales"
+msgstr "Ventas"
+
+#. module: l10n_pe_detracciones
+#: view:account.detracciones:0
+#: model:ir.actions.act_window,name:l10n_pe_detracciones.action_account_detracciones
+#: model:ir.ui.menu,name:l10n_pe_detracciones.menu_l10n_pe_detracciones
+msgid "Servicios Afectos a Detracciones"
+msgstr "Servicios Afectos a Detracciones"
+
+#. module: l10n_pe_detracciones
+#: view:account.detracciones:0 field:account.detracciones,name:0
+msgid "Nombre Servicio"
+msgstr "Nombre Servicio"
+
+#. module: l10n_pe_detracciones
+#: field:account.detracciones,type:0
+msgid "Type"
+msgstr "Tipo"
+
+#. module: l10n_pe_detracciones
+#: model:ir.model,name:l10n_pe_detracciones.model_account_detracciones
+msgid "account.detracciones"
+msgstr "Servicios Afectos a Detracciones"
+
+#. module: l10n_pe_detracciones
+#: field:account.invoice,subject_to_detrac:0
+msgid "Considera Detracciones?"
+msgstr "Considera Detracciones?"
+
+#. module: l10n_pe_detracciones
+#: selection:account.detracciones,type:0
+msgid "Purchases"
+msgstr "Compras"

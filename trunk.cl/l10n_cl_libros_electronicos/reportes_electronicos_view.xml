@@ -1,0 +1,52 @@
+<openerp>
+  <data>
+	<record model="ir.ui.view" id="view_reportes_electronicos_form">
+		<field name="name">reportes_electronicos.form</field>
+		<field name="model">reportes.electronicos</field>
+		<field name="arch" type="xml">
+			<form string="Chilean Location. S.I.I." version="7.0">
+				<group states="choose" string="Export Preferences">
+					<field name="state" invisible="1"/>
+					<group>
+						<group>
+							<field name="company_id" required="1"/>
+			                	        <field name="type" required="1"/>
+						</group>
+						<group>
+							<field name="period_id" required="1"/>
+						</group>
+					</group>
+				</group>
+				<div states="get">
+					<h2>Export Complete</h2>
+					<p>Here is the exported TXT file: <field name="data" readonly="1" filename="name"/></p>
+					<p>This file was generated using the universal <strong>Unicode/UTF-8</strong> file encoding,
+						please be sure to view and edit using the same encoding.</p>
+				</div>
+				<footer states="choose">
+					<button type="object" name="create_report" string="Export" class="oe_highlight"
+						confirm="This process will take time, want to continue?"/>
+					<button special="cancel" string="Cancel"/>
+				</footer>
+				<footer states="get">
+					<button special="cancel" string="Close" type="object"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record model="ir.actions.act_window" id="action_reportes_libros_electronicos">
+		<field name="name">Export eBooks</field>
+		<field name="res_model">reportes.electronicos</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+         	       
+	<menuitem id="reportes_libros_electronicos_menu" name="Ebooks DBNET" parent="account.menu_finance_reports"/>
+	<menuitem name="Export" parent="reportes_libros_electronicos_menu"
+		id="reportes_electronicos_menu_mainform" action="action_reportes_libros_electronicos"/>
+
+  </data>
+</openerp>
+

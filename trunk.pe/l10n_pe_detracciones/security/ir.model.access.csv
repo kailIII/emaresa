@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"access_l10n_pe_detracciones_admin","account.detracciones.admin","model_account_detracciones","group_detracciones_admin",1,1,1,1
+
+"access_l10n_pe_detracciones_users","account.detracciones.users","model_account_detracciones","group_detracciones_users",1,0,0,0

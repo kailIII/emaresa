@@ -1,0 +1,38 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* account_followup_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-03 22:32+0000\n"
+"PO-Revision-Date: 2014-03-03 19:34-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <dacevedo@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Español Chile\n"
+
+#. module: account_followup_report
+#: view:res.partner:0
+msgid "Print Overdue Payments"
+msgstr "Imprimir pagos pendientes"
+
+#. module: account_followup_report
+#: model:ir.model,name:account_followup_report.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: account_followup_report
+#: view:res.partner:0
+msgid "Print Overdue Payments Without Header"
+msgstr "Imprimir pagos pendientes SIN carta"
+
+#. module: account_followup_report
+#: view:res.partner:0
+msgid "Print overdue payments report independent of follow-up line"
+msgstr ""
+"Imprimir informe de pagos vencidos independiente de la línea de seguimiento"

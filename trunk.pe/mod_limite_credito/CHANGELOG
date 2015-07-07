@@ -1,0 +1,30 @@
+
+Versión 0.3.2
+
+	Se modifican los permisos  se crean nuevos grupos:
+		- Credit Limit: Tiene permisos de edición sobre campo credit limit.
+		- Credit Limit Viewer: Solo puede ver el campo credit limit sin editarlo.
+
+Versión 0.3.1.1
+
+	Se modifica error de llamado a security.
+
+Versión 0.3.1
+
+	Agrega carpeta security.
+
+Versión 0.3
+
+	Se eliminan campos innecesarios de la pestaña contabilidad del partner solo dejando el credit limit de función con permisos del grupo de usuario.
+
+Versión 0.2
+
+	Se agrega un campo sólo lectura para límite de crédito y se mantiene para otro grupo el límite de crédito editable.
+	Se agregan cabezeras y CHANGELOG al módulo.
+	Se añade la imágen de OpenDrive al módulo.
+	Se modifica nombre de xml.
+
+Versión 0.1
+
+	Módulo para efectuar cambios en la pestaña contabilidad de la vista res.partner mostrando datos de líneas de crédito
+

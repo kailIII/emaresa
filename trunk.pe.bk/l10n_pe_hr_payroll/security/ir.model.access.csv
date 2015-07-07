@@ -1,0 +1,10 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_rem_afp","rem.afp","model_rem_afp","base.group_user",1,1,1,1
+"access_hr_employee","hr.employee","model_hr_employee","base.group_user",1,1,1,1
+"access_rem_health","rem.health","model_rem_health","base.group_user",1,1,1,1
+"access_rem_tax_segment","rem.tax_segment","model_rem_tax_segment","base.group_user",1,1,1,1
+"access_rem_indicator","rem.indicator","model_rem_indicator","base.group_user",1,1,1,1
+"access_rem_voluntary_saving","rem.voluntary_saving","model_rem_voluntary_saving","base.group_user",1,1,1,1
+"access_rem_neto","rem.neto","model_rem_neto","base.group_user",1,1,1,1
+"access_rem_tiempos","rem.tiempos","model_rem_tiempos","base.group_user",1,1,1,1
+"access_rem_adelantos","rem.adelantos","model_rem_adelantos","base.group_user",1,1,1,1

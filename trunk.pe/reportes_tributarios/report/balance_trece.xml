@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+	  
+	  	<!-- Balance Trece Columnas -->
+
+		<record id="balance_trece_xls_report" model="ir.actions.report.xml">
+			<field name="name">Excel Balance 13 Columnas</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">wizard.report</field>
+			<field name="report_name">balance_trece</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo.report_mimetypes_ods_ods')"/>
+			<field name="parser_loc">reportes_tributarios/report/balance_trece.py</field>
+			<field name="report_rml">reportes_tributarios/report/balance_trece.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<record id="balance_trece_xls_button_view" model="ir.ui.view">
+			<field name="name">balance.trece.xls.button.view</field>
+			<field name="model">wizard.report</field>
+			<field name="inherit_id" ref="account_financial_report.wizard_report_view"/>
+			<field name="arch" type="xml">
+				<button string="Print" position="replace">
+					<button name="print_report" string="Imprimir PDF" type="object" class="oe_highlight"/>
+					<button name="print_report_xls" string="Imprimir Excel" type="object" class="oe_highlight"/>
+				</button>
+			</field>
+		</record>
+
+	</data>
+</openerp>

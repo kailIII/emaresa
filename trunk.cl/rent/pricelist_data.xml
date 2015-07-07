@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<record id="pricelist_type_sale" model="product.pricelist.type">
+			<field name="name">Rent Pricelist</field>
+			<field name="key">rent</field>
+		</record>
+
+		<record id="list_price" model="product.price.type">
+			<field name="name">Rent Price</field>
+			<field name="field">rent_price</field>
+			<field search="[('name','=','PEN')]" model='res.currency' name='currency_id'/>
+		</record>
+	</data>
+</openerp>
+

@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<document filename="estado_cta_cte_cliente_whitout_header.pdf">
+  <template pageSize="(27.94cm,21.59cm)" title="Estado Cuenta Corriente Cliente" author="David Acevedo Toledo (Fedoro)" allowSplitting="20">
+    <!--pageSize="(792.0,612.0)" -->
+    <pageTemplate id="first">
+      <frame id="first" x1="28.0" y1="57.0" width="25.94cm" height="18.19cm"/> <!--width="736" height="498"/>-->
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+    </blockTableStyle>
+    <blockTableStyle id="Tabla1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table4">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <blockTableStyle id="Tabla3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="CENTER"/>
+	<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="Header" fontName="Helvetica-Bold" fontSize="15.0" leading="15" alignment="CENTER" spaceBefore="10.0" spaceAfter="35.0"/>
+    <paraStyle name="Default" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+    <paraStyle name="Standard" fontName="Helvetica" leftIndent="23.0" spaceBefore="6.0" spaceAfter="4.0" fontSize="12.0"/>
+    <paraStyle name="P1" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+    <paraStyle name="P2" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+    <paraStyle name="P3" fontName="Helvetica-Bold" fontSize="7.0" leading="10" alignment="CENTER"/>
+    <paraStyle name="P4" fontName="Helvetica-Bold" fontSize="7.0" leading="10" alignment="RIGHT"/>
+    <paraStyle name="P5" fontName="Helvetica" fontSize="7.0" leading="10" alignment="RIGHT"/>
+    <paraStyle name="P6" fontName="Helvetica-Bold" fontSize="7.5" leading="15" spaceBefore="14" alignment="LEFT"/>
+    <paraStyle name="P7" fontName="Helvetica" fontSize="7.0" leading="10" alignment="LEFT"/>
+    <paraStyle name="P8" fontName="Helvetica" fontSize="7.0" leading="10" alignment="CENTER"/>
+  </stylesheet>
+  <story>
+    
+		<para style="Default">[[repeatIn(ids_to_objects(data['form']['partner_ids']), 'a')]]</para>
+		<para style="Default">[[setLang(a.partner_id.lang)]]</para>
+		<illustration>
+			<image width="100.0" height="40.0" x="20" y="-25">[[(company.logo) or ' ']]</image>
+		</illustration>
+		<para style="Header">Estado Cuenta Corriente Cliente</para>
+		
+		<blockTable colWidths="70.0,667.0" style="Tabla1">
+			<tr>
+			  <td>
+			    <para style="P1">NOMBRE</para>
+			  </td>
+			  <td>
+			    <para style="P2">[[ (a.partner_id.name).upper() or '' ]]</para>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+			    <para style="P1">RUT</para>
+			  </td>
+			  <td>
+			    <para style="P2">[[ formatRut(a.partner_id.vat or '') ]]</para>
+			  </td>
+			</tr>
+			<tr>
+			  <td>
+			    <para style="P1">FECHA</para>
+			  </td>
+			  <td>
+			    <para style="P2">[[ formatLang(data['form']['date'], date=True) ]]</para>
+			  </td>
+			</tr>
+		      </blockTable>
+	      <para style="Default">[[' '*get_lines(a)]]</para>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="488.0,186.0,65.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P3">Datos del Documento</para>
+        </td>
+        <td>
+          <para style="P3">Saldos Documentos Vencidos</para>
+        </td>
+        <td>
+          <para style="P3">
+            <font color="white"> </font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <blockTable colWidths="53.0,62.0,53.0,39.0,60.0,63.0,30.0,59.0,69.0,62.0,62.0,62.0,65.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P3">N° Dcto.</para>
+        </td>
+        <td>
+          <para style="P3">Documento</para>
+        </td>
+        <td>
+          <para style="P3">Doc. Refer.</para>
+        </td>
+        <td>
+          <para style="P3">Centro Costo</para>
+        </td>
+        <td>
+          <para style="P3">Fecha Emisión</para>
+        </td>
+        <td>
+	  <para style="P3">Fecha Vencimiento</para>
+        </td>
+        <td>
+          <para style="P3">Días</para>
+        </td>
+        <td>
+          <para style="P3">Monto Original</para>
+        </td>
+        <td>
+          <para style="P3">Saldo Actual</para>
+        </td>
+        <td>
+          <para style="P3">Mayor a 60 días</para>
+        </td>
+        <td>
+          <para style="P3">De 31 a 60 días</para>
+        </td>
+        <td>
+          <para style="P3">Hasta 30 días</para>
+        </td>
+        <td>
+          <para style="P3">Saldos por Vencer</para>
+        </td>
+      </tr>
+    </blockTable>
+<section>
+    <para style="Default">[[repeatIn(get_journals(),'journal_name')]]</para>
+    <blockTable colWidths="739.0" style="Table4">
+      <tr>
+        <td>
+          <para style="P6">[[journal_name]]</para>
+        </td>
+      </tr>
+    </blockTable>
+    <section>
+    <para style="Default">[[repeatIn(agrupados(journal_name),'line')]]</para>
+    <blockTable colWidths="53.0,62.0,53.0,39.0,60.0,63.0,30.0,59.0,69.0,62.0,62.0,62.0,65.0" style="Tabla3">
+      <tr>
+        <td>
+          <para style="P7">[[ line['name'] ]]</para>
+        </td>
+        <td>
+          <para style="P7">[[ strip_name(line['type'], '19') ]]</para>
+        </td>
+        <td>
+          <para style="P8">[[ line['ref'] ]]</para>
+        </td>
+        <td>
+          <para style="P8">[[centroCosto(line['move_id'])]]</para>
+        </td>
+        <td>
+          <para style="P8">[[formatLang(line['date'], date=True)]]</para>
+        </td>
+        <td>
+          <para style="P8">[[formatLang(line['date_maturity'], date=True)]]</para>
+        </td>
+        <td>
+          <para style="P8">[[dias(data['form']['date'], line['date_maturity'])]]</para>
+        </td>
+        <td>
+          <para style="P5">[[saldosHasta(data['form']['date'], line['date_maturity'], line['id'], line['balance'], 0)]]</para>
+        </td>
+        <td>
+          <para style="P5">[[formatLang(saldos(line['id'], line['balance']), digits=0)]]</para>
+        </td>
+        <td>
+          <para style="P5">[[saldosHasta(data['form']['date'], line['date_maturity'], line['id'], line['balance'], 1)]]</para>
+        </td>
+        <td>
+          <para style="P5">[[saldosHasta(data['form']['date'], line['date_maturity'], line['id'], line['balance'], 2)]]</para>
+        </td>
+        <td>
+          <para style="P5">[[saldosHasta(data['form']['date'], line['date_maturity'], line['id'], line['balance'], 3)]]</para>
+        </td>
+        <td>
+          <para style="P5">[[saldosHasta(data['form']['date'], line['date_maturity'], line['id'], line['balance'], 4)]]</para>
+        </td>
+      </tr>
+    </blockTable>
+  </section>
+</section>
+    <blockTable colWidths="419.0,69.0,62.0,62.0,62.0,65.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P4">Total General = </para>
+        </td>
+        <td>
+          <para style="P4">[[total(0)]]</para>
+        </td>
+        <td>
+          <para style="P4">[[total(1)]]</para>
+        </td>
+        <td>
+          <para style="P4">[[total(2)]]</para>
+        </td>
+        <td>
+          <para style="P4">[[total(3)]]</para>
+        </td>
+        <td>
+          <para style="P4">[[total(4)]]</para>
+        </td>
+      </tr>
+    </blockTable>
+  </story>
+</document>

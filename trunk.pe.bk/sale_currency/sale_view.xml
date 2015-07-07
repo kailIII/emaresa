@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Cotizacion -->
+		<record id="view_sale_quotation_tree_period" model="ir.ui.view">
+			<field name="name">sale.quotation.tree.currency_id</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_quotation_tree"/>
+			<field name="arch" type="xml">
+				<field name="amount_total" position="after">
+					<field name="currency_id"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- Pedido Venta -->
+		<record id="view_sale_order_tree_period" model="ir.ui.view">
+			<field name="name">account.analytic.line.tree.period</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_order_tree"/>
+			<field name="arch" type="xml">
+				<field name="amount_total" position="after">
+					<field name="currency_id"/>
+				</field>
+			</field>
+		</record>
+
+		<!-- Busqueda -->
+		<record id="view_salealytic_line_tree_period" model="ir.ui.view">
+			<field name="name">account.analytic.line.tree.period</field>
+			<field name="model">sale.order</field>
+			<field name="inherit_id" ref="sale.view_sales_order_filter"/>
+			<field name="arch" type="xml">
+				<xpath expr="//group/filter[@string='Order Date']" position="after">
+					<filter string="Currency" context="{'group_by':'currency_id'}"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

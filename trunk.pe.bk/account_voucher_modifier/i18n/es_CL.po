@@ -1,0 +1,99 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* account_voucher_modifier
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-06-02 18:20+0000\n"
+"PO-Revision-Date: 2014-06-02 14:26-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive Ltda. <dacevedo@opendrive.cl>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: Español Chile\n"
+"X-Generator: Poedit 1.5.4\n"
+
+#. module: account_voucher_modifier
+#: field:account.voucher,currency_help_label:0
+msgid "Helping Sentence"
+msgstr "Frase de Ayuda"
+
+#. module: account_voucher_modifier
+#: field:account.voucher,code_analytic:0
+msgid "Code"
+msgstr "Código Centro de Costo"
+
+#. module: account_voucher_modifier
+#: view:account.voucher:0
+msgid "Open Supplier Journal Entries"
+msgstr "Abrir asientos de proveedor"
+
+#. module: account_voucher_modifier
+#: field:account.voucher.line,move_line_name:0
+msgid "Name"
+msgstr "Nombre"
+
+#. module: account_voucher_modifier
+#: help:res.partner,reconcile:0
+msgid "Enable to NOT automatically reconciles"
+msgstr "Habilitar para que NO concilie de forma automática"
+
+#. module: account_voucher_modifier
+#: model:ir.model,name:account_voucher_modifier.model_account_voucher
+msgid "Accounting Voucher"
+msgstr "Comprobantes contables"
+
+#. module: account_voucher_modifier
+#: view:account.voucher:0
+msgid "Open Customer Journal Entries"
+msgstr "Abrir asientos diario cliente"
+
+#. module: account_voucher_modifier
+#: field:account.voucher,code_analytic_id:0
+msgid "Cost Center"
+msgstr "Centro de Costo"
+
+#. module: account_voucher_modifier
+#: model:ir.model,name:account_voucher_modifier.model_account_voucher_line
+msgid "Voucher Lines"
+msgstr "Líneas de comprobante"
+
+#. module: account_voucher_modifier
+#: help:account.voucher,currency_help_label:0
+msgid ""
+"This sentence helps you to know how to specify the payment rate by giving "
+"you the direct effect it has"
+msgstr ""
+
+#. module: account_voucher_modifier
+#: view:account.voucher:0
+msgid "Payment Method"
+msgstr "Método de pago"
+
+#. module: account_voucher_modifier
+#: field:account.voucher,date_transfer:0
+msgid "Fecha Transferencia"
+msgstr "Fecha Transferencia"
+
+#. module: account_voucher_modifier
+#: field:res.partner,reconcile:0
+msgid "NOT Auto Reconcile"
+msgstr "SIN auto conciliación"
+
+#. module: account_voucher_modifier
+#: model:ir.model,name:account_voucher_modifier.model_res_partner
+msgid "Partner"
+msgstr "Empresa"
+
+#. module: account_voucher_modifier
+#: field:account.voucher,origin_bank:0
+msgid "Banco Origen"
+msgstr "Banco Origen"
+
+#. module: account_voucher_modifier
+#: view:account.voucher:0
+msgid "Total Allocation"
+msgstr "Asignación total"

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        <record model="ir.ui.view" id="product_category_form_view_internal_type">
+            <field name="name">product.category.form.internal_type</field>
+            <field name="model">product.category</field>
+            <field name="inherit_id" ref="product.product_category_form_view"/>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                 <field name="type" position="after">
+                    <field name="internal_type" string="Tipo interno" placeholder="Según estructura de categ ..." select="1"/>
+                </field>
+            </field>
+        </record>
+    </data>
+</openerp>

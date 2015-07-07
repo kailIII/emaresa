@@ -1,0 +1,18 @@
+{
+	'name' : 'Flujo Caja Efectivo',
+	'version' : '0.1',
+	'description': '''Modulo enfocado en hacer una liquidacion de sueldos estandar.''',
+	'author' : '[Alonso Molina, OpenDrive Ltda;]',
+	'category' : 'Account Bank',
+	'website' : '[http://www.opendrive.cl]',
+	'depends' : ['base','account'],
+	'init_xml' : [],
+	'update_xml' : [
+			'wizard/flujo_cuenta_efectivo_view.xml',		
+			'report/flujo_caja_efectivo_view.xml',
+			'account_account_type_cuentas/account_account_type_cuentas_view.xml',
+	],
+	'demo_xml' : [],
+	'installable': True,
+	'active': False
+}

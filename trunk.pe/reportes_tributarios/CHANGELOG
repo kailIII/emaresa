@@ -1,0 +1,42 @@
+
+Versión 0.6.3
+
+	Se invierte columna de Iva y Neto en Libro de Compras
+
+Versión 0.6.2
+
+	Corrección de formatos de salida de todos los reportes a XLS.
+	Corrección reporte diario para montos que se mostraban cortados en vista de celda normal por formato de celda en reporte.
+
+Versión 0.6.1
+
+	Corrección Libro Mayor con campos Rut, Diario y Fecha Vencimiento de las líneas.
+	Se formatean los montos en celdas de las líneas que aparecían con decimales.
+	Se formatea al centro linea de Fecha de Vencimiento.
+	Se corrige error en caso de que Fecha de Vencimiento no exista.
+
+Versión 0.6
+
+	Se agregan campos a libro mayor.
+
+Versión 0.5
+
+	Se crea Reporte Libro Diario para RML y XLS.
+
+Versión 0.4 
+
+	Se crea Excel Libro Ventas y Compra
+
+Versión 0.3
+
+	Se corrigen vistas, versión y wizard.
+	Se añade compañía asociada del usuario para wizard de reportes por omisión.
+
+Versión 0.2
+
+	Corrección de bugs para reporte ventas RML.
+
+Versión 0.1
+
+	Inicio módulo reportes tributarios XLS y PDF.
+

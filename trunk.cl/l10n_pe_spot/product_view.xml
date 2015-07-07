@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='product_category_form_view'>
+			<field name='name'>product.category.form.inherit.pe.spot</field>
+			<field name='model'>product.category</field>
+			<field name='inherit_id' ref='l10n_pe_base.product_category_form_view'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//group[@name='l10n_pe']" position="attributes">
+					<attribute name="invisible">0</attribute>
+				</xpath>
+				<xpath expr="//group[@name='l10n_pe']" position="inside">
+					<field name="spot_product_type"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record model='ir.ui.view' id='product_normal_form_view'>
+			<field name='name'>product.normal.form.inherit.pe.spot</field>
+			<field name='model'>product.product</field>
+			<field name='inherit_id' ref='l10n_pe_base.product_normal_form_view'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//group[@name='l10n_pe']" position="attributes">
+					<attribute name="invisible">0</attribute>
+				</xpath>
+				<xpath expr="//group[@name='l10n_pe']" position="inside">
+					<field name="spot_product_type"/>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</openerp>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="account_invoice_fields" model="ir.ui.view">
+			<field name="name">account.invoice.fields.form</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<field name="payment_term" position="after">
+					<field name="amount_in_words"/>
+					<field name="code_payment"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"access_account_account","account_account","model_account_account","base.group_user",1,1,1,1
+"access_reporte_flujo_caja_efectivo","reporte_flujo_caja_efectivo","model_reporte_flujo_caja_efectivo","base.group_user",1,1,1,1

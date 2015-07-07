@@ -1,0 +1,468 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(595.0,842.0)"  title="Contrato de Arriendo " author="Patricio Felipe Caceres (kron623)" allowSplitting="20" >
+    <pageTemplate id="first">
+      <frame id="first" x1="2.9cm" y1="1.1cm" width="15.4cm" height="27.4cm"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="0,0" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="0,0" stop="0,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="1,0" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="1,0" stop="1,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="2,0" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="2,0" stop="2,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="3,0" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="3,0" stop="3,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="4,0" stop="4,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="4,0" stop="4,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="5,0" stop="5,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="5,0" stop="5,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="5,0" stop="5,0"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="5,-1" stop="5,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="0,1" stop="0,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="0,1" stop="0,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="0,-1" stop="0,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="1,1" stop="1,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="1,1" stop="1,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="1,-1" stop="1,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="2,1" stop="2,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="2,1" stop="2,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="2,-1" stop="2,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="3,1" stop="3,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="3,1" stop="3,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="3,1" stop="3,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="3,-1" stop="3,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="4,1" stop="4,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="4,1" stop="4,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="4,1" stop="4,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="4,-1" stop="4,-1"/>
+      <lineStyle kind="LINEBEFORE" colorName="#00000a" start="5,1" stop="5,-1"/>
+      <lineStyle kind="LINEAFTER" colorName="#00000a" start="5,1" stop="5,-1"/>
+      <lineStyle kind="LINEABOVE" colorName="#00000a" start="5,1" stop="5,1"/>
+      <lineStyle kind="LINEBELOW" colorName="#00000a" start="5,-1" stop="5,-1"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table3">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1" fontName="Helvetica" fontSize="10.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="P2" fontName="Helvetica" fontSize="10.0" leading="15"/>
+    <paraStyle name="P3" fontName="Helvetica" fontSize="10.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P4" fontName="Helvetica" fontSize="10.0" leading="15" alignment="JUSTIFY"/>
+    <paraStyle name="P5" fontName="Helvetica" fontSize="9.0" leading="11" alignment="JUSTIFY"/>
+    <paraStyle name="P6" fontName="Helvetica-Bold" fontSize="10.0" leading="13" alignment="CENTER" textColor="#000000"/>
+    <paraStyle name="P7" fontName="Helvetica" fontSize="8.0" leading="11" alignment="JUSTIFY" spaceBefore="0.0" spaceAfter="1.0"/>
+    <paraStyle name="P8" fontName="Helvetica" fontSize="10.0" leading="15" alignment="RIGHT" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P9" fontName="Helvetica" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P10" fontName="Helvetica" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P11" fontName="Helvetica" fontSize="10.0" leading="15" alignment="CENTER" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P12" fontName="Helvetica" fontSize="10.0" leading="15" alignment="JUSTIFY" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P13" fontName="Helvetica" fontSize="10.0" leading="15" alignment="CENTER" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P14" fontName="Helvetica" fontSize="9.0" leading="11" alignment="JUSTIFY" spaceBefore="6.0" spaceAfter="0.0" textColor="#000000"/>
+    <paraStyle name="P15" fontName="Helvetica" fontSize="10.0" leading="15" alignment="JUSTIFY" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P16" fontName="Helvetica" fontSize="10.0" leading="15" spaceBefore="6.0" spaceAfter="0.0"/>
+    <paraStyle name="P17" fontName="Helvetica" fontSize="10.0" leading="15" alignment="CENTER"/>
+    <paraStyle name="Standard" fontName="Helvetica" fontSize="10.0" leading="15"/>
+    <paraStyle name="Heading" fontName="Helvetica" fontSize="14.0" leading="17" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="Text body" fontName="Helvetica" fontSize="10.0" leading="15" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Helvetica" fontSize="10.0" leading="15" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Helvetica" fontSize="10.0" leading="15" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Helvetica" fontSize="10.0" leading="15"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para >[[repeatIn(objects,'o')]]</para>
+    <para style="P17">
+      <font face="Helvetica-Bold">CONTRATO DE ARRENDAMIENTO DE MAQUINARIA </font>
+    </para>
+    <para style="P2">
+      <font color="white"> </font>
+    </para>
+    
+    <para style="P7">
+      Conste por el presente documento el Contrato de Arrendamiento de Maquinaria que celebran de una parte [[o.company_id.name]], [[o.company_id.vat]] representada por don [[o.company_id.partner_id.legal_representative]] con CE [[o.company_id.partner_id.legal_representative]] ambos domiciliados en [[o.company_id.street]], a quien en adelante se le denominará <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> ; y de otra parte 
+      [[o.partner_id.name]] con  RUC [[o.partner_id]], representada por NOMBRE DEL REPRESENTANTE LEGAL con DNI DEL REPRESENTANTE ambos con domicilio en DOMICILIO DE LA EMPRESA CLIENTE , quien en adelante se le denominará <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>; en los términos y las condiciones que seguidamente se expresan: </para>
+    
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">PRIMERA.- LA ARRENDADORA </font>es una empresa dedicada entre otras actividades mercantiles al arrendamiento de bienes muebles a plazo determinado.
+      <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA </font>es una sociedad que se dedica a construcción de edificios, motivo por el cual requiere para sus actividades contar con maquinaria y/o equipo especializados para tal efecto, por lo cual ha solicitado a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> y esta ha aceptado arrendarle los bienes que se individualizan en este instrumento (Anexo 1), como también aquellos bienes que en el futuro fueran susceptibles de arrendamiento y que las partes acuerdan individualizar en anexos posteriores, los que formarán parte de este contrato principal y se regirán por las clausulas aquí expresadas, para todos los efectos a que haya lugar. Las partes dejan constancia, que  <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> en forma previa, ha verificado el estado del equipo y su correcto funcionamiento, declarando que no tiene reclamo que formular, declaración que se hace extensiva a los sucesivos anexos que puedan suscribir las partes relativos al funcionamiento y estado de los equipos entregados en arrendamiento.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">SEGUNDA.- </font> La renta mensual de arrendamiento será la suma de US$ XXXX y 00/100 dólares americanos más el Impuesto General a las Ventas (IGV) que corresponda por los equipos alquilados (según anexo 1), monto que <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA </font> se obliga a pagar de forma mensual anticipada. Las partes acuerdan que en los equipos que cuenten con horómetro, tienen 180 horas máximas de uso mensual de los equipos, sin perjuicio de que el uso sea menor. En caso que el equipo sea utilizado un número superior a 180 horas mensuales, las horas en exceso serán facturadas proporcionalmente a las 180 horas máximas, más el IGV correspondiente. Para el caso de equipos arrendados por períodos menores a un mes, se considerará un máximo de horas libres prorrateados a razón de 180 horas por 30 días y multiplicado por los días en arriendo.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">TERCERA.-</font>En casos de renovación de contratos,<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>se obliga a efectuar el pago de la renta dentro de los tres (3) días calendario siguientes a la presentación de las facturas correspondientes al nuevo período de arriendo , en la que se incluirá la tarifa correspondiente a excesos de horas sobre las fijadas como máximas, es decir 180 horas mensuales, por el período vencido más el anticipo de la renta de arrendamiento del período de renovación; dicho pago se hará mediante giro bancario a nombre de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, o depósito en Cuenta Corriente.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">CUARTA.-</font> Si <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> no paga la factura dentro del plazo fijado en la cláusula anterior, su importe será incrementado con los intereses compensatorios y moratorios más IGV, con las tasas máximas autorizadas por el Banco Central de Reserva, sin perjuicio del derecho de EMARESA PERU SAC de dar por terminado inmediatamente el contrato y exigir la devolución inmediata de cualquiera de los equipos arrendados.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">QUINTA.- </font>  El contrato tendrá una duración indefinida entendiéndose que se renueva sucesivamente en la medida que existan equipos y bienes entregados en arrendamiento, amparados por sus correspondientes Anexos que forman parte del contrato principal.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">SEXTA.-</font> El control de las horas por el uso del equipo arrendado que cuente con este dispositivo, se llevará ante lectura del horómetro.<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>se obliga a dar libre acceso a la máquina para que personal destacado por <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> tome lectura del horómetro y constate su buen funcionamiento.<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> declara su responsabilidad por la buena conservación del horómetro y se compromete a comunicar a  <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, el día cuando ésta lo solicite, la lectura de éste; así como comunicar eventualmente y cuando esto ocurra, el deficiente funcionamiento del mismo. En caso que <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> no comunique la falla del hómetro, <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> considera que, para determinar el número de horas en exceso de las convenidas; que el equipo fue sometido a un trabajo de 12 horas por día, a partir de la última lectura efectuada a horómetro; de igual modo, en caso que el horómetro muestre huellas de violación o actos de vandalismo.<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> no podrá manipular de ninguna forma el horómetro y que en caso que lo haga sin consentimiento de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, quedará obligado a la renta presunta que se establece en el párrafo precedente.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">SÉTIMA.-</font> Los bienes arrendados se entregan puestos en la bodega de<font face="Helvetica-Bold" size="8.0"> LA ARRENDADORA </font>o en el lugar que esta determine, siendo cargo de  <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> los gastos de transporte, <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, para cuya constancia de entrega de los equipos se levantará y suscribirá por quienes entregan y reciben los bienes, una Acta de Entrega que formará parte de este documento, de igual modo, al momento de la devolución de los mismos.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">OCTAVA.-</font> Queda expresamente convenido que el bien arrendado será usado por <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> únicamente en el lugar fijado en el Acta de Entrega, y a trabajar en las faenas propias de su diseño. En caso que <font face="Helvetica-Bold" size="8.0"> LA ARRENDATARIA </font>traslade el bien a un lugar distinto y tenga que usarla en trabajos distintos, necesita autorización previa y por escrito de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">NOVENA</font> <font face="Helvetica-Bold" size="8.0">.- LA ARRENDATARIA</font>reconoce, y así lo declara expresamente, que la propiedad de la máquina corresponde únicamente a<font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>. En tal sentido, se obliga a: 
+    </para>
+
+        <para style="P7">
+          9.1. Comunicar a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, de cualquier hecho o circunstancia por la cual se pretendiera desconocer la propiedad o se deriven en situaciones que amenacen o perturben el ejercicio de su derecho, inmediatamente que tuvieran conocimiento de ello. Para probar la propiedad <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> podrá adherir a la máquina arrendada placas, etiquetas, avisos u otras marcas que indiquen la propiedad, no estando permitido a<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> a retirarlos bajo ninguna circunstancia.
+        </para>
+        <para style="P7">
+          9.2 No introducir a la máquina modificaciones, mejoras o alteraciones de cualquier tipo en su estructura o funcionamiento, y a conservarla en buen estado de uso y conservación.
+        </para>
+        <para style="P7">
+          9.3 No sub-arrendar, entregar, ceder o consignar la máquina a otras personas naturales o jurídicas, sin previa autorización escrita de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>
+        </para>
+        <para style="P7">
+          9.4 Mantener a su costo el bien o bienes arrendados en perfecto estado de funcionamiento, realizando todo lo necesario para su conservación. Al término del arrendamiento [[o.company_id.name]] inspeccionará los bienes que sean devueltos y cobrará los gastos de mano de obra y repuestos que sean necesarios para dejarlos en el estado similar que tenían al comienzo del arrendamiento, sin perjuicio del desgaste del uso del período.
+        </para>
+        <para style="P7">
+          9.5 Evitar darle a los bienes un uso inadecuado, contrario al uso que naturalmente está establecido, sobrecargándolos, efectuando en forma periódica y de acuerdo a la pauta que se adjunta a cada equipo los trabajos de mantenimiento y lubricación, restituyéndolos en perfecto estado de uso y funcionamiento.
+        </para>
+        <para style="P7">
+          9.6 Si durante el periodo de arrendamiento fuera necesario efectuar reparaciones y/o mantenimiento al equipo arrendado,<font face="Helvetica-Bold" size="8.0">LA ARRENDADORA </font> se reserva el derecho de utilizar para ello el tiempo equivalente a un día por semana, sin que signifique reducción del periodo de arrendamiento. <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA </font>otorgará a<font face="Helvetica-Bold" size="8.0"> LA ARRENDADORA </font>todas las facilidades del caso para que el técnico que determine pueda inspeccionar la instalación, utilización y conservación de ellos . Toda reparación, reposición e incorporación de cualquier elemento que se haga en los bienes arrendados deberá ser efectuado por<font face="Helvetica-Bold" size="8.0">LA ARRENDADORA, </font>salvo autorización expresa de esta a favor de <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA.</font>
+        </para>
+
+<para></para>
+        <para style="P7">
+          Al incumplimiento de cualquiera de los prescritos en los incisos precedentes, el contrato se resolverá automáticamente, sin necesidad de declaración judicial previa, y por la sola comunicación que curse      <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>  en aplicación del Artículo 1430 del Código Civil. En tal eventualidad <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> podrá recoger la máquina directamente en el lugar en que se encuentre, estando expresamente facultada a exigir a <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> los gastos incurridos y el cumplimiento de la totalidad de sus obligaciones contractuales.
+        </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA.- LA ARRENDATARIA </font>se obliga a mantener asegurados durante toda la vigencia de este contrato principal y de cualquiera de los anexos, los bienes objeto del mismo, contra todo riesgo y especialmente, pérdida total o parcial, incendio, caso fortuito, daños propios, a terceros, robo o hurto. Los seguros se tomarán en beneficio de [[o.company_id.name]] por el total del valor de los bienes arrendados, debiendo pagarse la indemnización en caso de siniestro en forma directa a [[o.company_id.name]] por la compañía de seguros.<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> se obliga a pagar a [[o.company_id.name]] las diferencias que se produzcan en razón de la cobertura que no se encuentre cubierta con la indemnización. 
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA PRIMERA.- </font> Ampliando la cláusula precedente, queda convenido que producidos los daños no cubiertos por la póliza,<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> asume el costo de reparaciones de la máquina así como la responsabilidad civil, que resulte de su uso, operación o transporte durante todo el tiempo que tenga en su poder la máquina desde la firma del Acta de Entrega, hasta que sea devuelta en las instalaciones de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>. Por tal razón, <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> asume responsabilidad ante terceros de los daños o perjuicios que pudiera ocasionar. Por lo que <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> en ningún caso tendrá responsabilidad de esos hechos, y que el ejercicio de cualquiera en contra de <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>, jamás podrá implicar retención de la máquina. En el caso que se retenga la máquina por terceros o la autoridad a consecuencia de cualquier daño, perjuicio o medida cautelar ocasionado por <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>, el tiempo que dure la retención, se considera como estar en uso por <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>. Por la propia naturaleza del contrato, en que la máquina sea entregada en arrendamiento para ser operada por<font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> , esta reconoce y acepta expresamente que <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> no tiene responsabilidad alguna por daños, perjuicios, lucro cesante u otras, cualquiera que fueran su causal.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA SEGUNDA.- </font>En caso de siniestro, daño o pérdida de la máquina arrendada, cualquiera sea su causa o gravedad, <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> deberá informar a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> dentro de las 24 horas del accidente sobrevenido, la fecha, lugar y circunstancias, su naturaleza y monto estimado de los daños.
+      En caso de siniestro parcial, el Contrato de Arrendamiento seguirá vigente en los mismos términos, debiendo <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> pagar a sus vencimientos la tarifa convenida.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMO TERCERA.- LA ARRENDATARIA </font> faculta y autoriza expresamente a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA </font>para que ante el simple retardo en el pago de una cualquiera de las facturas generadas por concepto de arrendamiento de maquinarias y equipos individualizados en este contrato como en cualquiera de los anexos que se entienden forma parte de este, proceda al envío de las facturas a registro de <font face="Helvetica-Bold" size="8.0">INFOCORP</font>, sin responsabilidad alguna para <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA. </font>Asimismo, <font face="Helvetica-Bold" size="8.0"> LA ARRENDATARIA </font>      renuncia expresamente al ejercicio de cualquiera acción que pudiese intentar en contra de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>como consecuencia del envío a registro <font face="Helvetica-Bold" size="8.0">INFOCORP</font> de las respectivas facturas.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMO CUARTA.- </font>Los gastos de combustible, lubricantes, operadores, materiales de corte, desgaste y otros serán de cargo de <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>, quien está obligada a usar los materiales fijados por los fabricantes en las instrucciones y estándares de operación. En cuanto a los filtros y aceites, deberán ser de la marca que corresponda y que señalan los fabricantes, lo que será verificado por <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA QUINTA.- </font>A la terminación del presente contrato, cualquiera que sea su causa, <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> se obliga a devolver la máquina en un plazo máximo de 24 horas, caso contrario,<font face="Helvetica-Bold" size="8.0">LA ARENDATARIA</font> pagará a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> la tarifa proporcional más IGV por cada día de mora. La máquina será devuelta sin más desgaste que el producido por el uso normal y cuidadoso, cuyos costos serán exclusivamente de <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>. A la devolución se levantará el ACTA DE DEVOLUCIÓN que será suscrita por los representantes de ambas partes, la misma que contendrá los datos pormenorizados y detallados de las condiciones del bien a devolverse.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA SÉTIMA.- LA ARRENDATARIA </font>se obliga desde ahora, a informa a <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, en cada oportunidad que la máquina haya trabajado 250 horas, para realizar el mantenimiento preventivo de acuerdo a lo señalado por los fabricantes, sin costo de mano de obra para <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>. Es de responsabilidad de<font face="Helvetica-Bold" size="8.0"> LA ARRENDATARIA</font>, la lubricación de la máquina arrendada, limpieza del equipo, limpieza de los filtros de aire, revisión de sus niveles, los rellenos y engrases de manera diaria. Todos los trabajos de reparación serán realizados única y exclusivamente por personal de <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>, debiendo impedirse bajo responsabilidad de <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> la que asumirá el costo de los posibles daños y perjuicios que se provoquen a la máquina arrendada.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">DÉCIMA OCTAVA.- </font>Es causal suficiente para que <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> de por resuelto y de pleno derecho al contrato, sin declaración judicial alguna, en caso de:
+    </para>
+        <para style="P7">
+          18.1 Falta de pago oportuna de la tarifa (renta) de arrendamiento o de cualquier otra cantidad que 
+          <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> debe pagar conforme al presente contrato.
+        </para>
+        <para style="P7">
+          18.2 Cuando <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font> sea declarada en proceso de reestructuración empresarial (quiebra) o estado de liquidación, suspensión de pagos o cualquier otra situación semejante.
+        </para>
+        <para style="P7">
+          18.3 El incumplimiento de cualesquier otra obligación contractual que deba asumir <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>.
+        </para>
+        <para style="P7">
+          <font face="Helvetica-Bold" size="8.0">DÉCIMA NOVENA.- </font>En cualquiera de los casos previstos en la cláusula anterior, cuando <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font> resuelva el contrato de arrendamiento, está facultada a exigir judicial o extrajudicialmente a <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA:</font>
+        </para>
+            <para style="P7">
+              19.1 La devolución de la máquina arrendada.
+            </para>
+            <para style="P7">
+              19.2 El total de las rentas vencidas.
+            </para>
+            <para style="P7">
+              19.3 Los gastos de recuperación de la máquina arrendada incluyendo las costas y costos del juicio.
+            </para>
+            <para style="P7">
+              19.4 Todos los intereses moratorios y compensatorios que puedan derivarse del incumplimiento de pagos y gastos.
+            </para>
+    
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">VIGÉSIMA.- </font>Las partes acuerdan que todos los gastos y tributos que origine la celebración y ejecución de este contrato serán asumidas por <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA.</font>
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">VIGÉSIMA PRIMERA.- </font> Para la validez de todas las comunicaciones y notificaciones a las partes con motivo de la ejecución de este contrato, ambos señalan como sus respectivos domicilios los indicados en la introducción de este documento. El cambio de domicilio de cualquiera de las partes surtirá efecto desde la fecha de comunicación de dicho cambio a la otra parte a través de conducto notarial.
+    </para>
+
+    <para style="P7">
+      <font face="Helvetica-Bold" size="8.0">VIGÉSIMA SEGUNDA.- LA ARRENDATARIA</font>, renuncia al fuero de su domicilio y se somete expresamente a la jurisdicción de los Jueces de la Ciudad de Lima, Provincia y Departamento o Región Lima.
+    </para>
+
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P5">
+      <font color="white"> </font>
+    </para>
+    <para style="P8">
+      <font face="Helvetica" size="9.0">Lima, 23 de Noviembre de 2014</font>
+    </para>
+    <para style="P9">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="213.0,213.0" style="Table1">
+      <tr>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica" size="9.0">____________________</font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>
+          </para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica" size="9.0">____________________</font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12"/>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P6">
+      <font color="white"> </font>
+    </para>
+    <para style="P6">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font face="Helvetica-Bold" size="10.0">ANEXO 01</font>
+    </para>
+    <para style="P14">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="30.0,102.0,68.0,66.0,92.0,92.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P15">
+            <font face="Helvetica" size="9.0">N</font>
+          </para>
+        </td>
+        <td>
+          <para style="P11">
+            <font face="Helvetica" size="10.0">Equipo</font>
+          </para>
+        </td>
+        <td>
+          <para style="P11">
+            <font face="Helvetica" size="10.0">Marca</font>
+          </para>
+        </td>
+        <td>
+          <para style="P11">
+            <font face="Helvetica" size="10.0">Modelo</font>
+          </para>
+        </td>
+        <td>
+          <para style="P11">
+            <font face="Helvetica" size="10.0">Serie del Equipo</font>
+          </para>
+        </td>
+        <td>
+          <para style="P16">
+            <font face="Helvetica" size="10.0">Combustible</font>
+          </para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P11">
+            <font face="Helvetica" size="10.0">1</font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">
+            <font face="Helvetica">xxxx</font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">
+            <font face="Helvetica">xxxx</font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">
+            <font face="Helvetica">xxxx</font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">
+            <font face="Helvetica">xxxx</font>
+          </para>
+        </td>
+        <td>
+          <para style="P1">
+            <font face="Helvetica">xxxx</font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P13">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <para style="P12">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="213.0,213.0" style="Table3">
+      <tr>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica" size="9.0">____________________</font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica-Bold" size="8.0">LA ARRENDADORA</font>
+          </para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica" size="9.0">____________________</font>
+          </para>
+          <para style="P11">
+            <font face="Helvetica-Bold" size="8.0">LA ARRENDATARIA</font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P15">
+      <font color="white"> </font>
+    </para>
+  </story>
+</document>
+

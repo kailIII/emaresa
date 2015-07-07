@@ -1,0 +1,341 @@
+<?xml version="1.0"?>
+<document filename="comprobante_conciliacion.pdf">
+	<template pageSize="(27.94cm,21.59cm)" title="Comprobante Conciliación" author="David Acevedo Toledo (Fedoro)" allowSplitting="20">
+		<!--  842.0, 595.0 -->
+		<pageTemplate id="first">
+			<frame id="first" x1="25.0" y1="60.0" width="25.94cm" height="18.19cm"/>
+		  <!-- width="786" height="525"
+			<pageGraphics>
+			  <image x="1.8cm" y="19.20cm" height="30.0" >[[(company.logo) or ' ']]</image>
+			</pageGraphics>-->
+		</pageTemplate>
+	</template>
+	<stylesheet>
+		<blockTableStyle id="Standard_Outline">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table2">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla1">
+		      <blockAlignment value="LEFT"/>
+		      <blockValign value="CENTER"/>
+		      <lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table1">
+		      <blockAlignment value="LEFT"/>
+		      <blockValign value="CENTER"/>
+		      <lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla3">
+		      <blockAlignment value="LEFT"/>
+		      <blockValign value="CENTER"/>
+		      <lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table4">
+		      <blockAlignment value="LEFT"/>
+		      <blockValign value="CENTER"/>
+		      <lineStyle kind="GRID" colorName="#000000" start="1,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table5">
+		      <blockAlignment value="LEFT"/>
+		      <blockValign value="CENTER"/>
+		      <lineStyle kind="LINEBELOW" colorName="#000000" start="0,0" stop="0,0"/>
+		      <lineStyle kind="LINEBELOW" colorName="#000000" start="2,0" stop="2,0"/>
+		      <lineStyle kind="LINEBELOW" colorName="#000000" start="4,0" stop="4,0"/>
+		      <lineStyle kind="LINEBELOW" colorName="#000000" start="6,0" stop="6,0"/>
+		</blockTableStyle>
+		<initialize>
+		      <paraStyle name="all" alignment="justify"/>
+		</initialize>
+		<paraStyle name="Header" fontName="Helvetica-Bold" fontSize="15.0" leading="15" alignment="CENTER" spaceBefore="10.0" spaceAfter="35.0"/>
+		<paraStyle name="Default" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+		<paraStyle name="Standard" fontName="Helvetica" leftIndent="23.0" spaceBefore="6.0" spaceAfter="4.0" fontSize="12.0"/>
+		<paraStyle name="P1" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P2" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P3" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P4" fontName="Helvetica-Bold" leftIndent="23.0" fontSize="10.0"/>
+		<paraStyle name="P5" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P6" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P8" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+	</stylesheet>
+	<story>
+		<para style="Default">[[repeatIn(objects,'o')]]</para>
+		<illustration>
+			<image width="100.0" height="40.0" x="20" y="-25">[[(company.logo) or ' ']]</image>
+		</illustration>
+		<para style="Header">Comprobante Conciliacion</para>
+		<blockTable colWidths="539.0,22.0,118.0" style="Table2">
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P6">N</para>
+				</td>
+				<td>
+					<para style="P1">[[o.name]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="110.0,93.0,476.0" style="Tabla1">
+			<tr>
+				<td>
+					<para style="P8">Fecha Conciliación</para>
+				</td>
+				<td>
+					<para style="P1">[[ formatLang(o.create_date, date=True) ]]</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+		<blockTable colWidths="110.0,569.0" style="Table1">
+			<tr>
+				<td>
+					<para style="P8">Comentario</para>
+				</td>
+				<td>
+					<para style="P2">[[o.comment]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="P4">Lineas Completamente Conciliadas<font color="white">[[ (o.line_id) or removeParentNode('para') ]]</font></para>
+		<para style="P4">Lineas Parcialmente Conciliadas<font color="white">[[ (o.line_partial_ids) or removeParentNode('para') ]]</font></para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0" style="Table1">
+			<tr>
+				<td>
+					<para style="P6">Cuenta Contable</para>
+				</td>
+				<td>
+					<para style="P6">Nro. Asiento</para>
+				</td>
+				<td>
+					<para style="P6">Rut Empresa</para>
+				</td>
+				<td>
+					<para style="P6">Diario</para>
+				</td>
+				<td>
+					<para style="P6">Nombre</para>
+				</td>
+				<td>
+					<para style="P6">Referencia</para>
+				</td>
+				<td>
+					<para style="P6">Fecha Vencimiento</para>
+				</td>
+				<td>
+					<para style="P6">Debe</para>
+				</td>
+				<td>
+					<para style="P6">Haber</para>
+				</td>
+			</tr>
+		</blockTable>
+		<section>[[ (o.line_id) or removeParentNode('section') ]]
+			<blockTable colWidths="75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0" style="Tabla3">
+			<para style="terp_default_8">[[ repeatIn(o.line_id,'c') ]]</para>
+				<tr>
+					<td>
+						<para style="P2">[[c.account_id.code]] [[c.account_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.move_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[formatRut(c.partner_id.vat)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.move_id.journal_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.ref]]</para>
+					</td>
+					<td>
+						<para style="P1"><font face="Helvetica">[[ formatLang(c.date_maturity, date=True) ]]</font></para>
+					</td>
+					<td>
+						<para style="P3"><font face="Helvetica">[[ formatLang(c.debit, digits=0) ]]</font></para>
+					</td>
+					<td>
+						<para style="P3">[[formatLang(c.credit, digits=0)]]</para>
+					</td>
+				</tr>
+			</blockTable>
+		</section>
+		<section>[[ (o.line_partial_ids) or removeParentNode('section') ]]
+			<blockTable colWidths="75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0,75.0" style="Tabla3">
+				<para style="terp_default_8">[[ repeatIn(o.line_partial_ids,'c') ]]</para>
+				<tr>
+					<td>
+						<para style="P2">[[c.account_id.code]] [[c.account_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.move_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[formatRut(c.partner_id.vat)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.move_id.journal_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.ref]]</para>
+					</td>
+					<td>
+						<para style="P1"><font face="Helvetica">[[ formatLang(c.date_maturity, date=True) ]]</font></para>
+					</td>
+					<td>
+						<para style="P3"><font face="Helvetica">[[ formatLang(c.debit, digits=0) ]]</font></para>
+					</td>
+					<td>
+						<para style="P3">[[formatLang(c.credit, digits=0)]]</para>
+					</td>
+				</tr>
+			</blockTable>
+		</section>
+		<blockTable colWidths="450.0,75.0,75.0,75.0" style="Table4">[[ (o.line_id) or removeParentNode('blockTable') ]]
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P5">Totales </para>
+				</td>
+				<td>
+					<para style="P5">[[ formatLang(suma(o.line_id.debit), digits=0) ]]</para>
+				</td>
+				<td>
+					<para style="P5">[[ formatLang(suma(o.line_id.credit), digits=0) ]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<blockTable colWidths="450.0,75.0,75.0,75.0" style="Table4">[[ (o.line_partial_ids) or removeParentNode('blockTable') ]]
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P5">Totales </para>
+				</td>
+				<td>
+					<para style="P5">[[ formatLang(suma(o.line_partial_ids.debit), digits=0) ]]</para>
+				</td>
+				<td>
+					<para style="P5">[[ formatLang(suma(o.line_partial_ids.credit), digits=0) ]]</para>
+				</td>
+			</tr>
+		</blockTable>
+
+		<para style="Standard">
+			<font color="white">" "</font>
+		</para>
+		<para style="Standard">
+			<font color="white">" "</font>
+		</para>
+		<para style="Standard">
+			<font color="white">" "</font>
+		</para>
+
+		<blockTable colWidths="210.0,10.0,148.0,9.0,147.0,9.0,145.0" style="Table5">
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P1">[[create_uid(o.id)]]</para>
+					<para style="P1">[[create_date(o.id)]]</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Revisado Por</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Autorizado Por</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Firmado Por</para>
+				</td>
+			</tr>
+		</blockTable>
+	</story>
+</document>

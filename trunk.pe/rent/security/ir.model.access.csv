@@ -1,0 +1,9 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"sales_rent_order","rent.order","model_rent_order","base.group_sale_salesman",1,1,1,0
+"sales_rent_order_line","rent.order.line","model_rent_order_line","base.group_sale_salesman",1,1,1,1
+"sales_rent_order_manager","rent.order.manager","model_rent_order","base.group_sale_manager",1,1,1,1
+"sales_rent_order_line_manager","rent.order.line.manager","model_rent_order_line","base.group_sale_manager",1,1,1,1
+"sales_rent_interval","rent.interval","model_rent_interval","base.group_sale_salesman",1,0,0,0
+"sales_rent_interval_manager","rent.interval","model_rent_interval","base.group_sale_manager",1,0,0,0
+"stock_rent_order","rent.order","model_rent_order","stock.group_stock_manager",1,1,1,0
+"stock_rent_order_line","rent.order.line","model_rent_order_line","stock.group_stock_manager",1,1,1,0

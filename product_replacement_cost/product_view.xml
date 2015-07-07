@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="product_replacement_cost_form_view">
+			<field name="name">product.replacement.cost.form.view</field>
+			<field name="model">product.product</field>
+			<field name="inherit_id" ref="product.product_normal_form_view"/>
+			<field name="arch" type="xml">
+				<field name="type" position="after">
+					<field name="currency_id" attrs="{'required': [('cost_method','=','average')]}"/>
+				</field>
+				<field name="cost_method" position="after">
+					<field name="currency_standard_price" attrs="{'readonly':[('cost_method','=','average')]}"/>
+				</field>
+				<group name="general" position="inside">
+					<field name="replacement_cost"/>
+				</group>
+			</field>
+		</record>
+	</data>
+</openerp>
+

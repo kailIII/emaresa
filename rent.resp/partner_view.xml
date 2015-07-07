@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+       <record id="rent_view_partner_form" model="ir.ui.view">
+            <field name="name">rent.res.partner.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="priority">2</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <field name='title' position="before">
+                   <field name="legal_representative" />  
+                </field>
+            </field>
+        </record>
+	</data>
+</openerp>

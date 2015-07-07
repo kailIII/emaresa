@@ -1,0 +1,12 @@
+
+Versión 0.4.1
+
+	Se añade carpeta con permisos para el módulo.
+	Se borra basura comentada en __openerp__.py
+
+Versión 0.4
+
+	Se añaden traducciones, imágen de opendrive y archivo CHANGELOG.
+	Se corrige problema al duplicar boleta de honorarios.
+	Se borran archivos basura del módulo.
+	

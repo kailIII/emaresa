@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	 <record id="view_res_currency_select_automatic_update" model="ir.ui.view">
+	            <field name="name">res.currency.form.select_automatic_update</field>
+	            <field name="model">res.currency</field>
+	            <field name="inherit_id" ref="base.view_currency_form"/>
+	            <field name="arch" type="xml">
+	                <field name="active" position="after">
+	                    <field name="actualizacion_ws"/>
+	                    <field name="cod_bcentral" attrs="{'invisible':[('actualizacion_ws','!=',True)]}"/>
+	                </field>
+	            </field>
+	 </record>
+ 
+     <record model="ir.cron" id="automatic_update_cron">
+        <field name="name">Carga el tipo de cambio</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="False"/>
+        <field name="model" eval="'res.currency'"/>
+        <field name="function" eval="'_carga_tipo_cambio'"/>
+        <field name="args" eval="'()'" />
+    </record>
+    
+    </data>
+</openerp>

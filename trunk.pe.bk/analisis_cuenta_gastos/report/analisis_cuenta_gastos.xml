@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+<data noupdate="1">
+	<!-- Liquidacion Form report definition -->
+	<record id="analisis_cuenta_gastos" model="ir.actions.report.xml">
+		<field name="name">Reporte Analisis Cuenta de Gastos</field>
+		<field name="type">ir.actions.report.xml</field>
+		<field name="model">reporte_analisis_cuenta_gastos</field>
+		<field name="report_name">report_analisis_cuenta_gastos</field>
+		<field name="report_type">aeroo</field>
+		<field name="in_format">oo-ods</field>
+		<field name="out_format" eval="ref('report_aeroo.report_mimetypes_ods_ods')"/>
+		<field name="parser_loc">analisis_cuenta_gastos/report/parser.py</field>
+		<field name="report_rml">analisis_cuenta_gastos/report/analisis_cuenta_gastos.ods</field>
+		<field name="parser_state">loc</field>
+		<field name="tml_source">file</field>
+	</record>
+	
+</data>
+</openerp>

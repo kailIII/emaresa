@@ -1,0 +1,35 @@
+
+Versión 0.7.1
+	Se agrega campo comment a reporte rml.
+
+Versión 0.7
+
+	Se convierte reporte a rml para mejor compatibilidad.
+	Se comentan las lineas para integración con Aeroo Report.
+
+Versión 0.6
+
+	Se agrega campo comentario al objeto de las conciliaciones y se hereda el contenido desde wizard de conciliacion completa.
+
+Versión 0.5
+
+	Se agrega company_id y su respectivo filtro para companies necesario para filtro de vista.
+
+Versión 0.4
+
+	Se agrega filtro de vista para reconciliaciones manuales, queda agregado en la vista mostrandose al ingresar cualquier usuario.
+
+Versión 0.3
+
+	Agrega cambios solicitados en report para quedar acorde a necesidades Emaresa.
+
+Versión 0.2
+
+	Se elimina el cambio en la vista tree quitando los campos 'reconcile_id' y 'reconcile_partial_id' del objeto account.move.line
+volviendo a mostrar el campo 'reconcile'.
+	Se agrega una vista tree y search con su menuitem para account.move.reconcile debajo del apunte analítico.
+
+Versión 0.1
+
+	Se agrega el reporte del objeto account.move.reconcile y se cambia el campo 'reconcile' de la vista account.move.line tree
+por los campos 'reconcile_id' y 'reconcile_partial_id' para acceder directo a la vista form de account.move.reconcile.\n

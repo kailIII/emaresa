@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="view_reporte_flujo_cuenta_efectivo_form" model="ir.ui.view">
+            <field name="name">report_flujo_caja_efectivo.form</field>
+            <field name="model">reporte_flujo_caja_efectivo</field>
+            <field name="arch" type="xml">
+                <form string="Flujo de Caja Efectivo" version="7.0">
+			<group colspan="6" col="6">
+				<field name="report_xml_id" widget="selection" domain="[('report_name','=','report_flujo_caja_efectivo')]" invisible="1"/>
+				<field name="fiscalyear_id" string="Ejercicio Fiscal" widget="selection"/>
+				<field name="compania_id" string="Compañía" widget="selection"/>
+			</group>
+			<footer>
+				<button name="generate_report" class="oe_highlight" string="Imprimir" type="object"/>
+				
+				<button string="Cancelar" class="oe_link" special="cancel" />
+			</footer>
+                </form>
+            </field>
+        </record>
+        
+	<record id="action_flujo_caja_efectivo_reports" model="ir.actions.act_window">
+		<field name="name">Flujo Cuenta Efectivo</field>
+		<field name="type">ir.actions.act_window</field>
+		<field name="res_model">reporte_flujo_caja_efectivo</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+          <menuitem name="Flujo Efectivo" id="menu_flujo_caja_efectivo" parent="account.menu_finance_bank_and_cash" sequence="11"/>
+       	  <menuitem name="Generar" action="action_flujo_caja_efectivo_reports" id="menu_action_flujo_efectivo" parent="menu_flujo_caja_efectivo"/>
+
+    </data>
+</openerp>

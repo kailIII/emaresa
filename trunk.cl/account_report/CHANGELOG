@@ -1,0 +1,23 @@
+
+Versión 1.1.2
+
+	Se corrige campo detalle de reporte cobranza, ahora sale el número de factura en vez del número de asiento.
+
+Versión 1.1.1
+
+	Se corrigen errores de nombres en nuevo comprobante de cobranza donde decía "Comprobante Contable" ahora queda "Comprobante Cobranza".
+
+Versión 1.1
+
+	Se modifica el reporte de cobranza para que sea similar al comprobante de asiento en la información entregada.
+	Se continua imprimiendo desde pago de clientes.
+
+Versión 0.10
+
+	Se modifica Comprobante de Asiento para agregar fechas de vencimiento en cheques depositados.
+
+Versión 0.9
+
+	Se añaden templates en rml para mejorar rendimiento de informes en OpenERP Emaresa.
+	Se comentan las lineas para integración con Aeroo Report.
+

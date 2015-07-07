@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_account_asset_category_form_1" model="ir.ui.view">
+			<field name="name">account.asset.category.form.1.view</field>
+			<field name="model">account.asset.category</field>
+			<field name="inherit_id" ref="account_asset.view_account_asset_category_form"/>
+			<field name="arch" type="xml">
+				<field name="name" position="before">
+					<field name="accounting_type"/>
+				</field>
+				<field name="account_asset_id" position="after">
+					<field name="account_correccion_monetaria_id"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

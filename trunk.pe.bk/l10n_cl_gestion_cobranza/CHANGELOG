@@ -1,0 +1,13 @@
+
+Versión 0.2.1
+
+	Corregido errores de reporte al no ser un pago de cliente, hecha validación en rml para texto de error.
+
+Versión 0.2
+
+	Añadido reporte de cobranza a módulo de gestión.
+
+Versión 0.1
+
+	Añadida vista no modificable con filtros de búsqueda específicos para Gestión de Corbanza en Emaresa.
+

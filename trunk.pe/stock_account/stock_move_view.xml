@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_move_account_move_inherit_form" model="ir.ui.view">
+			<field name="name">stock.move.account.move.inherit.form</field>
+			<field name="model">stock.move</field>
+			<field name="inherit_id" ref="stock.view_move_form"/>
+			<field eval="1" name="priority"/>
+			<field name="arch" type="xml">
+				<group name="destination_grp" position="after">
+					<group name="account_grp" string="Account">
+						<field name="account_move_id"/>
+					</group>
+				</group>
+			</field>
+		</record>
+	</data>
+</openerp>
+

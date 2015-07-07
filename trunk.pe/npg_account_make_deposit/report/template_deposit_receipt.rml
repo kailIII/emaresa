@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<document filename="comprobante_deposito.pdf">
+	<template pageSize="(612.0,792.0)" title="Comprobante de Depósito" author="David Acevedo Toledo (Fedoro)" allowSplitting="20">
+		<pageTemplate id="first">
+			<frame id="first" x1="57.0" y1="57.0" width="498" height="678"/>
+		</pageTemplate>
+	</template>
+	<stylesheet>
+		<blockTableStyle id="Standard_Outline">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="TOP"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla1">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table1">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla2">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table2">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table3">
+			<blockAlignment value="CENTER"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="1,0" stop="1,0" thickness="1"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="3,0" stop="3,0" thickness="1"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="5,0" stop="5,0" thickness="1"/>
+		</blockTableStyle>
+		<initialize>
+			<paraStyle name="all" alignment="justify"/>
+		</initialize>
+		<paraStyle name="Header" fontName="Helvetica-Bold" fontSize="15.0" leading="15" alignment="CENTER" spaceAfter="30.0"/>
+		<paraStyle name="Default" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+		<paraStyle name="Standard" fontName="Helvetica" leftIndent="23.0" spaceBefore="6.0" spaceAfter="4.0" fontSize="12.0"/>
+		<paraStyle name="P1" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P2" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P3" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P5" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P7" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P9" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER"/>
+	</stylesheet>
+	<story>
+		<para style="Default">[[repeatIn(objects,'o')]]</para>
+		<illustration>
+			<image width="100.0" height="40.0" x="-10" y="-15">[[(company.logo) or ' ']]</image>
+		</illustration>
+		<para style="Header">Comprobante de Depósito</para>
+		<blockTable colWidths="120.0,150.0,120.0,150.0" style="Tabla1">
+			<tr>
+				<td>
+					<para style="P5">Depósito desde Cuenta</para>
+				</td>
+				<td>
+					<para style="P7">[[o.deposit_from_account_id.name]]</para>
+				</td>
+				<td>
+					<para style="P5">Depósito a la Cuenta</para>
+				</td>
+				<td>
+					<para style="P7">[[o.deposit_to_account_id.name]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P5">Diario</para>
+				</td>
+				<td>
+					<para style="P7">[[o.journal_id.name]]</para>
+				</td>
+				<td>
+					<para style="P5">Comprobante Contable</para>
+				</td>
+				<td>
+					<para style="P7">[[o.name]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P5">Fecha Depósito</para>
+				</td>
+				<td>
+					<para style="P7">[[formatLang(o.date, date=True)]]</para>
+				</td>
+				<td>
+					<para style="P5">Glosa</para>
+				</td>
+				<td>
+					<para style="P7">[[o.memo]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P5">Número Depósito</para>
+				</td>
+				<td>
+					<para style="P7">[[o.deposit_bag_no]]</para>
+				</td>
+				<td>
+					<para style="P5">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="65.0,70.0,124.0,70.0,126.0,85.0" style="Table1">
+			<tr>
+				<td>
+					<para style="P9">Fecha</para>
+				</td>
+				<td>
+					<para style="P9">Fecha Vencimiento</para>
+				</td>
+				<td>
+					<para style="P9">Nombre</para>
+				</td>
+				<td>
+					<para style="P9">Referencia</para>
+				</td>
+				<td>
+					<para style="P9">Cliente</para>
+				</td>
+				<td>
+					<para style="P9">Monto</para>
+				</td>
+			</tr>
+		</blockTable>
+		<section>
+			<para style="P5">[[repeatIn(o.ticket_line_ids, 'c')]]</para>
+			<blockTable colWidths="65.0,70.0,124.0,70.0,126.0,85.0" style="Tabla2">
+				<tr>
+					<td>
+						<para style="P1">[[formatLang(c.date, date=True)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[formatLang(c.date_maturity, date=True)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.ref]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.partner_id.name]]</para>
+					</td>
+					<td>
+						<para style="P2">[[formatLang(c.amount, digits=0)]]</para>
+					</td>
+				</tr>
+			</blockTable>
+		</section>
+		<blockTable colWidths="259.0,70.0,126.0,85.0" style="Table2">
+			<tr>
+				<td>
+					<para style="P3">Total de Ítems</para>
+				</td>
+				<td>
+					<para style="P3">[[formatLang(o.count_total, digits=0)]]</para>
+				</td>
+				<td>
+					<para style="P3">Monto Total</para>
+				</td>
+				<td>
+					<para style="P3">[[formatLang(o.amount, digits=0)]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="21.0,142.0,21.0,136.0,21.0,137.0,21.0" style="Table3">
+			<tr>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P9">Preparado Por</para>
+					<para style="P1">[[o.prepared_by_user_id.name]]</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P9">Validado Por</para>
+					<para style="P1">[[o.verified_by_user_id.name]]</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P9">Fecha Validación</para>
+					<para style="P1">[[formatLang(o.verified_date, date=True)]]</para>
+				</td>
+				<td>
+					<para style="P7">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+	</story>
+</document>

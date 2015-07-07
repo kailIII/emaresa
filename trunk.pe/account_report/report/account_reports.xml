@@ -1,0 +1,92 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<!-- Account Move report definition
+		<record id="account_move_asiento_report" model="ir.actions.report.xml">
+			<field name="name">Imprimir Comprobante Asiento</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.move</field>
+			<field name="report_name">Comprobante de Asiento</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_report/report/parser.py</field>
+			<field name="report_rml">account_report/report/template_account_move.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>-->
+	
+		<!-- This record add the print button for the asiento report
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.move']" name="models"/>
+			<field name="name">Comprobante Asiento</field>
+			<field eval="'ir.actions.report.xml,'+str(account_move_asiento_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>-->
+		<report auto="False" id="account_move_report" model="account.move" name="account_move_report"
+			rml="account_report/report/template_account_move.rml" string="Comprobante Contable" usage="default"/>
+
+
+		<!-- Account Voucher report definition 
+		<record id="account_voucher_cobranza_report" model="ir.actions.report.xml">
+			<field name="name">Imprimir Comprobante Cobranza</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.voucher</field>
+			<field name="report_name">Comprobante de Cobranza</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_report/report/parser.py</field>
+			<field name="report_rml">account_report/report/template_account_voucher.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>-->
+	
+		<!-- This record add the print button for the cobranza report 
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.voucher']" name="models"/>
+			<field name="name">Comprobante Cobranza</field>
+			<field eval="'ir.actions.report.xml,'+str(account_voucher_cobranza_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>-->
+		<report auto="False" id="account_voucher_report" model="account.voucher" name="account_voucher_report"
+			rml="account_report/report/template_account_voucher.rml" string="Comprobante Cobranza Nuevo" usage="default"/>
+		<report auto="False" id="account_voucher_report_resp" model="account.voucher" name="account_voucher_report_resp"
+			rml="account_report/report/template_account_voucher.resp.rml" string="Comprobante Cobranza" usage="default"/>
+
+		<!-- Account Cargo report definition 
+		<record id="account_move_cargo_report" model="ir.actions.report.xml">
+			<field name="name">Imprimir Solicitud de Cargo</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.move</field>
+			<field name="report_name">Solicitud de Cargo</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_report/report/parser.py</field>
+			<field name="report_rml">account_report/report/template_account_move_cargo.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>-->
+	
+		<!-- This record add the print button for the cargo report 
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.move']" name="models"/>
+			<field name="name">Solicitud de Cargo</field>
+			<field eval="'ir.actions.report.xml,'+str(account_move_cargo_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>-->
+		<report auto="False" id="account_move_cargo_rml_report" model="account.move" name="account_move_cargo_report"
+			rml="account_report/report/template_account_move_cargo.rml" string="Solicitud Cargo Cta. Cte. Personal" usage="default"/>
+
+	</data>
+</openerp>

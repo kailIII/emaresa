@@ -1,0 +1,29 @@
+
+Versión 0.2.2
+
+	Se arregla reporte de guía de remisión.
+
+Versión 0.2.1
+
+	Se arregla reporte de guía de remisión.
+
+Versión 0.2
+
+	Depuración completa.
+
+Versión 0.1.3
+
+	Se modifica error de dependencia de report_aeroo_ooo.
+
+Versión 0.1.2
+
+	Se elimina del parser definición de reporte orden de compra hasta saber como llamar a otro id ya creado.
+
+Versión 0.1.1
+
+	Corrige error en dirección de reporte Pedido de Compra.
+
+Versión 0.1
+
+	Addons que añade reportes de Factura, Boleta, Guía de Despacho y Orden de Compra.
+

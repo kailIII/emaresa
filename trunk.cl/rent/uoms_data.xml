@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="duration_uom_categ" model="product.uom.categ">
+            <field name="name">Duration</field>
+        </record>
+        <record id="uom_day" model="product.uom">
+            <field name="name">Day</field>
+            <field name="category_id" ref="duration_uom_categ"/>
+            <!--
+                Because we consider a month is 30 days, we have to consider a year is 360 days (12*30).
+	    -->
+            <field name="factor" eval="360.0"/>
+            <field name="uom_type">smaller</field>
+            <field name="rounding" eval="1.0"/>
+        </record>
+        <record id="uom_month" model="product.uom">
+            <field name="name">Month</field>
+            <field name="category_id" ref="duration_uom_categ"/>
+            <field name="factor" eval="12.0"/>
+            <field name="uom_type">smaller</field>
+            <field name="rounding" eval="1.0"/>
+        </record>
+        <record id="uom_year" model="product.uom">
+            <field name="name">Year</field>
+            <field name="category_id" ref="duration_uom_categ"/>
+            <field name="factor" eval="1.0"/>
+            <field name="uom_type">reference</field>
+            <field name="rounding" eval="1.0"/>
+        </record>
+    </data>
+</openerp>

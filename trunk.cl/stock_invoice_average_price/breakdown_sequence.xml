@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data noupdate="1">
+		<!-- adjusting journal sequence -->
+		<record id="seq_type_adjusting_journal" model="ir.sequence.type">
+			<field name="name">Adjusting Journal</field>
+			<field name="code">adjusting.journal</field>
+		</record>
+
+		<record id="seq_adjusting_journal" model="ir.sequence">
+			<field name="name">Adjusting Journal</field>
+			<field name="code">adjusting.journal</field>
+			<field name="prefix">LC/</field>
+			<field name="padding">5</field>
+			<field name="company_id" eval="False"/>
+		</record>
+	</data>
+</openerp>
+		

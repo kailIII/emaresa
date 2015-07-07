@@ -1,0 +1,115 @@
+<?xml version="1.0"?>
+<document filename="localizacionChilena">
+  <template title="Localizacion Chilena" author="Michael Silva(msilva@solintegra.cl)" allowSplitting="20" >
+    <pageTemplate id="first">  	    	
+    	<frame id="first" x1="0.6cm" y1="3.3cm" height="23.0cm" width="19cm"/>
+        <pageGraphics>		
+                <setFont name="Helvetica" size="8"/>
+                <fill color="black"/>                
+                <stroke color="black"/>
+		<drawString x="0.5cm" y="29.0cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.name) ]] </drawString>
+		<drawString x="0.5cm" y="28.5cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.rut)]]</drawString>
+		<drawString x="0.5cm" y="28.0cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.x_giro)]]</drawString>
+		<drawString x="0.5cm" y="27.5cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.partner_id.address[0].street)]]</drawString>
+
+<setFont name="Helvetica" size="9"/>
+		<drawString x="10.0cm" y="27.7cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and 'Balance Tributario') ]]</drawString>		
+
+<setFont name="Helvetica" size="7"/>
+		<drawString x="10.1cm" y="27.3cm">[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and _periodos(data['form']['periodos'])) ]]</drawString>
+
+<setFont name="Helvetica" size="8"/>
+
+		<image x="16.5cm" y="26.7cm" height="40.0" >[[ (data['form']['si']==1 and '') or (data['form']['si']==0 and company.logo) ]]</image>    
+
+                <lines>0.5cm 26.7cm 20.7cm 26.7cm</lines>        
+                <lines>0.5cm 1.5cm 20.7cm 1.5cm</lines>            			
+            <drawCentredString x="10.5cm" y="0.8cm"> Pagina: <pageNumber/>  </drawCentredString>
+        </pageGraphics>	
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>	
+     <initialize>    
+		<paraStyle name="all" alignment="justify"/>
+    </initialize>    	
+    <paraStyle name="string_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_c" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="5.3" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="string_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_res" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="RIGHT" spaceBefore="2.5" spaceAfter="0.0"/>    
+    <paraStyle name="string_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_campos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="7.0" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>    	
+    <paraStyle name="string_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="6.5" leading="0" alignment="LEFT" spaceBefore="0.0" spaceAfter="2.5"/>    
+    <paraStyle name="integer_titulos_" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica-Bold" fontSize="4.9" leading="0" alignment="RIGHT" spaceBefore="0.0" spaceAfter="2.5"/>          
+    <images/>
+  </stylesheet>
+  <story>       
+
+<section>
+	  <para>[[ repeatIn(get_(data['form']['compania'],data['form']['periodos'],data['form']['si'],data['form']['type_']), 'o') ]]</para> 
+      <blockTable colWidths="1.6cm,5.0cm,1.7cm,1.7cm,1.7cm,1.7cm,1.7cm,1.7cm,1.7cm,1.7cm">
+        <tr>
+            <td>    
+                <para textColor="black" style="string_titulos">[[ (o['auxiliar']=='t' and 'Codigo')]]</para>
+                <para textColor="black" style="string_campos_c">[[ (o['auxiliar']=='d' and o['code'])]]</para>    
+                <para textColor="black" style="string_titulos_">[[ (o['auxiliar']=='d_' and '')]]</para>
+            </td>
+            <td>
+				<para textColor="black" style="string_titulos">[[ (o['auxiliar']=='t' and 'Cuenta')]]</para>  
+                <para textColor="black" style="string_campos_c">[[(o['auxiliar']=='d' and corto_dat(o['name']))]]</para>  
+                <para textColor="black" style="string_titulos_">[[ (o['auxiliar']=='d_' and o['name'])]]</para>  
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Debe')]]</para>  
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['debe'])]]</para>  
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['debe'])]]</para>  
+            </td>
+            <td>
+				<para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Haber')]]</para>  
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['haber'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['haber'])]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Deudor')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['deudor'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['deudor'])]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Acreedor')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['acreedor'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['acreedor'])]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Activo')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['activo'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['activo'])]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Pasivo')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['pasivo'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['pasivo'])]]</para>
+            </td>
+            <td>
+                <para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Perdida')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['perdida'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['perdida'])]]</para>
+            </td>
+            <td>
+				<para textColor="black" style="integer_titulos">[[ (o['auxiliar']=='t' and 'Ganancia')]]</para>
+                <para textColor="black" style="integer_campos_c">[[ (o['auxiliar']=='d' and o['ganancia'])]]</para>
+                <para textColor="black" style="integer_titulos_">[[ (o['auxiliar']=='d_' and o['ganancia'])]]</para>
+            </td>        
+        </tr>
+      </blockTable>    
+</section>
+  </story>
+</document>

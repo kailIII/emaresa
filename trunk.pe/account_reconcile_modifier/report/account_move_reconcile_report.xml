@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Account Move Reconcile Report Definition 
+		<record id="account_move_reconcile_report" model="ir.actions.report.xml">
+			<field name="name">Comprobante Conciliacion</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.move.reconcile</field>
+			<field name="report_name">Comprobante Conciliacion</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-odt</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_pdf_odt')"/>
+			<field name="parser_loc">account_reconcile_modifier/report/parser.py</field>
+			<field name="report_rml">account_reconcile_modifier/report/template_account_move_reconcile.odt</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>-->
+	
+		<!-- This record add the print button for the asiento report 
+		<ir_set>
+			<field eval="'action'" name="key"/>
+			<field eval="'client_print_multi'" name="key2"/>
+			<field eval="['account.move.reconcile']" name="models"/>
+			<field name="name">Comprobante Conciliacion</field>
+			<field eval="'ir.actions.report.xml,'+str(account_move_reconcile_report)" name="value"/>
+			<field eval="True" name="isobject"/>
+			<field eval="True" name="replace"/>
+		</ir_set>-->
+
+		<report auto="False" id="account_move_reconcile_rml_report" model="account.move.reconcile" name="account_move_reconcile_rml_report"
+		 rml="account_reconcile_modifier/report/template_account_move_reconcile.rml" string="Comprobante Conciliacion" usage="default"/>
+	</data>
+</openerp>

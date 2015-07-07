@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--
+            Rent Order Calendar view
+        <record model="ir.ui.view" id="rent_order_calendar_view">
+            <field name="name">rent.order.calendar</field>
+            <field name="model">rent.order</field>
+            <field name="arch" type="xml">
+                <calendar string="Rent Orders" color="partner_id" date_start="date_begin_rent" date_stop="date_end_rent">
+                    <field name="partner_id"/>
+                    <field name="description"/>
+                </calendar>
+            </field>
+        </record>-->
+
+<!--	Boton para facturar las lineas mensualmente
+
+		<act_window id="menu_action_confirm_account_asset" 
+		multi="True"
+		key2="client_action_multi" name="Bill Rent Lines"
+		res_model="rent.order" src_model="rent.order.lines"
+		view_id="view_account_asset_asset_confirm_wizard_form"
+		view_type="form" target="new" view_mode="form"/>-->
+
+        <!--
+            Rent Order tree view
+        -->
+        <record model="ir.ui.view" id="rent_order_tree_view">
+            <field name="name">rent.order.tree.view</field>
+            <field name="model">rent.order</field>
+            <field name="arch" type="xml">
+                <tree string="Rent Orders" colors="blue:state in ('draft');gray:state in ('cancelled');green:state in ('done')">
+                    <field name="reference"/>
+                    <field name="date_created"/>
+                    <field name="partner_id"/>
+                    <field name="salesman"/>
+                    <field name="origin_document"/>
+                    <field name="state"/>
+                    <field name="invoiced_rate" widget="progressbar"/>
+                    <field name="total_with_discount" string="Untaxed Total" sum="Total"/>
+                    <field name="total_with_taxes_with_discount" string="Total"/>
+                    <button name="action_show_invoices" type="object"  icon="terp-account"
+                        string="Show invoices" states="ongoing,done,confirmed"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--
+            Rent Order form view
+        -->
+        <record model="ir.ui.view" id="rent_order_form_view">
+            <field name="name">rent.order.form.view</field>
+            <field name="model">rent.order</field>
+            <field name="arch" type="xml">
+                <form string="Rent Order" version="7.0">
+			<header>
+	                        <button name="on_draft_clicked" string="Go back to draft" states="cancelled" type="object"/>
+	                        <button name="on_cancel_clicked" string="Cancel" states="confirmed,ongoing"/>
+	                        <button name="on_confirm_clicked" string="Confirm" states="draft"/>
+<!--				<button name="billable_to_done" string="Generate invoices" type="object"
+					states="ongoing,billable"/>-->
+				<field name="state" widget="statusbar" statusbar_colors='{"draft":"red","confirmed":"blue"}' readonly="1"/>
+			</header>
+			<sheet>
+				<div class="oe_title">
+					<label for="reference" class="oe_edit_only" string="Reference"/>
+					<field name="reference" attrs="{'readonly':[('state','!=','draft')]}"/>
+				</div>
+				<group>
+					<group>
+						<field name="date_created" attrs="{'readonly':[('state','!=','draft')]}"/>
+						<field name="salesman" attrs="{'readonly': [('state','!=','draft')]}"/>
+						<field name="origin_document" attrs="{'readonly':[('state','!=','draft')]}"/>
+						    <!-- ['|',('is_service_only', '=', True)] -->
+					</group>
+					<group>
+							<field name="shop_id" widget="selection"
+								attrs="{'readonly': [('state','!=','draft')]}"
+								on_change="company_load(shop_id)"/>
+						    <!-- ['|',('is_service_only', '=', True)] -->
+							<field name="fiscal_position" widget="selection"
+								attrs="{'readonly': [('state','!=','draft')]}"/>
+						    <!-- ['|',('is_service_only', '=', True)] -->
+							<field name="partner_id" on_change="on_client_changed(partner_id)"
+								attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="pricelist_id" attrs="{'readonly': [('state','!=','draft')]}"
+								on_change="onchange_pricelist_id(pricelist_id, rent_line_ids)"/>
+						<!--	groups="product.group_sale_pricelist"/>-->
+					</group>
+				</group>
+				<notebook colspan="6">
+					<page string="Rent Order">
+						<group colspan="4" col="2">
+						<!--	<button name="bill" string="Bill" type="object" states="ongoing"/>-->
+							<field name="description" colspan="4"
+								 attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<field name="rent_line_ids" nolabel="1" colspan="4"
+							attrs="{'readonly': [('state','!=','draft')]}"/>
+							<!-- ['|',('is_service_only', '=', True)] -->
+						<group class="oe_subtotal_footer oe_right" colspan="2" name="rent_total">
+							<field name="total" widget='monetary'
+								 options="{'currency_field': 'currency_id'}"/>
+							<field name="total_taxes" widget='monetary'
+								 options="{'currency_field': 'currency_id'}"/>
+							<div class="oe_subtotal_footer_separator oe_inline">
+								<label for="total_with_taxes" />
+								<button name="on_compute_clicked" states="draft" type="object"
+									string="(update)" class="oe_edit_only oe_link"/>
+							</div>
+							<field name="total_with_taxes" nolabel="1"
+								class="oe_subtotal_footer_separator"
+								widget='monetary' options="{'currency_field': 'currency_id'}"/>
+						</group>
+						<div class="oe_clear"/>
+							<field name="notes" class="oe_inline"
+								 placeholder="Terms and conditions..."/>
+<!--						<group colspan="4" col="7">
+							-Disabled for now, until we find a good way to implement
+									global discount in invoices !
+							<field name="total_with_discount" attrs="{'readonly': [('state','!=','billable')]}"/>
+							<field name="total_taxes_with_discount" attrs="{'readonly': [('state','!=','billable')]}"/>
+							<field name="total_with_taxes_with_discount" attrs="{'readonly': [('state','!=','billable')]}"/>
+							<field name="discount" attrs="{'readonly': [('state','!=','billable')]}"/>
+							<label string="Click on this button to refresh prices ->" colspan="2"/>
+						</group>-->
+						<!--	<field name="is_service_only" readonly="1" colspan="4"
+							string="This rent order contains only services, no shipping will be done."/>-->
+					</page>
+<!--					<page string="Invoices">
+						<field name="invoices_ids" nolabel="1" context="{'form_view_ref' : 'account.invoice_form'}"/>
+					</page>-->
+				</notebook>
+			</sheet>
+		</form>
+	</field>
+	</record>
+
+        <!--
+            Rent Order search view.
+        -->
+        <record model="ir.ui.view" id="rent_order_search_view">
+            <field name="name">rent.order.search.view</field>
+            <field name="model">rent.order</field>
+            <field name="arch" type="xml">
+                <search string="Rent Orders">
+                    <filter string="Quotation" icon="terp-project" domain="[('state', '=', 'draft')]"/>
+                    <filter string="Confirmed" icon="terp-project" domain="[('state', '=', 'confirmed')]"/>
+                    <filter string="Ongoing" icon="terp-project" domain="[('state', '=', 'ongoing')]"/>
+                    <separator orientation="vertical"/>
+                    <field name="reference" select="1"/>
+                    <field name="partner_id" select="1"/>
+                    <newline/>
+                    <group string="Group by..." expand="1">
+                        <filter string="Customer" icon="terp-project" context="{'group_by' : 'partner_id'}"/>
+                        <filter string="Salesman" icon="terp-project" context="{'group_by' : 'salesman'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!--
+            Rent Order Line form view.
+        -->
+        <record model="ir.ui.view" id="rent_order_line_form_view">
+            <field name="name">rent.order.line.form.view</field>
+            <field name="model">rent.order.line</field>
+            <field name="arch" type="xml">
+                <form string="Rent Order Lines">
+                    <notebook>
+                        <page string="General">
+                            <separator string="Product information" colspan="4"/>
+                            <field name="product_id" colspan="4" on_change="on_product_changed(product_id,quantity)"
+			    	attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="description" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="product_id_uom"/>
+			    <field name="date_begin_rent" attrs="{'readonly':[('state','!=','draft')]}"
+				on_change="on_duration_changed(date_begin_rent,rent_duration,rent_duration_unity,company_id,context)"/>
+		    	    <field name="date_in_shipping" 
+				on_change="correct_date(date_begin_rent, date_in_shipping, rent_duration_unity)"
+				attrs="{'readonly' : [('state','!=','draft')]}"/> <!-- ['|',('is_service_only', '=', True)] -->
+		    	    <field name="last_invoicing_date" attrs="{'readonly' : [('state','!=','draft')]}"/>
+		    	    <field name="invoicing_date" attrs="{'readonly' : [('state','!=','draft')]}"/>
+			    <field name="rent_duration" attrs="{'readonly': [('state','!=','draft')]}"
+				on_change="on_duration_changed(date_begin_rent,rent_duration,rent_duration_unity,company_id,context)"/>
+				<!-- ['|',('is_service_only', '=', True)] -->
+		    	    <field name="rent_duration_unity" attrs="{'readonly': [('state','!=','draft')]}"
+				on_change="on_duration_changed(date_begin_rent,rent_duration,rent_duration_unity,company_id,context)"/>
+				<!-- ['|',('is_service_only', '=', True)] -->
+	<!--	    	    <field name="rent_invoice_period"
+				attrs="{'readonly': [('state','!=','draft')]}"/>
+				DESCOMENTAR ALGUN DIA -->
+					<!-- ['|',('is_service_only', '=', True)] -->
+                            <field name="quantity" on_change="on_quantity_changed(product_id, quantity)"
+			    	attrs="{'readonly': [('state','!=','draft')]}"/>
+<!--on_change="product_uom_change(parent.pricelist_id, product_id, product_uom_qty, product_uom, product_uos_qty, product_uos, name, parent.partner_id, False, False, parent.date_order, context)"-->
+                            <field name="discount" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="product_type" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="unit_price" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <separator string="Taxes" colspan="4"/>
+                            <field name="tax_ids" colspan="4" nolabel="1"
+			    	attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="state" colspan="4"/>
+			    <field name="company_id" attrs="{'readonly' : [('state','!=','draft')]}"/>
+			    <!-- ['|',('is_service_only', '=', True)] -->
+                        </page>
+                        <page string="Notes">
+                            <field name="notes" nolabel="1"/>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+
+        <!--
+            Rent Order Line tree view.
+        -->
+        <record model="ir.ui.view" id="rent_order_line_tree_view">
+            <field name="name">rent.order.line.tree.view</field>
+            <field name="model">rent.order.line</field>
+            <field name="arch" type="xml">
+                <tree string="Rent Order Lines">
+                    <field name="product_id"/>
+		    <field name="date_begin_rent"/>
+		    <field name="date_in_shipping"/>
+		    <field name="last_invoicing_date"/>
+		    <field name="invoicing_date"/>
+		    <field name="rent_duration"/>
+		    <field name="rent_duration_unity"/>
+                    <field name="real_unit_price"/>
+                    <field name="discount"/>
+                    <field name="duration_unit_price"/>
+                    <field name="quantity"/>
+                    <field name="product_id_uom"/>
+		<!--    <field name="rent_invoice_period"/>-->
+                    <field name="line_price"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</openerp>

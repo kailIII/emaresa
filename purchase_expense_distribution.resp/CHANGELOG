@@ -1,0 +1,47 @@
+
+Versión 1.3.4
+
+	Se añaden traducciones para es_PE.po.
+
+Versión 1.3.3
+
+	Se corrige bug del precio unitario traido por el wizard a la linea del costeo.
+
+Versión 1.3.2
+
+	Se añaden traducciones para campos nuevos.
+
+Versión 1.3.1
+
+	Se corrige traspaso a dolares mal dividido (cost_rate_currency).
+
+Versión 1.3
+
+	Cambia el monto de la línea del asiento. Reemplaza en 'debit' (línea 308) y 'credit' (línea 315) "line.order_id.expense_amount" por "line.expense_amount".
+
+Versión 1.2
+
+	Se pasa la creación del asiento al momento de actualizar los montos.
+	Se modifica el valor de busqueda del vaor del producto al asiento generado por el stock_move para compatibilidad con importaciones en otras monedas.
+	Se corrigen caculos de los USD dentro de la orden al valor que corresponde.
+
+Versión 1.1.3
+
+	Se corrigen problemas con la eliminación del asiento al volver a calcular los montos.
+
+Versión 1.1.2
+
+	Se añade la creación del asiento contable de la valoración de inventario.
+
+Versión 1.1.1
+
+	Se cambia la forma de calcular el USD, por reconfiguración de monedas en la compañía.
+
+Versión 1.1
+
+	Se completa re-identación y se añaden funcionalidades para calculo del USD junto con la moneda seleccionada en la orden (esta es la moneda base de la compañia y no se puede editar).
+
+Versión 1.0
+
+	Se añade el módulo a proyecto mara modificar añadiendo el USD en la vista para referencia.
+

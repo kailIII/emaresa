@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_gestion_cobranza_tree">
+			<field name="name">gestion.cobranza.tree</field>
+			<field name="model">account.move.line</field>
+			<field name="arch" type="xml">
+				<tree colors="red:state == 'draft';black:state == 'valid'" string="Gestion Cobranza"
+					create="false" delete="false" edit="false" editable="top" version="7.0">
+					<field name="date" string="Fecha"/>
+					<field name="name" invisible="1"/>
+					<field name="move_id" string="Correlativo" width="50"/> 
+					<field name="partner_id" string="Cliente"/>
+					<field name="journal_id" string="Tipo Documento"/>
+					<field name="period_id" invisible="1"/>
+					<field name="ref" string="Referencia"/>
+					<field name="debit"/>
+					<field name="credit"/>
+					<field name="account_id" invisible="1" string="Cuenta Contable"/>
+					<field name="company_id" invisible="1"/>
+					<field name="state" invisible="1"/>
+				</tree>
+			</field>
+		</record>
+
+		<record model="ir.ui.view" id="view_gestion_cobranza_search">
+			<field name="name">gestion.cobranza.search</field>
+			<field name="model">account.move.line</field>
+			<field name="arch" type="xml">
+				<search string="Gestion Cobranza">
+					<field name="ref" string="Numero Documento"/>
+<!--					<field name="date" string="Fecha"/>-->
+					<field name="date_from" filter_domain="[('date','&gt;=',self)]"/>
+					<field name="date_to" filter_domain="[('date','&lt;=',self)]"/>
+					<field name="debit"/>
+					<field name="credit"/>
+					<field name="partner_id" string="Rut Cliente"/>
+					<field name="journal_id" string="Tipo Documento"/>
+					<field name="account_id" string="Cuenta Contable"/>
+					<group expand="0" string="Group By...">
+						<filter string="Period" domain="[]" context="{'group_by':'period_id'}"/>
+						<filter string="Journal" domain="[]" context="{'group_by':'journal_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		
+		<record model="ir.actions.act_window" id="action_gestion_cobranza">
+			<field name="name">Gestion Cobranza</field>
+			<field name="res_model">account.move.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="view_gestion_cobranza_tree"/>
+			<field name="domain">[('account_id.type', '=', 'receivable')]</field>
+			<field name="search_view_id" ref="view_gestion_cobranza_search"/>
+		</record>   
+
+		<record id="action_gestion_cobranza_tree" model="ir.actions.act_window.view">
+			<field eval="15" name="sequence"/>
+			<field name="view_mode">tree</field>
+			<field name="view_id" ref="view_gestion_cobranza_tree"/>
+			<field name="act_window_id" ref="action_gestion_cobranza"/>
+		</record>
+
+		<!-- MenuItem -->
+		<menuitem name="Gestion Cobranza" action="action_gestion_cobranza" id="menu_gestion_cobranza"
+					parent="account.menu_finance_bank_and_cash" sequence="15"/>
+         
+   	</data>
+</openerp>
+

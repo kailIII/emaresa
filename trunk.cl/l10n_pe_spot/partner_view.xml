@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='view_partner_form_inherit_transfer_advance'>
+			<field name='name'>res.partner.property.form.inherit.inherit.transfer.advance</field>
+			<field name='model'>res.partner</field>
+			<field name='inherit_id' ref='account.view_partner_property_form'/>
+			<field name="priority">120</field>
+			<field name='arch' type='xml'>
+	            <xpath expr="//field[@name='property_supplier_payment_term']" position="after">
+	            	<field name="property_spot_journal"/>
+	            </xpath>
+			</field>
+		</record>
+		
+	</data>
+</openerp>

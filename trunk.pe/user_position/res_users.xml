@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	 <record id="user_position_form" model="ir.ui.view">
+	            <field name="name">user_position.form</field>
+	            <field name="model">res.users</field>
+	            <field name="inherit_id" ref="base.view_users_form"/>
+	            <field name="arch" type="xml">
+	                <field name="email" position="after">
+	                    <field name="position" widget="selection"/>
+	                </field>
+	            </field>
+	 </record>
+
+         <record id="user_position_tree" model="ir.ui.view">
+            <field name="name">user_position.tree</field>
+            <field name="model">res.users</field>
+	    <field name="inherit_id" ref="base.view_users_tree"/>
+            <field name="arch" type="xml">
+                <field name="login" position="after">
+                    <field name="position"/>
+		</field>
+            </field>
+        </record>
+
+    </data>
+</openerp>

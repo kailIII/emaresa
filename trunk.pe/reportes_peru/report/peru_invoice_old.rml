@@ -1,0 +1,393 @@
+<?xml version="1.0"?>
+<document filename="test.pdf">
+  <template pageSize="(851.0,793.0)" title="Test" author="Martin Simon" allowSplitting="20">
+    <pageTemplate id="first">
+      <frame id="first" x1="47.0" y1="0.0" width="700" height="736"/>
+      <frame id="second" x1="47.0" y1="-50.0" width="700" height="230" showBoundary="0"/>
+    </pageTemplate>
+  </template>
+  <stylesheet>
+    <blockTableStyle id="Standard_Outline">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table6">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table7">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="MIDDLE"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table8">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table9">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table10">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table2">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <blockTableStyle id="Table1">
+      <blockAlignment value="LEFT"/>
+      <blockValign value="TOP"/>
+    </blockTableStyle>
+    <initialize>
+      <paraStyle name="all" alignment="justify"/>
+    </initialize>
+    <paraStyle name="P1x" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="-1.0" spaceAfter="0.0"/>
+    <paraStyle name="P1" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P2" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="-1.0"/>
+    <paraStyle name="P3" fontName="Courier" fontSize="9.0" leading="11" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P4" fontName="Courier" fontSize="9.0" leading="11" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P5x" rightIndent="0.0" leftIndent="-50.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P9x" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P5" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P6" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P7" fontName="Courier" fontSize="10.0" leading="13" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P8" fontName="Courier" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P9" fontName="Courier" fontSize="10.0" leading="3" alignment="LEFT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P10" fontName="Courier" leftIndent="100.0" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P11" rightIndent="40.0" fontName="Courier" fontSize="10.0" leading="13" alignment="RIGHT" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P12" rightIndent="12.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P13" rightIndent="12.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P14" rightIndent="25.0" leftIndent="0.0" fontName="Courier-Bold" fontSize="9.0" leading="11" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P15" rightIndent="25.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="P16" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P17" rightIndent="0.0" leftIndent="-80.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P18" rightIndent="25.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P19" rightIndent="26.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P20" rightIndent="25.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P21" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="P22" fontName="Courier" fontSize="2.0" leading="3"/>
+    <paraStyle name="P23" fontName="Courier" fontSize="8.0" leading="10"/>
+    <paraStyle name="P24" fontName="Courier" fontSize="2.0" leading="3"/>
+    <paraStyle name="P25" fontName="Courier" fontSize="9.0" leading="11"/>
+    <paraStyle name="P26" fontName="Courier" fontSize="2.0" leading="3"/>
+    <paraStyle name="Standard" fontName="Courier"/>
+    <paraStyle name="Text body" fontName="Courier" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="List" fontName="Courier" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Contents" fontName="Courier" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Table Heading" fontName="Courier" alignment="CENTER" spaceBefore="0.0" spaceAfter="6.0"/>
+    <paraStyle name="Caption" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="Index" fontName="Courier"/>
+    <paraStyle name="Heading" fontName="Courier" fontSize="15.0" leading="19" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_header" fontName="Courier-Bold" fontSize="12.0" leading="15" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_8" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Footer" fontName="Courier"/>
+    <paraStyle name="Horizontal Line" fontName="Courier" fontSize="6.0" leading="8" spaceBefore="0.0" spaceAfter="14.0"/>
+    <paraStyle name="Heading 9" fontName="Courier-Bold" fontSize="75%" leading="NaN" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_General" fontName="Courier-Bold" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_Details" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_Bold_8" rightIndent="0.0" leftIndent="0.0" fontName="Courier-Bold" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_tblheader_General_Centre" fontName="Courier-Bold" fontSize="8.0" leading="10" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_General_Right" fontName="Courier-Bold" fontSize="8.0" leading="10" alignment="RIGHT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_Details_Centre" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_tblheader_Details_Right" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_Right_8" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="8.0" leading="10" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Centre_8" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="8.0" leading="10" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_header_Right" fontName="Courier-Bold" fontSize="15.0" leading="19" alignment="LEFT" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_header_Centre" fontName="Courier-Bold" fontSize="12.0" leading="15" alignment="CENTER" spaceBefore="12.0" spaceAfter="6.0"/>
+    <paraStyle name="terp_default_address" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="10.0" leading="13" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_9" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Bold_9" rightIndent="0.0" leftIndent="-3.0" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Centre_9" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="9.0" leading="11" alignment="CENTER" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Right_9" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_Bold_Right_9" rightIndent="0.0" leftIndent="-3.0" fontName="Courier-Bold" fontSize="9.0" leading="11" alignment="RIGHT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_2" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="2.0" leading="3" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="terp_default_White_2" rightIndent="0.0" leftIndent="0.0" fontName="Courier" fontSize="2.0" leading="3" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0" textColor="#ffffff"/>
+    <paraStyle name="terp_default_Note" rightIndent="0.0" leftIndent="9.0" fontName="Courier-Oblique" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Table" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="6.0" spaceAfter="6.0"/>
+    <paraStyle name="User Index 10" rightIndent="0.0" leftIndent="127.0" fontName="Courier" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Preformatted Text" fontName="Courier" fontSize="10.0" leading="13" spaceBefore="0.0" spaceAfter="0.0"/>
+    <paraStyle name="Frame contents" fontName="Courier"/>
+    <images/>
+  </stylesheet>
+  <story>
+    <para style="P1">[[ repeatIn(objects,'o') ]]</para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <para style="P1x">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="712.0" style="Table6">
+      <tr>
+        <td>
+          <blockTable colWidths="61.0,404.0,75.0,231.0" rowHeights="3" style="Table7">
+            <tr>
+              <td>
+                <para style="Table Contents">
+                  <font color="white"> </font>
+                </para>
+              </td>
+              <td>
+                <para style="P2">[[ o.partner_id.name or '' ]]</para>
+              </td>
+              <td>
+                <para style="Table Contents">
+                  <font color="white"> </font>
+                </para>
+              </td>
+              <td>
+                <para style="P12">
+                  <font face="Courier">[[ get_vat(o.partner_id.vat, o.partner_id.ref) or '']]</font>
+                </para>
+              </td>
+            </tr>
+          </blockTable>
+          <blockTable colWidths="62.0,353.0,202.0,174.0" rowHeights="2" style="Table8">
+            <tr>
+              <td>
+                <para style="P3">
+                  <font color="white"> </font>
+                </para>
+              </td>
+              <td>
+                <para style="P4"><font face="Courier" size="10.0">[[ (o.partner_id.street or '') ]] [[ (o.partner_id.street2 or '') ]]</font>, <font face="Courier" size="10.0">[[ (o.partner_id.city or '') ]]</font>, <font face="Courier" size="10.0">[[ (o.partner_id.country_id.name or '') ]]</font></para>
+              </td>
+              <td>
+                <para style="P3">
+                  <font color="white"> </font>
+                </para>
+              </td>
+              <td>
+                <para style="P13">
+                  <font face="Courier" size="10.0">[[ o.date_invoice ]]</font>
+                </para>
+              </td>
+            </tr>
+          </blockTable>
+          <para style="Text body">
+            <font color="white"> </font>
+          </para>
+          <para style="Text body">
+            <font color="white"> </font>
+          </para>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <section>
+            <font face="Courier" size="8.0">[[ repeatIn(o.invoice_line,'l') ]]</font>
+            <blockTable colWidths="43.0,492.0,130.0,127.0" rowHeights="15" style="Table10">
+              <tr>
+                <td>
+                  <para style="P5x">
+                    <font face="Courier" size="10.0">[[ formatLang(l.quantity, digits="1")]]</font>
+                  </para>
+                </td>
+                <td>
+                  <para style="P5">
+                    <font face="Courier" size="10.0">[[ l.name ]]</font>
+                  </para>
+                </td>
+                <td>
+                  <para style="P16">[[ formatLang(l.price_unit) ]]</para>
+                </td>
+                <td>
+                  <para style="P16">[[ formatLang(l.price_subtotal, digits=get_digits(dp='Account')) ]]</para>
+                </td>
+              </tr>
+            </blockTable>
+          </section>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <para style="P8">
+            <font color="white"> </font>
+          </para>
+          <para style="P1">
+            <font color="white"> </font>
+          </para>
+          <para style="P1">
+            <font color="white"> </font>
+          </para>
+          <para style="P1">
+            <font color="white"> </font>
+          </para>
+          <para style="P1">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font face="Courier" size="10.0">Detalle:</font>
+          </para>
+          <section>
+            <blockTable rowHeights="65" style="Table10">
+              <tr>
+                <td>
+                  <para style="P9x">
+                    <font face="Courier" size="10.0">[[ o.comment or '']]</font>
+                  </para>
+                </td>
+              </tr>
+            </blockTable>
+          </section>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>
+          <para style="P9">
+            <font color="white"> </font>
+          </para>impr
+        </td>
+      </tr>
+      
+    </blockTable>
+    
+    <nextFrame name="second"/>
+    <para style="P1">
+      <font color="white"> </font>
+    </para>
+    <blockTable colWidths="46.0,639.0" style="Table2">
+      <tr>
+        <td>
+          <para style="P14">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P15">
+            <font face="Courier">SON:[[ o.amount_in_words or '']]</font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="P23">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P23">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    <para style="P24">
+      <font color="white"> </font>
+    </para>
+    
+    <blockTable colWidths="730.0,100.0,140.0" rowHeights="17" style="Table1">
+      <tr>
+        <td>
+          <para style="P10">Fecha de Vencimiento: <font face="Courier">[[ o.date_due or '']]</font></para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P17">[[ formatLang(o.amount_untaxed, digits=get_digits(dp='Account')) ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P11">18</para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P17">[[ formatLang(o.amount_tax, digits=get_digits(dp='Account')) ]]</para>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P10">
+            <font color="white"> </font>
+          </para>
+        </td>
+        <td>
+          <para style="P17">
+            <font face="Courier">[[ formatLang(o.amount_total, digits=get_digits(dp='Account')) ]]</font>
+          </para>
+        </td>
+      </tr>
+    </blockTable>
+    <para style="Standard">
+      <font color="white"> </font>
+    </para>
+    <para style="terp_default_8"/>
+    <para style="terp_default_8">
+      <font color="white"> </font>
+    </para>
+  </story>
+</document>

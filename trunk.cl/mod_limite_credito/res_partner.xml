@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<openerp>
+    <data>
+
+         <record id="view_partner_modLimiteCredito_form" model="ir.ui.view">
+            <field name="name">res.partner.modLimiteCredito.form.inherit</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="account.view_partner_property_form"/>
+            <field name="arch" type="xml">
+            
+	            <field name="credit_limit" modifiers="{}" position="replace">
+	            	<field name="credit_limit" string="Limite de credito total" modifiers="{}" invisible="1" />
+	            </field>
+	            
+	            <!-- 
+	            <field name="date_credit" position="replace">
+	            	<field name="date_credit" invisible="1"/>
+	            </field>
+	             -->
+            
+            	<field name="bank_ids" position="before" context="{'default_partner_id': active_id, 'form_view_ref': 'base.view_partner_bank_form'}">
+			        <group>
+						<group string = "Linea de credito">
+							<field name="credit_limit" string="Limite de credito total" modifiers="{}" />
+			            	<field name="ref_venta" readonly="1" />
+					    	<field name="ref_arriendo" readonly="1" />
+							<field name="date_credit" readonly="1" />
+						</group>
+						<group string="Seguro del cliente">
+							<field name="linea_aprobada" readonly="1" />
+						    <field name="tipo_cliente" readonly="1" />
+						    <field name="estado_seguro" readonly="1" />
+						    <field name="fecha_vigencia" readonly="1" />
+						</group>
+					</group>
+                </field>
+                
+            </field>
+        </record>
+
+    </data>
+</openerp>
+
+

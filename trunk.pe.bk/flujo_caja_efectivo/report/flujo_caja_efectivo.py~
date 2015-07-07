@@ -1,0 +1,101 @@
+import datetime
+from report import report_sxw
+from report.report_sxw import rml_parse
+
+class Parser(report_sxw.rml_parse):
+	def __init__(self, cr, uid, name, context):
+		super(Parser, self).__init__(cr, uid, name, context)
+		self.fiscalyear = str(context['fiscalyear_id'])
+		self.compania = str(context['compania_id'])
+		
+		self.localcontext.update({
+			'periodos': self.periodos,
+			'cuentas': self.cuentas,
+			'monto' : self.monto,
+			'monto_periodo' : self.monto_periodo,
+			'monto_cuenta' : self.monto_cuenta,
+	        }) 
+
+	def periodos(self):
+        	cr = self.cr
+	        uid = self.uid
+        	cr.execute("select name from account_period where fiscalyear_id='%"+self.fiscalyear+"%'")
+        	periodos = cr.dictfetchall()
+        	return periodos
+	def titulos(self):
+        	cr = self.cr
+	        uid = self.uid
+        	cr.execute('select name from account_period')
+        	periodos = cr.dictfetchall()
+        	return titulos
+
+	def cuentas(self):
+   		cr = self.cr
+        	uid = self.uid
+        	cr.execute('select account_account_type.name from account_account_type ' \
+				"inner join account_account on account_account.user_type=account_account_type.id "\
+				"where account_account_type.code <> 'view' and account_account_type.flujo_caja=True and account_account.company_id='"+self.compania+"' "
+				"group by account_account_type.name,account_account_type.categoria,account_account_type.secuencia")
+        	cuentas = cr.dictfetchall()
+		return cuentas
+
+	def monto_periodo(self,periodo):
+   		cr = self.cr
+        	uid = self.uid	
+		monto_periodo = 0
+		sql = 'select sum(amount) from account_bank_statement_line ' \
+        		'inner join account_bank_statement on account_bank_statement_line.statement_id=account_bank_statement.id ' \
+                	'inner join account_account on account_bank_statement_line.account_id=account_account.id ' \
+                	'inner join account_period on account_bank_statement.period_id=account_period.id ' \
+	               	'inner join account_account_type on account_account_type.id=account_account.user_type ' \
+			"where account_period.name='"+periodo+"'" \
+			'group by account_period.name'			
+
+		cr.execute(sql)
+		for suma in cr.fetchall():
+			if suma=='None':
+				monto_periodo = 0
+			else:
+				monto_periodo = suma
+		return monto_periodo
+
+	def monto_cuenta(self,cuenta):
+   		cr = self.cr
+        	uid = self.uid	
+		monto_cuenta = 0
+		sql = 'select sum(amount) from account_bank_statement_line ' \
+        		'inner join account_bank_statement on account_bank_statement_line.statement_id=account_bank_statement.id ' \
+                	'inner join account_account on account_bank_statement_line.account_id=account_account.id ' \
+                	'inner join account_period on account_bank_statement.period_id=account_period.id ' \
+	               	'inner join account_account_type on account_account_type.id=account_account.user_type ' \
+			"where account_account_type.name='"+cuenta+"'" \
+			'group by account_account_type.name'
+
+		cr.execute(sql)
+		for suma in cr.fetchall():
+			if suma=='None':
+				monto_cuenta = 0
+			else:
+				monto_cuenta = suma
+		return monto_cuenta
+
+	def monto(self,periodo,cuenta):
+   		cr = self.cr
+        	uid = self.uid	
+		montos = 0
+		sql = 'select sum(amount) from account_bank_statement_line ' \
+        		'inner join account_bank_statement on account_bank_statement_line.statement_id=account_bank_statement.id ' \
+                	'inner join account_account on account_bank_statement_line.account_id=account_account.id ' \
+                	'inner join account_period on account_bank_statement.period_id=account_period.id ' \
+                	'inner join account_account_type on account_account_type.id=account_account.user_type ' \
+                	"where account_period.name='"+periodo+"' and account_account_type.name='"+cuenta+"'" \
+                	'group by account_period.id,account_account_type.id'	
+		cr.execute(sql)
+		for suma in cr.fetchall():
+			montos = suma
+		return montos
+
+
+
+
+

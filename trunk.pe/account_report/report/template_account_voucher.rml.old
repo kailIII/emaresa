@@ -1,0 +1,344 @@
+<?xml version="1.0"?>
+<document filename="comprobante_cobranza.pdf">
+	<template pageSize="(27.94cm,21.59cm)" title="Comprobante Cobranza" author="David Acevedo Toledo (Fedoro)" allowSplitting="20">
+		<!--  842.0, 595.0 -->
+		<pageTemplate id="first">
+			<frame id="first" x1="25.0" y1="60.0" width="25.94cm" height="18.19cm"/>
+		</pageTemplate>
+	</template>
+	<stylesheet>
+		<blockTableStyle id="Standard_Outline">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table1">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla1">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table6">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table2">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Tabla3">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table5">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="GRID" colorName="#000000" start="0,0" stop="-1,-1" thickness="0.5"/>
+		</blockTableStyle>
+		<blockTableStyle id="Table4">
+			<blockAlignment value="LEFT"/>
+			<blockValign value="CENTER"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="0,0" stop="0,0"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="2,0" stop="2,0"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="4,0" stop="4,0"/>
+			<lineStyle kind="LINEBELOW" colorName="#000000" start="6,0" stop="6,0"/>
+		</blockTableStyle>
+		<initialize>
+			<paraStyle name="all" alignment="justify"/>
+		</initialize>
+		<paraStyle name="Header" fontName="Helvetica-Bold" fontSize="15.0" leading="15" alignment="CENTER" spaceBefore="10.0" spaceAfter="35.0"/>
+		<paraStyle name="Default" rightIndent="0.0" leftIndent="0.0" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT" spaceBefore="0.0" spaceAfter="0.0"/>
+		<paraStyle name="Standard" fontName="Helvetica" leftIndent="23.0" spaceBefore="6.0" spaceAfter="4.0" fontSize="12.0"/>
+		<paraStyle name="P1" fontName="Helvetica" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P2" fontName="Helvetica" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P6" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="CENTER"/>
+		<paraStyle name="P7" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="LEFT"/>
+		<paraStyle name="P8" fontName="Helvetica-Bold" fontSize="8.0" leading="10" alignment="RIGHT"/>
+		<paraStyle name="P9" fontName="Helvetica" fontSize="8.0" leading="10" alignment="LEFT"/>
+	</stylesheet>
+	<story>
+		<para style="Default">[[repeatIn(objects,'o')]]</para>
+		<illustration>
+			<image width="100.0" height="40.0" x="20" y="-25">[[(company.logo) or ' ']]</image>
+		</illustration>
+		<para style="Header">Comprobante Cobranza</para>
+		<blockTable colWidths="504.0,28.0,146.0" style="Table1">
+			<tr>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P6">N°</para>
+				</td>
+				<td>
+					<para style="P9">[[o.move_id.name]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="65.1,244.0,72.0,95.0,108.0,95.0" style="Tabla1">
+			<tr>
+				<td>
+					<para style="P7">Diario</para>
+				</td>
+				<td>
+					<para style="P9">[[o.journal_id.name]]</para>
+				</td>
+				<td>
+					<para style="P7">Periodo</para>
+				</td>
+				<td>
+					<para style="P9">[[periodo(o.period_id.name)]]</para>
+				</td>
+				<td>
+					<para style="P7">Fecha</para>
+				</td>
+				<td>
+					<para style="P9">[[formatLang(o.date, date=True)]]</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P7">Rut</para>
+				</td>
+				<td>
+					<para style="P9">[[formatRut(o.partner_id.vat)]]</para>
+				</td>
+				<td>
+					<para style="P7">N° Cheque</para>
+				</td>
+				<td>
+					<para style="P9">[[o.move_id.ref]]</para>
+				</td>
+				<td>
+					<para style="P7">Fecha de Documento</para>
+				</td>
+				<td>
+					<para style="P9">[[fecha_documento(o.move_id.ref)]]</para>
+				</td>
+			</tr>
+		</blockTable>
+		<blockTable colWidths="65.1,244.0,72.0,298.0" style="Table6">
+			<tr>
+				<td>
+					<para style="P7">Empresa</para>
+				</td>
+				<td>
+					<para style="P9">[[o.partner_id.name]]</para>
+				</td>
+				<td>
+					<para style="P7">Descripción</para>
+				</td>
+				<td>
+					<para style="P9">[[descripcion(o.move_id.ref)]]</para>
+				</td>
+			</tr>
+		</blockTable>
+<!--		<blockTable colWidths="65.1,614.0" style="Table6">
+			<tr>
+				<td>
+					<para style="P7">Descripción</para>
+				</td>
+				<td>
+					<para style="P9">[[descripcion(o.move_id.ref)]]</para>
+				</td>
+			</tr>
+		</blockTable>-->
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="53.0,98.0,197.0,83.0,73.0,74.0,100.0" style="Table2">
+			<tr>
+				<td>
+					<para style="P6">Código</para>
+				</td>
+				<td>
+					<para style="P6">Cuenta</para>
+				</td>
+				<td>
+					<para style="P6">Detalle</para>
+				</td>
+				<td>
+					<para style="P6">Fecha Vencimiento</para>
+				</td>
+				<td>
+					<para style="P6">Debe</para>
+				</td>
+				<td>
+					<para style="P6">Haber</para>
+				</td>
+				<td>
+					<para style="P6">Centro de Costo</para>
+				</td>
+			</tr>
+		</blockTable>
+		<section>
+			<blockTable colWidths="53.0,98.0,197.0,83.0,73.0,74.0,100.0" style="Tabla3">
+				<para style="P1">[[repeatIn(o.move_ids,'c')]]</para>
+				<tr>
+					<td>
+						<para style="P9">[[c.account_id.code]]</para>
+					</td>
+					<td>
+						<para style="P1">[[c.account_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[centro_costo(c, '1')]]</para>
+					</td>
+					<td>
+						<para style="P1">[[fecha_vencimiento(o.move_id.ref, c.date_maturity)]]</para>
+					</td>
+					<td>
+						<para style="P2">[[formatLang(c.debit, digits=0)]]</para>
+					</td>
+					<td>
+						<para style="P2">[[formatLang(c.credit, digits=0)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[centro_costo(c, '0')]]</para>
+					</td>
+				</tr>
+			</blockTable>
+		</section>
+<!--		<section>
+			<blockTable colWidths="53.0,98.0,93.0,83.0,73.0,74.0,100.0,104.0" style="Tabla3">
+				<para style="P1">[[repeatIn(lineas(o.move_ids, 1),'d')]]</para>
+				<tr>
+					<td>
+						<para style="P9">[[d.general_account_id.code]]</para>
+					</td>
+					<td>
+						<para style="P1">[[d.general_account_id.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[d.name]]</para>
+					</td>
+					<td>
+						<para style="P1">[[fecha_vencimiento(o.ref, c.date_maturity)]]</para>
+					</td>
+					<td>
+						<para style="P2">[[formatLang(monto(d.amount, 0), digits=0)]]</para>
+					</td>
+					<td>
+						<para style="P2">[[formatLang(monto(d.amount, 1), digits=0)]]</para>
+					</td>
+					<td>
+						<para style="P1">[[d.account_id.code]]</para>
+					</td>
+					<td>
+						<para style="P1">[[descripcion(o.ref)]]</para>
+					</td>
+				</tr>
+			</blockTable>
+		</section>-->
+		<blockTable colWidths="431.0,73.0,74.0,100.0" style="Table5">
+			<tr>
+				<td>
+					<para style="P8">Totales </para>
+				</td>
+				<td>
+					<para style="P8">[[formatLang(suma(o.move_ids.debit),digits=0)]]</para>
+				</td>
+				<td>
+					<para style="P8">[[formatLang(suma(o.move_ids.credit),digits=0)]]</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+		</blockTable>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<para style="Standard">
+			<font color="white"> </font>
+		</para>
+		<blockTable colWidths="210.0,10.0,148.0,9.0,147.0,9.0,145.0" style="Table4">
+			<tr>
+				<td>
+					<para style="P22">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P13">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<para style="P1">[[get_create_uid(o.id, 'account_voucher')]]</para>
+					<para style="P1">[[get_create_date(o.id, 'account_voucher')]]</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Revisado Por</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Autorizado Por</para>
+				</td>
+				<td>
+					<para style="P1">
+						<font color="white"> </font>
+					</para>
+				</td>
+				<td>
+					<para style="P1">Firmado Por</para>
+				</td>
+			</tr>
+		</blockTable>
+	</story>
+</document>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Form 
+		<record id="view_account_invoice_form_cc" model="ir.ui.view">
+			<field name="name">account.invoice.form.cc</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="account.invoice_form"/>
+			<field name="arch" type="xml">
+				<field name="fiscal_position" position="after">
+                                        <field name="out_invoice_cc" attrs="{'invisible': [('type','!=','out_invoice')]}"/>
+					<field name="out_refund_cc" attrs="{'invisible': [('type','!=','out_refund')]}"/>
+				</field>
+			</field>
+		</record>
+-->
+	</data>
+</openerp>

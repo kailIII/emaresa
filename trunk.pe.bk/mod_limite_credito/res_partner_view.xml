@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		<record id="view_partner_modLimiteCredito_form" model="ir.ui.view">
+			<field name="name">res.partner.modLimiteCredito.form.inherit</field>
+			<field name="model">res.partner</field>
+			<field name="inherit_id" ref="account.view_partner_property_form"/>
+			<field name="arch" type="xml">
+				<field name="credit_limit" position="replace">
+					<field name="credit_limit" groups="mod_limite_credito.group_edit_credit_limit"/>
+					<field name="credit_limit_view" groups="mod_limite_credito.group_noedit_credit_limit"/>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>
+
+

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='view_account_journal_form'>
+			<field name='name'>account.journal.form.inherit.pe.spot</field>
+			<field name='model'>account.journal</field>
+			<field name='inherit_id' ref='l10n_pe_base.view_account_journal_form'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//group[@name='l10n_pe']" position="attributes">
+					<attribute name="invisible">0</attribute>
+				</xpath>
+				<xpath expr="//group[@name='l10n_pe']" position="inside">
+					<field name="spot_operation_type"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<record model='ir.ui.view' id='invoice_supplier_form'>
+			<field name='name'>account.invoice.supplier.form.inherit.pe.spot</field>
+			<field name='model'>account.invoice</field>
+			<field name='inherit_id' ref='account.invoice_supplier_form'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//field[@name='invoice_line_tax_id']" position="after">
+					<field name="spot_product_type" invisible="1"/>
+				</xpath>
+				<xpath expr="//field[@name='payment_term']" position="after">
+					<field name="spot_operation_type"/>
+				</xpath>
+			</field>
+		</record>
+		
+		<!--<record model='ir.ui.view' id='view_account_transfer_form'>
+			<field name='name'>account.transfer.form.inherit.spot</field>
+			<field name='model'>account.transfer</field>
+			<field name='inherit_id' ref='account_transfer.view_account_transfer_form'/>
+			<field name='arch' type='xml'>
+				<xpath expr="//field[@name='name']" position="before">
+	            	<label string="SPOT Transfer " attrs="{'invisible':['|',('name','=','/'),('type','!=','spot')]}"/>
+	            </xpath>
+	            <field name="date" position="after">
+	            	<field name="is_spot"/>
+	            </field>
+			</field>
+		</record> -->
+		
+	</data>
+</openerp>

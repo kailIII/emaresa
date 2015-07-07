@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+	        <report string="reportes libro de venta" model="reportes.tributarios" auto="True" name="libro_venta_rml"
+			rml="reportes_tributarios/report/libro_venta.rml" id="libro_venta_rml" menu="False"/>
+
+        	<report string="reportes libro de compra" model="reportes.tributarios" auto="True" name="libro_compra_rml"
+			rml="reportes_tributarios/report/libro_compra.rml" id="libro_compra_rml" menu="False"/>
+
+		<report string="reportes libro diario" model="reportes.tributarios" auto="True" name="libro_diario_rml"
+			rml="reportes_tributarios/report/libro_diario.rml" id="libro_diario_rml" menu="False"/>
+
+        	<report string="reportes balance tributario" model="reportes.tributarios" auto="True" name="balance_tributario_rml"
+        		rml="reportes_tributarios/report/balance_tributario.rml" id="balance_tributario_rml" menu="False"/>
+
+<!--		<report string="reportes libro Honorarios"
+			model="reportes"
+			auto="True"
+			name="reportes_libro_honorarios"
+			rml="reportes_tributarios/reportes_libro_honorarios.rml"
+			id="reportes_libro_honorarios"
+			menu="False"/>-->
+
+		<!-- Libro de Ventas -->
+		<record id="libro_venta_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Libro Venta</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">reportes.tributarios</field>
+			<field name="report_name">libro_venta_xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/libro_venta_xls.py</field>
+			<field name="report_rml">reportes_tributarios/report/libro_venta.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<!-- Libro de Compras -->
+		<record id="libro_compra_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Libro Compra</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">reportes.tributarios</field>
+			<field name="report_name">libro_compra_xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/libro_compra_xls.py</field>
+			<field name="report_rml">reportes_tributarios/report/libro_compra.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<!-- Libro Diario -->
+		<record id="libro_diario_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Libro Diario</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">reportes.tributarios</field>
+			<field name="report_name">libro_diario_xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/libro_diario_xls.py</field>
+			<field name="report_rml">reportes_tributarios/report/libro_diario.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<!-- Balance Tributario -->
+		<record id="balance_tributario_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Balance Tributario</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">reportes.tributarios</field>
+			<field name="report_name">balance_tributario_xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/balance_tributario_xls.py</field>
+			<field name="report_rml">reportes_tributarios/report/balance_tributario.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<!-- Balance Tributario -->
+		<record id="libro_mayor_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Libro Mayor</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.account</field>
+			<field name="report_name">libro_mayor_xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/account_general_ledger2.py</field>
+			<!--<field name="parser_loc">account/report/account_general_ledger.py</field>-->
+			<field name="report_rml">reportes_tributarios/report/libro_mayor.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<record id="libro_mayor_xls_button_view" model="ir.ui.view">
+			<field name="name">libro.mayor.xls.button.view</field>
+			<field name="model">account.report.general.ledger</field>
+			<field name="inherit_id" ref="account.account_report_general_ledger_view"/>
+			<field name="arch" type="xml">
+				<button string="Print" position="after">
+					<button name="print_excel" string="Print Excel" type="object" class="oe_highlight"/>
+					or 
+				</button>
+			</field>
+		</record>
+
+		<!-- Ganancias/Perdidas -->
+		<record id="ganancia_perdida_xls" model="ir.actions.report.xml">
+			<field name="name">Excel Ganancias y Perdidas</field>
+			<field name="type">ir.actions.report.xml</field>
+			<field name="model">account.financial.report</field>
+			<field name="report_name">account.financial.report.xls</field>
+			<field name="report_type">aeroo</field>
+			<field name="in_format">oo-ods</field>
+			<field name="out_format" eval="ref('report_aeroo_ooo.report_mimetypes_xls_odt')"/>
+			<field name="parser_loc">reportes_tributarios/report/account_financial_report.py</field>
+			<field name="report_rml">reportes_tributarios/report/perdida_ganancia.ods</field>
+			<field name="parser_state">loc</field>
+			<field name="tml_source">file</field>
+		</record>
+
+		<record id="account_report_xls_button_view" model="ir.ui.view">
+			<field name="name">account.report.xls.button.view</field>
+			<field name="model">accounting.report</field>
+			<field name="inherit_id" ref="account.accounting_report_view"/>
+			<field name="arch" type="xml">
+				<button string="Print" position="replace">
+					<button name="check_report" string="Imprimir PDF" type="object" class="oe_highlight"/>
+					<button name="check_report_xls" string="Imprimir Excel" type="object" class="oe_highlight" invisible="not context.get('profit_loss')"/>
+					or 
+				</button>
+			</field>
+		</record>
+
+		<record id="account.action_account_report_pl" model="ir.actions.act_window">
+			<field name="name">Profit and Loss</field>
+			<field name="res_model">accounting.report</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="view_id" ref="account.accounting_report_view"/>
+			<field name="target">new</field>
+			<field name="context">{'profit_loss': 1}</field>
+		</record>
+	</data>
+</openerp>

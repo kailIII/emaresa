@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+
+	<record model="ir.ui.view" id="view_stock_move_asset_category_form">
+		<field name="name">stock.move.asset.category.form</field>
+		<field name="model">stock.move</field>
+		<field name="inherit_id" ref="stock.view_move_form"/>
+		<field name="arch" type="xml">
+			<xpath expr="//group[@string='Traceability']" position="after">
+				<group string="Asset Category">
+					<field name="asset_category_id"	domain="[('accounting_type','=','ifrs')]"/>
+					<field name="asset_category_tributario_id" domain="[('accounting_type','=','tributario')]"/>
+				</group>
+			</xpath>
+		</field>
+	</record>
+
+	<record model="ir.ui.view" id="view_stock_move_asset_category_tree">
+		<field name="name">stock.move.asset.category.tree</field>
+		<field name="model">stock.move</field>
+		<field name="inherit_id" ref="stock.view_move_picking_tree"/>
+		<field name="arch" type="xml">
+			<field name="product_qty" position="before">
+				<field name="asset_category_id"/>
+				<field name="asset_category_tributario_id"/>
+			</field>
+		</field>
+	</record>
+
+<!--	<record id="action_picking_tree6" model="ir.actions.act_window">
+		<field name="name">Internal Moves</field>
+		<field name="res_model">stock.picking</field>
+		<field name="inherit_id" ref="stock.action_picking_tree6"/>
+		<field name="type">ir.actions.act_window</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">tree,form,calendar</field>
+		<field name="domain">[('type','=','internal')]</field>
+		<field name="context">{'contact_display': 'partner_address', 'search_default_available': 1}</field>
+		<field name="search_view_id" ref="view_picking_internal_search"/>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">
+				Click to create an internal move request.
+				</p><p>
+				Most operations are prepared automatically by OpenERP according
+				to your preconfigured logistics rules, but you can also record
+				manual stock movements.
+			</p>
+		</field>
+	</record>-->
+    </data>
+</openerp>

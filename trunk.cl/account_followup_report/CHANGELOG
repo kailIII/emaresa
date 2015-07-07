@@ -1,0 +1,15 @@
+
+Versión 0.8
+
+	Se modifica resultado de reportes de seguimiento por falla en suma dada anteriormente.
+	Se identan los reportes RML para mayor facilidad de lectura.
+	
+Versión 0.7
+
+	Modifica reportes a rml para mayor desempeño y compatibilidad.
+	Se comentan las lineas para integración con Aeroo Report.
+
+Versión 0.6
+
+	Integra títulos y agrupación por diarios en el reporte.
+

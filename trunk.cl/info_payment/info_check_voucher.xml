@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+	<!-- <record id="view_info_check_voucher" model="ir.ui.view">
+	            <field name="name">info.account.voucher</field>
+	            <field name="model">account.voucher</field>
+	            <field name="inherit_id" ref="account.voucher.receipt.form"/>
+	            <field name="arch" type="xml">
+	                <field name="jounal_id" position="after">
+	                     <field name="date_due" string="Fecha Vencimiento"/>
+                             <field name="origin_bank"/>
+	                </field>
+	            </field>
+	 </record> -->
+ 
+    </data>
+</openerp>

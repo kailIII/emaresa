@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<!-- Replace attrs from analytics_id in account.invoice.line -->
+
+		<record model="ir.ui.view" id="invoice_supplier_form_analytic_inherit">
+			<field name="name">account.analytic.invoice.supplier.form.inherit</field>
+			<field name="model">account.invoice</field>
+			<field name="inherit_id" ref="purchase_analytic_plans.invoice_supplier_form_inherit"/>
+			<field name="arch" type="xml">
+				<field name="analytics_id" position="before">
+					<field name="analytics_id_required" invisible="1"/>
+				</field>
+				<field name="analytics_id" position="attributes">
+					<attribute name="attrs">{'required': [('analytics_id_required','=',True)]}</attribute>
+				</field>
+			</field>
+		</record>
+	</data>
+</openerp>

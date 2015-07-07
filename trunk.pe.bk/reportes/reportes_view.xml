@@ -1,0 +1,77 @@
+<openerp>
+	<data>
+		<record model="ir.ui.view" id="view_reportes_form">
+			<field name="name">reportes.form</field>
+			<field name="model">reportes</field>
+			<field name="type">form</field>
+			<field name="arch" type="xml">
+				<form string="Localizacion Chilena. Reportes S.I.I.">                        
+            				<field name="compania" required="1"></field>												
+            				<field name="type_" required="1"></field>
+					<field name="periodos" colspan="4" string="Periodo(s)"/>					
+					<field name="si"></field>							
+					<newline/>
+            				<group colspan="2">
+               					<button special="cancel" icon="gtk-cancel" string="Cancelar"/>
+               					<button type="object" name="create_report" icon="gtk-go-forward" string="Crear"  confirm=" Este Proceso tomara un tiempo. Deseas continuar" />
+            				</group>					
+				</form>
+			</field>
+		</record>
+		<record model="ir.actions.act_window" id="action_reportes">
+			<field name="name">reportes</field>
+			<field name="res_model">reportes</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form</field>
+			<field name="target">new</field>
+		</record>
+	
+        	<report string="reportes libro de venta"
+		model="reportes"
+		auto="True"
+		name="reportes_print_libven"
+		rml="reportes/reportes_report_v.rml"
+		id="report_reportes_libven"
+		menu="False"
+		/>		
+        	<report string="reportes libro de compra"
+		model="reportes"
+		auto="True"
+		name="reportes_print_libcom"
+		rml="reportes/reportes_reportc.rml"
+		id="report_reportes_libcom"
+		menu="False"
+		/>		
+        	<report string="reportes balance tributario"
+		model="reportes"
+		auto="True"
+		name="reportes_print_baltri"
+		rml="reportes/reportes_report.rml"
+		id="report_reportes_baltri"
+		menu="False"
+		/>	
+	
+		<report string="reportes libro diario"
+		model="reportes"
+		auto="True"
+		name="reportes_report_d"
+		rml="reportes/reportes_report_d.rml"
+		id="reportes_report_d"
+
+		menu="False"
+		/>		
+		
+         <report string="reportes libro Honorarios"
+		model="reportes"
+		auto="True"
+		name="reportes_libro_honorarios"
+		rml="reportes/reportes_libro_honorarios.rml"
+		id="reportes_libro_honorarios"
+		menu="False"
+		/>
+ 			
+	<menuitem id="reportes_menu" name="Reportes SII" parent="account.menu_finance_reporting"/>
+	<menuitem name="Generar" parent="reportes_menu" id="reportes_menu_mainform" action="action_reportes"/>
+
+	</data>
+</openerp>

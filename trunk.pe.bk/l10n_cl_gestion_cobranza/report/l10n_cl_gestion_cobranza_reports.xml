@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+		<report auto="False" id="l10n_cl_gestion_cobranza_report" model="account.move.line" name="l10n_cl_gestion_corbranza_report"
+			rml="l10n_cl_gestion_cobranza/report/template_account_voucher.rml" string="Comprobante Cobranza" usage="default"/>
+	</data>
+</openerp>

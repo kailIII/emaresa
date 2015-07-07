@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Account Reconcile Full -->
+		<record id="view_account_move_line_reconcile_full_comment_inherit" model="ir.ui.view">
+			<field name="name">account.move.line.reconcile.full.form.comment.inherit</field>
+			<field name="model">account.move.line.reconcile</field>
+			<field name="inherit_id" ref="account.view_account_move_line_reconcile_full"/>
+			<field name="arch" type="xml">
+				<xpath expr="//footer/button[@string='Reconcile']" position="replace">
+					<button string="Reconcile" name="trans_rec_reconcile_full_comment" type="object" default_focus="1"
+						attrs="{'invisible':[('writeoff','!=',0)]}" class="oe_highlight"/>
+				</xpath>
+				<xpath expr="//footer/button[@string='Partial Reconcile']" position="replace">
+					<button string="Partial Reconcile" name="trans_rec_reconcile_partial_comment" type="object"
+						attrs="{'invisible':[('writeoff','==',0)]}" class="oe_highlight"/>
+				</xpath>
+			</field>
+		</record>
+
+		<record id="view_account_move_line_reconcile_comment_full" model="ir.ui.view">
+			<field name="name">account.move.line.reconcile.full.comment.form</field>
+			<field name="model">account.move.line.reconcile</field>
+			<field name="arch" type="xml">
+				<form string="Comment" version="7.0">
+					<group col="4">
+						<separator string="Comment" colspan="4"/>
+						<field name="comment" nolabel="1" colspan="4"/>
+					</group>
+					<footer>
+						<button string="Reconcile" name="trans_rec_reconcile_full" type="object"
+								default_focus="1" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<!-- Account Partial Reconcile -->
+		<record id="account_move_line_reconcile_writeoff_comment" model="ir.ui.view">
+			<field name="name">account.move.line.reconcile.writeoff.comment.form</field>
+			<field name="model">account.move.line.reconcile.writeoff.comment</field>
+			<field name="arch" type="xml">
+				<form string="Comment" version="7.0">
+					<group col="4">
+						<separator string="Comment" colspan="4"/>
+						<field name="comment_partial" nolabel="1" colspan="4"/>
+					</group>
+					<footer>
+						<button string="Partial Reconcile" name="trans_rec_reconcile_partial" type="object"
+								default_focus="1" class="oe_highlight"/>
+						or
+						<button string="Cancel" class="oe_link" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+	</data>
+</openerp>

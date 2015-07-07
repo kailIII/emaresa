@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!-- Rent Order -->
+		<report string="Rent Quotation" model="rent.order" auto="False" name="rent_order_rml"
+								rml="rent/report/rent_quotation.rml" id="rent_order_rml"/>		
+
+		<!--  Contract report  -->
+		<report auto="False" id="rent_contract" model="rent.order" name="rent_contract"
+								rml="rent/report/rent_contract.rml" string="Rent Contract"/>
+	</data>
+</openerp>

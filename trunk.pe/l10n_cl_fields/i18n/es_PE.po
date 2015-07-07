@@ -1,0 +1,154 @@
+# Translation of OpenERP Server.
+# This file contains the translation of the following modules:
+# 	* l10n_cl_fields
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenERP Server 7.0-20131003-231232\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-12-12 14:50+0000\n"
+"PO-Revision-Date: 2013-12-12 12:03-0300\n"
+"Last-Translator: David Acevedo Toledo (Fedoro) <dacevedo@opendrive.cl>\n"
+"Language-Team: OpenDrive\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"Language: Español\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,primary_zone:0 field:stock.picking.out,primary_zone:0
+msgid "Primary Zone"
+msgstr "Zona Primaria"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,for_processing:0
+#: field:stock.picking.out,for_processing:0
+msgid "For Processing"
+msgstr "Para Transformación"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,itinerant_issuer:0
+#: field:stock.picking.out,itinerant_issuer:0
+msgid "Itinerant Issuer"
+msgstr "Emisor Iterante"
+
+#. module: l10n_cl_fields
+#: selection:stock.picking,proof_type:0
+#: selection:stock.picking.out,proof_type:0
+msgid "Other"
+msgstr "Otro"
+
+#. module: l10n_cl_fields
+#: model:ir.model,name:l10n_cl_fields.model_stock_picking
+msgid "Picking List"
+msgstr "Lista de guías de despacho"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,import:0 field:stock.picking.out,import:0
+msgid "Import"
+msgstr "Importación"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,proof_number:0 field:stock.picking.out,proof_number:0
+msgid "Proof Number"
+msgstr "Número Comprobante"
+
+#. module: l10n_cl_fields
+#: selection:stock.picking,proof_type:0
+#: selection:stock.picking.out,proof_type:0
+msgid "Ballot Sale"
+msgstr "Boleta de Venta"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,sale_sac:0 field:stock.picking.out,sale_sac:0
+msgid "Sale Sac"
+msgstr "Venta Sac"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,purchase:0 field:stock.picking.out,purchase:0
+msgid "Purchase"
+msgstr "Compra"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,pick_processed:0
+#: field:stock.picking.out,pick_processed:0
+msgid "Pick Processed"
+msgstr "Recojo de Transformados"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,refound:0 field:stock.picking.out,refound:0
+msgid "Refound"
+msgstr "Devolución"
+
+#. module: l10n_cl_fields
+#: field:account.invoice,amount_in_words:0
+msgid "Amount in Words"
+msgstr "Monto en Palabras"
+
+#. module: l10n_cl_fields
+#: view:stock.picking:0 view:stock.picking.out:0
+msgid "Reference Payment Voucher"
+msgstr "Referencia Comprobante de Pago"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,sale:0 field:stock.picking.out,sale:0
+msgid "Sale"
+msgstr "Venta"
+
+#. module: l10n_cl_fields
+#: selection:stock.picking,proof_type:0
+#: selection:stock.picking.out,proof_type:0
+msgid "Debit Note"
+msgstr "Nota de Débito"
+
+#. module: l10n_cl_fields
+#: view:stock.picking:0 field:stock.picking,number:0 view:stock.picking.out:0
+#: field:stock.picking.out,number:0
+msgid "Number Office Guide"
+msgstr "Número Guía"
+
+#. module: l10n_cl_fields
+#: selection:stock.picking,proof_type:0
+#: selection:stock.picking.out,proof_type:0
+msgid "Credit Note"
+msgstr "Nota de Crédito"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,proof_type:0 field:stock.picking.out,proof_type:0
+msgid "Proof Type"
+msgstr "Tipo Comprobante"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,between_establishments:0
+#: field:stock.picking.out,between_establishments:0
+msgid "Between Establishments"
+msgstr "Entre Establec. de una Misma Emp."
+
+#. module: l10n_cl_fields
+#: field:stock.picking,export:0 field:stock.picking.out,export:0
+msgid "Export"
+msgstr "Exportación"
+
+#. module: l10n_cl_fields
+#: view:stock.picking:0 view:stock.picking.out:0
+msgid "Reason for Transfer"
+msgstr "Motivo del Traslado"
+
+#. module: l10n_cl_fields
+#: model:ir.model,name:l10n_cl_fields.model_account_invoice
+#: selection:stock.picking,proof_type:0
+#: selection:stock.picking.out,proof_type:0
+msgid "Invoice"
+msgstr "Factura"
+
+#. module: l10n_cl_fields
+#: field:stock.picking,despatch:0 field:stock.picking.out,despatch:0
+msgid "Despatch"
+msgstr "Consignación"
+
+#. module: l10n_cl_fields
+#: model:ir.model,name:l10n_cl_fields.model_stock_picking_out
+msgid "Delivery Orders"
+msgstr "Guías de Despacho"

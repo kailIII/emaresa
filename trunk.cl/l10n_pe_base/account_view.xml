@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+		
+		<record model='ir.ui.view' id='view_account_journal_form'>
+			<field name='name'>account.journal.form.inherit.pe</field>
+			<field name='model'>account.journal</field>
+			<field name='inherit_id' ref='account.view_account_journal_form'/>
+			<field name="priority">90</field>
+			<field name='arch' type='xml'>
+				<xpath expr="//page[@string='Advanced Settings']/group" position="inside">
+					<group name="l10n_pe" string="Peruvian Localization Settings" invisible="1">
+					</group>
+				</xpath>
+			</field>
+		</record>
+		
+	</data>
+</openerp>
