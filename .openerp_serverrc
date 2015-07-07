@@ -1,5 +1,5 @@
 [options]
-addons_path = /home/cubicerp/src/odoo/addons,/home/cubicerp/src/trunk
+addons_path = ./odoo/addons,./trunk.pe,./branch
 admin_passwd = admin
 csv_internal_sep = ,
 db_host = 172.17.40.152
@@ -23,7 +23,7 @@ limit_time_real = 120
 list_db = True
 log_handler = ["[':INFO']"]
 log_level = info
-logfile = False
+#logfile = ./log/openerp-server.log
 login_message = False
 logrotate = True
 max_cron_threads = 2
