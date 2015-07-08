@@ -6,7 +6,8 @@
             <field name="wkf_id" ref="purchase.purchase_order"/>
             <field name="name">CheckForBizagiApproval</field>
             <field name="split_mode">OR</field>
-            <field name="kind">dummy</field>
+            <field name="kind">function</field>
+            <field name="action">action_send_bizagi()</field>
         </record>
 
          <record id="trans_confirmed_double_check" model="workflow.transition">
