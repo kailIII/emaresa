@@ -19,6 +19,6 @@
 #
 ##############################################################################
 
-import purchase_double_validation_installer
+import purchase
 
 # vim:expandtab:smartindent:tabstop=4:softtabstop=4:shiftwidth=4:

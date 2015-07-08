@@ -35,8 +35,8 @@ This module integrate the purchase module with bizagi of Emaresa.
     'website': 'http://www.cubicerp.com',
     'data': [
         'board_purchase_view.xml',
-        'purchase_bizagi_view.xml',
-        'purchase_bizagi_workflow.xml',
+        'purchase_view.xml',
+        'purchase_workflow.xml',
     ],
     'test': [
     ],
