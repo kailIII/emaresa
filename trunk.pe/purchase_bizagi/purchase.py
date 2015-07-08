@@ -89,7 +89,7 @@ class purchase_order(osv.Model):
             r = SimpleXMLElement(result['createCasesAsStringResult'])
             processId = int(r.process.processId)
             if not processId:
-                raise osv.except_osv(_('Bizagi Error!'), "Error de comunicación con el servidor Bizagi, contacte al administrador o intente mas tarde. %s"%result)
+                raise osv.except_osv(_('Bizagi Error!'), "Bizagi comunication error, contact to administrator or try again. %s"%result)
             self.write(cr, uid, [order.id], {'bitacora_bizagi': result, 
                                              'date_confirm': fields.date.context_today(self, cr, uid, context=context),
                                              'bizagi_process_id': processId})
