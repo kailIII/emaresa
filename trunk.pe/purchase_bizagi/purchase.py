@@ -54,7 +54,7 @@ class purchase_order(osv.Model):
                             </Entities>
                         </Case>
                     </Cases>
-                </BizAgiWSParam>"""%(order.name, order.validator.name, order.purchase_order_id.name))
+                </BizAgiWSParam>"""%(order.name, order.validator.name, order.purchase_journal_id.name))
             self.write(cr, uid, [order.id], {'bitacora_bizagi': result})
 
         
