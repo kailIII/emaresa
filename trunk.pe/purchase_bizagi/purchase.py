@@ -85,6 +85,6 @@ class purchase_order(osv.Model):
                                      detalle,
                                      order.id))
             self.write(cr, uid, [order.id], {'bitacora_bizagi': result, 
-                                             'date_confirm': fields.date.context_today('purchase.order', cr, uid, context=context)})
+                                             'date_confirm': fields.date.context_today(self, cr, uid, context=context)})
 
         
