@@ -2,15 +2,9 @@
 <openerp>
     <data>
 
-        <record id="act_double_wait" model="workflow.activity">
-            <field name="wkf_id" ref="purchase.purchase_order"/>
-            <field name="name">WaitForApproval</field>
-            <field name="kind">dummy</field>
-        </record>
-
         <record id="act_double_check" model="workflow.activity">
             <field name="wkf_id" ref="purchase.purchase_order"/>
-            <field name="name">CheckForApproval</field>
+            <field name="name">CheckForBizagiApproval</field>
             <field name="split_mode">OR</field>
             <field name="kind">dummy</field>
         </record>
@@ -22,21 +16,14 @@
         
         <record id="trans_confirmed_double_gt" model="workflow.transition">
             <field name="act_from" ref="act_double_check"/>
-            <field name="act_to" ref="act_double_wait"/>
-            <field name="condition">amount_untaxed &gt;= 5000</field>
-            <field name="signal">purchase_approve</field>
-            <field name="group_id" ref="purchase.group_purchase_manager"/>
+            <field name="act_to" ref="purchase.act_router"/>
+            <field name="signal">bizagi_approve</field>
         </record>
 
         <record id="trans_confirmed_double_lt" model="workflow.transition">
             <field name="act_from" ref="act_double_check"/>
-            <field name="act_to" ref="act_double_wait"/>
-            <field name="condition">amount_untaxed &lt; 5000</field>
-        </record>
-
-        <record id="trans_double_app_conf" model="workflow.transition">
-            <field name="act_from" ref="act_double_wait"/>
-            <field name="act_to" ref="purchase.act_router"/>
+            <field name="act_to" ref="purchase.act_cancel"/>
+            <field name="signal">bizagi_cancel</field>
         </record>
 
     </data>
