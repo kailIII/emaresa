@@ -86,7 +86,7 @@ class purchase_order(osv.Model):
                                      detalle,
                                      order.id))
             r = SimpleXMLElement(result['createCasesAsStringResult'])
-            processId = int(r.processes.process.processId)
+            processId = int(r.process.processId)
             if not processId:
                 raise osv.except_osv(_('Bizagi Error!'), result)
             self.write(cr, uid, [order.id], {'bitacora_bizagi': result, 
