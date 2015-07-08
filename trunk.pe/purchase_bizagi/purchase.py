@@ -13,7 +13,7 @@ class purchase_journal(osv.Model):
 class purchase_log_bizagi(osv.Model):
     _name = 'purchase.log.bizagi'
     _columns = {
-            'order_id': fields.one2many('purchase.order', string='Purchase Order', ondelete='cascade'),
+            'order_id': fields.many2one('purchase.order', string='Purchase Order', ondelete='cascade'),
             'bizagi_user': fields.char('Bizagi User', size=64),
             'bizagi_state': fields.char('Bizagi State', size=32),
             'bizagi_date': fields.datetime('Bizagi Date', size=32),
