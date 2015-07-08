@@ -21,7 +21,7 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
             	<page string="Bitacora Bizagi">
-            		<field name="bitacora_bizagi"/>
+            		<field name="bizagi_log"/>
             	</page>
             </xpath>
         </field>

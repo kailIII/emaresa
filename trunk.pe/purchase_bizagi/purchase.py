@@ -9,6 +9,18 @@ class purchase_journal(osv.Model):
     _columns = {
             'name': fields.char('Name', size=32),
         }
+
+class purchase_log_bizagi(osv.Model):
+    _name = 'purchase.log.bizagi'
+    _columns = {
+            'order_id': fields.one2many('purchase.order', string='Purchase Order', ondelete='cascade'),
+            'bizagi_user': fields.char('Bizagi User', size=64),
+            'bizagi_state': fields.char('Bizagi State', size=32),
+            'bizagi_date': fields.datetime('Bizagi Date', size=32),
+            'bizagi_approve_level': fields.char('Bizagi Approve Level', size=64),
+            'bizagi_details': fields.text('Bizagi Details'),
+        }
+
     
 class purchase_order(osv.Model):
     _name = "purchase.order"
@@ -17,6 +29,8 @@ class purchase_order(osv.Model):
             'purchase_journal_id': fields.many2one('purchase.journal', string="Purchase Journal", required=True,
                                                    states={'confirmed':[('readonly',True)], 'approved':[('readonly',True)],'done':[('readonly',True)]}),
             'bitacora_bizagi': fields.text('Bitacora Bizagi', readonly=True),
+            'bizagi_log': fields.one2many('purchase.log.bizagi', 'order_id', string="Bizagi Log", readonly=True),
+            'date_confirm':fields.date('Date Confirmed', readonly=1, select=True, help="Date on which purchase order has been confirmed"),
         }
     
     def action_approve_bizagi(self, cr, uid, ids, context=None):
@@ -70,6 +84,7 @@ class purchase_order(osv.Model):
                                      order.purchase_journal_id.name,
                                      detalle,
                                      order.id))
-            self.write(cr, uid, [order.id], {'bitacora_bizagi': result})
+            self.write(cr, uid, [order.id], {'bitacora_bizagi': result, 
+                                             'date_confirm': fields.date.context_today})
 
         
