@@ -21,7 +21,15 @@
             </xpath>
             <xpath expr="//notebook" position="inside">
             	<page string="Bitacora Bizagi">
-            		<field name="bizagi_log"/>
+            		<field name="bizagi_log">
+            			<tree>
+            				<field name="bizagi_date"/>
+            				<field name="bizagi_user"/>
+            				<field name="bizagi_state"/>
+            				<field name="bizagi_approve_level"/>
+            				<field name="bizagi_details"/>
+            			</tree>
+            		</field>
             	</page>
             </xpath>
         </field>
