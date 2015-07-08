@@ -33,7 +33,7 @@
             		<group>
             			<field name="bizagi_process_id"/>
             		</group>
-            		<field name="bitacora_bizagi" attrs="{'invisible':[('bizagi_process_id','=',0)]}"/>
+            		<field name="bitacora_bizagi" attrs="{'invisible':[('bizagi_process_id','!=',0)]}"/>
             	</page>
             </xpath>
         </field>
