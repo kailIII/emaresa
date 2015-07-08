@@ -1,5 +1,6 @@
 from openerp.osv import osv, fields
 from openerp import netsvc
+from openerp.tools.translate import _
 from pysimplesoap.client import SoapClient
 from pysimplesoap.simplexml import SimpleXMLElement
 
@@ -31,7 +32,7 @@ class purchase_order(osv.Model):
             'bitacora_bizagi': fields.text('Bitacora Bizagi', readonly=True),
             'bizagi_log': fields.one2many('purchase.log.bizagi', 'order_id', string="Bizagi Log", readonly=True),
             'date_confirm':fields.date('Date Confirmed', readonly=1, select=True, help="Date on which purchase order has been confirmed"),
-            'bizagi_process_id': fields.integer('Bizagi Process ID'), 
+            'bizagi_process_id': fields.integer('Bizagi Process ID', readonly=True), 
         }
     
     def action_approve_bizagi(self, cr, uid, ids, context=None):
