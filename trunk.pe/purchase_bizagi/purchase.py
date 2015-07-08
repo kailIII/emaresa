@@ -21,6 +21,17 @@ class purchase_order(osv.Model):
     def action_send_bizagi(self, cr, uid, ids, context=None):
         client = SoapClient(wsdl="http://172.17.40.93/Procesos/webservices/WorkflowEngineSOA.asmx?wsdl")
         for order in self.browse(cr, uid, ids, context=context):
+            detalle = ""
+            for line in order.order_line:
+                detalle += """
+                                        <detalle>
+                                            <producto>%s</producto>
+                                            <descripcion>%s</descripcion>
+                                            <precio>%s</precio>
+                                         </detalle>                
+                """%(line.product_id.default_code,
+                     line.name,
+                     line.price_unit)
             result = client.createCasesAsString("""
             <BizAgiWSParam xmlns="">
                     <domain>domain</domain>
@@ -34,27 +45,16 @@ class purchase_order(osv.Model):
                                     <solicitante>%s</solicitante>
                                     <tipo>%s</tipo>
                                     <detalle>
-                                        <detalle>
-                                            <producto>7024000400213</producto>
-                                            <descripcion>PAD CAFE 13"</descripcion>
-                                            <precio>1525</precio>
-                                         </detalle>
-                                         <detalle>
-                                            <producto>7024000400214</producto>
-                                            <descripcion>CADENA 33 MM</descripcion>
-                                            <precio>88542</precio>
-                                         </detalle>
-                                         <detalle>
-                                            <producto>7024000400215</producto>
-                                            <descripcion>DESECHOS TOXICOS</descripcion>
-                                            <precio>5000</precio>
-                                         </detalle>
+                                        %s
                                     </detalle>
                                 </PruebasRCV>
                             </Entities>
                         </Case>
                     </Cases>
-                </BizAgiWSParam>"""%(order.name, order.validator.name, order.purchase_journal_id.name))
+                </BizAgiWSParam>"""%(order.name, 
+                                     order.validator.name, 
+                                     order.purchase_journal_id.name,
+                                     detalle))
             self.write(cr, uid, [order.id], {'bitacora_bizagi': result})
 
         
