@@ -1,4 +1,5 @@
 from openerp.osv import osv, fields
+from openerp import netsvc
 from pysimplesoap.client import SoapClient
 from pysimplesoap.simplexml import SimpleXMLElement
 
