@@ -74,7 +74,7 @@ class purchase_order(osv.Model):
                                     <detalle>
                                         %s
                                     </detalle>
-                                    <open_order_id>%s</open_order_id>
+                                    <Open_Order_Id>%s</Open_Order_Id>
                                 </PruebasRCV>
                             </Entities>
                         </Case>
