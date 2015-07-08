@@ -18,6 +18,18 @@ class purchase_order(osv.Model):
             'bitacora_bizagi': fields.text('Bitacora Bizagi', readonly=True),
         }
     
+    def action_approve_bizagi(self, cr, uid, ids, context=None):
+        wf_service = netsvc.LocalService("workflow")
+        for order_id in ids:
+            wf_service.trg_validate(uid, 'purchase.order', order_id, 'bizagi_approve', cr)
+        return True
+    
+    def action_cancel_bizagi(self, cr, uid, ids, context=None):
+        wf_service = netsvc.LocalService("workflow")
+        for order_id in ids:
+            wf_service.trg_validate(uid, 'purchase.order', order_id, 'bizagi_cancel', cr)
+        return True
+    
     def action_send_bizagi(self, cr, uid, ids, context=None):
         client = SoapClient(wsdl="http://172.17.40.93/Procesos/webservices/WorkflowEngineSOA.asmx?wsdl")
         for order in self.browse(cr, uid, ids, context=context):
